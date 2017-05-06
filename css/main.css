@@ -1,38 +1,428 @@
 *{
-    width: inherit;
+
 }
 
 body{
     width: 100%;
+    height: 100%;
     margin: 0px;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    background-color: #253938;
+    font-family: "Microsoft YaHei UI Light";
 }
 
+
+
+/*--------------------nav bar block-----------------------*/
 .navBar{
     width: 100%;
     height: 42px;
     top:0;
-    position: fixed;
+    position: relative;
     background-color: #253938;
     color: #fe8b6c;
     padding:0px 20px;
     line-height: 42px;
     font-size: small;
+    z-index: 3;
+    border-top: solid 3px #fe8b6c;
 }
 
-.settingButton{
+.settingButton,.uploadButton,.saveButton{
+    display: inline-block;
     height: 30px;
     width: 30px;
     margin-top: 6px;
-    margin-right: 30px;
+    margin-right: 20px;
     border: none;
-    float: right;
+    vertical-align: top;
     background-color: transparent;
     background-size: cover;
-    background-image: url("../images/setting.png");
 }
 
-.settingButton:focus{
+.settingButton:focus,.uploadButton:focus{
     outline: none;
 }
+
+.settingButton{
+    background-image: url("../images/setting.png");
+}
+.uploadButton{
+    background-image: url("../images/upload.png");
+}
+.saveButton{
+    background-image: url("../images/save.png");
+}
+
+
+/*------------------------my tab end------------------------*/
+.menu_container{
+    text-align: right;
+    float: right;
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    margin: 0 20px;
+}
+.menu_container ul{
+    display: inline-block;
+    list-style: none;
+    width: 80%;
+    margin-top: 0px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+
+.menu_container li{
+    width: 20%;
+    height: 45px;
+    line-height: 45px;
+    color: #fe8b6c;
+    float: left;
+    background-color: transparent;
+    text-align: center;
+}
+
+.menu_container li:hover{
+    background-color: #fe8b6c;
+    color: #253939;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+/*------------------------my tab end------------------------*/
+
+
+
+.tab-pane{
+    -webkit-box-shadow:inset 0 -7px 10px #979797;
+    -moz-box-shadow:inset 0 -7px 10px #979797;
+    box-shadow: inset 0 -7px 10px #979797;
+    margin: -10px 0;
+}
+
+
+#centeredmenu {
+    float:left;
+    width:100%;
+    background:#fff;
+    border-bottom: 1px solid #ddd;
+    overflow:hidden;
+    position:relative;
+}
+#centeredmenu ul {
+    clear:left;
+    float:left;
+    list-style:none;
+    margin:0;
+    padding:0;
+    position:relative;
+    left:29%;
+    text-align:center;
+}
+
+
+/*---------------------nav bar end-----------------------*/
+
+.canvasArea{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.moduleArea{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     z-index: 3;
+ }
+
+.HalfModuleArea{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    z-index: 3;
+}
+
+.component-gird{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+
+}
+
+.grid{
+    z-index: 2;
+    position: absolute;
+    background: -webkit-linear-gradient(top, transparent 99.5%, #81e9ed 0.5%),
+    -webkit-linear-gradient(left, transparent 99.8%, #81e9ed 0.2%);
+    background-size: 25% 25%;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+}
+
+/*-----------------------Wizard module-----------------------*/
+
+.block{
+    width: 13.8%;
+    height: 240px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+}
+
+.templateBlock{
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    transition: all 0.2s;
+}
+.templateBlock button:hover{
+    width: 203px;
+    height: 123px;
+    transition: all 0.2s;
+}
+.wizard{
+    list-style:none;
+    width: 52px;
+    height: 217px;
+    margin: 15px auto;
+    -webkit-padding-start: 0px;
+}
+.wizard li{
+    position: relative;
+    width: 100%;
+    height: 23%;
+    margin-top:3px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #5fa292;
+    background-size:70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.li1{
+    background-image: url(../images/original.png);
+}
+
+.li2{
+     background-image: url(../images/grid1.png);
+ }
+.li3{
+    background-image: url(../images/directLight.png);
+}
+.li4{
+    background-image: url(../images/keyboard1.png);
+}
+
+.wizard button{
+    /*content: attr(data-text);*/
+    position: absolute;
+    padding:10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    line-height: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff!important;
+    border-radius: 3px;
+    background-color: #558188;
+    text-decoration: none!important;
+    text-align: center;
+    -webkit-transform-origin: -50% 50%;
+    transform-origin: -50% 50%;
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
+    -webkit-transition: -webkit-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    opacity: 0\9;
+    filter: alpha(opacity=0)\9;
+}
+
+button:focus{
+    outline: none;
+}
+
+.wizard li:hover button{
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+/*-----------------------Wizard module End-----------------------*/
+
+
+
+/*----------------------loadingBar----------------------*/
+.loading-container {
+    position: absolute;
+    z-index: 3;
+    left: 40%;
+    top:40%;
+    width:20%;
+    height:20%;
+    margin:auto;
+    transition: 1s;
+}
+.loading-container.loading-container-hidden
+{
+    opacity: 0;
+}
+
+.loading-bar {
+    width:100%;
+    margin:0px auto;
+    height:37px;
+    border-radius:5px;
+    background-color:#253938;
+    padding:4px 2px;
+    box-shadow:inset 3px 0px 10px rgba(0,0,0,0.1);
+}
+
+.amount {
+    /* we haven't included the colour yet, we'll get to that later. */
+    height:47px;
+    border-radius:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    margin-top:-9px;
+    width: 80%;
+}
+
+.lines {
+    /* the lines overflow the container. This creates a continuous flow of the background */
+    width:200%;
+    /* We use a SVG file as the background */
+    background:url('lines.svg') repeat-x;
+    height:120%;
+    text-align:center;
+    margin-top:-50px;
+    /* Any overflow is hidden */
+    overflow:hidden;
+    border-radius:50px;
+    /* Implement the animations, we'll get to that later */
+    -webkit-animation:moveBars 0.5s linear infinite;
+    -moz-animation:moveBars 0.5s linear infinite;
+    -ms-animation:moveBars 0.5s linear infinite;
+    -o-animation:moveBars 0.5s linear infinite;
+    animation:moveBars 0.5s linear infinite;
+    font-weight:bold;
+    color:#fff;
+    font-size:18px;
+    text-shadow:0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.loaded {
+    line-height: 47px;
+    text-align:center;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    position:relative;
+    font-size:25px;
+    text-shadow:0px 0px 10px rgba(0,0,0,0.2);
+    color:#fff;
+    z-index:11;
+}
+
+.green {
+    background-color:#8ac320;
+    box-shadow:inset 0px 4px 40px rgba(255,255,255,0.2), 0 10px 10px -5px #79aa1e , 0 7px 0 #628c14;
+}
+
+.blue {
+    background-color:#20b9c3;
+    box-shadow:inset 0px 4px 40px rgba(255,255,255,0.2), 0 10px 10px -5px #1e8aaa, 0 7px 0 #13768c;
+}
+
+.red {
+    background-color:#dc6565;
+    box-shadow:inset 0px 4px 40px rgba(255,255,255,0.2), 0 10px 10px -5px #d23333, 0 7px 0 #8c1212;
+}
+
+/* ANIMATIONS */
+@keyframes moveBars { 100% { margin-left:-180px;} }
+@-webkit-keyframes moveBars { 100% { margin-left:-180px;} }
+@-moz-keyframes moveBars { 100% { margin-left:-180px;} }
+@-ms-keyframes moveBars { 100% { margin-left:-180px;} }
+@-o-keyframes moveBars { 100% { margin-left:-180px;} }
+/*----------------------loadingBar End----------------------*/
+
+
+/*-------------------------resizabe-------------------------*/
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+/*-------------------------resizabe end-------------------------*/
+
+/*------------------------template button------------------------*/
+.templateButton{
+    width: 198px;
+    height: 118px;
+    background-color: transparent;
+    background-size: cover;
+    border: none;
+    -webkit-box-shadow:0 0 10px rgba(174, 172, 180, .5);
+    -moz-box-shadow:0 0 10px rgba(174, 172, 180, .5);
+    box-shadow:0 0 10px rgba(174, 172, 180, .5);
+}
+
+#template0{
+    background-image: url("../images/templates/template0.jpg");
+}
+#template1{
+    background-image: url("../images/templates/template1.jpg");
+}
+#template2{
+    background-image: url("../images/templates/template2.jpg");
+}
+#color-bg{
+    background-image: url("../images/templates/color-bg.jpg");
+}
+#image-bg{
+    background-image: url("../images/templates/img-bg.jpg");
+}
+#skybox-bg{
+    background-image: url("../images/templates/skybox-bg.jpg");
+}
+
+
+
+/*------------------------template button end------------------------*/
+
+/*-------------------------Basic Layout------------------------------*/
+.ListArea{
+    width: 20%;
+    background-color: #f5f5f5;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+}
+
+.addItemButton{
+    width: 80%;
+    margin: 10px 0 ;
+}
+/*-------------------------Basic Layout------------------------------*/
+

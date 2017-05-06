@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>LoadModelTest</title>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script src="libs/Vue/vue.min.js"></script>
+
+
+    <link rel="Stylesheet" href="libs/bootstrap/bootstrap.min.css" type="text/css" media="screen">
+    <link rel=StyleSheet href="css/main.css" TYPE="text/css" MEDIA=screen>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<div class="navBar">
+    Web3D Template System
+    <div class="menu_container">
+        <button class="saveButton" id="saveButton"></button>
+        <button class="uploadButton" id="uploadButton"></button>
+        <button class="settingButton" id="settingButton"></button>
+    </div>
+
+</div>
+<div id="control-panel" style="display: none">
+    <div id="centeredmenu" >
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#layout" data-toggle="tab">Layout</a></li>
+            <li><a href="#backgoround" data-toggle="tab">Background</a></li>
+            <li><a href="#component" data-toggle="tab">Component</a></li>
+            <li><a href="#color" data-toggle="tab">Color</a></li>
+            <li><a href="#material" data-toggle="tab">Material</a></li>
+            <li><a href="#interact" data-toggle="tab">Interact</a></li>
+            <li><a href="#fg" data-toggle="tab">Fog&Ground</a></li>
+        </ul>
+    </div>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="layout">
+            <div class="templateBlock">
+                <button class="templateButton" id="template0"></button>
+                <p>Basic Layout</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="template1"></button>
+                <p>Full Screen with draggable wizard</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="template2"></button>
+                <p>Basic Layout with map</p>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="backgoround">
+            <div class="templateBlock">
+                <button class="templateButton" id="color-bg"></button>
+                <p>Color Background</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="image-bg"></button>
+                <p>Image Background</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="skybox-bg"></button>
+                <p>Skybox Background</p>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="component">
+            <div class="templateBlock">
+                <div id="el">
+                    <wizard></wizard>
+                </div>
+                <p>Wizard</p>
+            </div>
+            <div class="templateBlock"></div>
+            <div class="templateBlock"></div>
+        </div>
+
+        <div class="tab-pane fade" id="color">
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+        </div>
+        <div class="tab-pane fade" id="material">
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+        </div>
+        <div class="tab-pane fade" id="interact">
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+        </div>
+        <div class="tab-pane fade" id="fg">
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+            <p>Haven't designed yet</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="canvasArea" id="canvasArea">
+
+    <!--&lt;!&ndash;<div class="ListArea">&ndash;&gt;-->
+        <!--&lt;!&ndash;<button class="btn btn-default addItemButton">+</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--<div class="moduleArea" id="moduleArea"></div>-->
+
+    <!--<div class="grid" style="display: none"></div>-->
+
+    <!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;processing bar&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="loading-container" id="processing">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="loading-bar">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="amount red" id="processingBar">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="loaded" id="processingText">&ndash;&gt;-->
+    <!--&lt;!&ndash;0%&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="lines"></div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;processing bar end&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+</div>
+
+
+<script type="text/x-template" id="wizard">
+        <ul id="drag1" class="wizard">
+            <li class="li1">
+                <button id="line">线框</button>
+            </li>
+            <li class="li2">
+                <button id="Grid">网格</button>
+            </li>
+            <li class="li3">
+                <button id="LightType">点光</button>
+            </li>
+            <li class="li4">
+                <button id="InteractMode">点光</button>
+            </li>
+        </ul>
+</script>
+
+<script>
+
+    Vue.component('wizard', {
+        template: '#wizard',
+    })
+
+    var vm = new Vue({
+        el: '#el',
+        template: '#el',
+        data: {
+            selected: 0,
+            options: [
+                { id: 1, text: 'Hello' },
+                { id: 2, text: 'World' }
+            ]
+        }
+    })
+</script>
+
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+
+<script src="js/DragDrop.js"></script>
+
+<script src="libs/three/three.js"></script>
+<script src="libs/three/STLLoader.js"></script>
+<script src="libs/three/MTLLoader.js"></script>
+<script src="libs/three/OBJLoader.js"></script>
+<script src="libs/three/DDSLoader.js"></script>
+<script src="libs/three/stats.min.js"></script>
+<script src="libs/three/Detector.js"></script>
+<script src="libs/three/Projector.js"></script>
+<script src="libs/three/CanvasRenderer.js"></script>
+<script src="libs/three/dat.gui.min.js"></script>
+<script src="libs/three/SkyShader.js"></script>
+
+<script src="js/Layout.js"></script>
+<!--<script src="js/LoadOBJ&MTL.js"></script>-->
+<!--<script src="js/LoadSTL.js"></script>-->
+
+
+<!--<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">-->
+    <!--<div class="modal-dialog modal-lg" role="document">-->
+        <!--<div class="modal-content">-->
+            <!--...-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<script>
+//    $('#myModal').modal(options)
+//    var LayoutNum = 0;
+//    [
+//        'js/Layout.js',
+//        'js/easyModel.js'
+//    ].forEach(function(src) {
+//        setTimeout(function() {
+//            var script = document.createElement('script');
+//            script.src = src;
+//            script.async = true;
+//            document.head.appendChild(script);
+//        }, 5000);
+//
+//    });
+
+//var script = document.createElement('script');
+//
+//if(script.readyState) {  //IE
+//    script.onreadystatechange = function() {
+//        if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+//            script.onreadystatechange = null;
+//            alert(jQuery);
+//        }
+//    };
+//} else{//others
+//    script.onload = function() {
+//        var script1 = document.createElement('script');
+//            script1.src = "js/easyModel.js";
+//            script1.async = true;
+//            document.documentElement.appendChild(script1);
+//    }
+//}
+//script.src = "js/Layout.js"
+//document.documentElement.appendChild(script);
+//
+</script>
+
+</body>
+</html>

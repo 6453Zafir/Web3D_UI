@@ -15,13 +15,18 @@ initGrid();
 
 function init() {
     container = document.createElement('div');
-    document.body.appendChild(container);
+    container.id='canvasWindow';
+    // document.body.appendChild(container);
+    document.getElementById("canvasArea").appendChild(container);
+    container.style.zIndex = 0;
+    container.style.position="absolute";
+    container.style.overflow="hidden";
 
+    //set camera
     camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 2000);
+    camera.position.x = 150;
     camera.position.z = 850;
     camera.position.y = 300;
-
-    // / cameraTarget = new THREE.Vector3(0,1.3,0);
 
     scene = new THREE.Scene();
 
@@ -36,7 +41,22 @@ function init() {
     var onProgress = function ( xhr ) {
         if ( xhr.lengthComputable ) {
             var percentComplete = xhr.loaded / xhr.total * 100;
-            console.log( Math.round(percentComplete, 2) + '% downloaded' );
+            // console.log( Math.round(percentComplete, 2) + '% downloaded' );
+            if(Math.round(percentComplete, 2)<100){
+                document.getElementById("processing").style.display="inital";
+                document.getElementById("processingBar").style.width=Math.round(percentComplete, 2)+'%';
+                document.getElementById("processingText").innerHTML= Math.round(percentComplete, 2)+"%";
+            }else{
+                document.getElementById("processingBar").style.width=Math.round(percentComplete, 2)+'%';
+                document.getElementById("processingText").innerHTML= Math.round(percentComplete, 2)+"%";
+               document.getElementById("processing").className = document.getElementById("processing").className + " loading-container-hidden";
+
+                setTimeout(function () {
+                    document.getElementById("processing").style.display = "hidden";
+                }, 1500);
+            }
+
+
         }
     };
 

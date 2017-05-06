@@ -1,0 +1,97 @@
+body {margin:0;padding:0;}
+
+.loading-container {
+	position: absolute;
+	z-index: 3;
+	left: 40%;
+	top:40%;
+	width:20%;
+	height:20%;
+	padding:50px;
+	margin:auto;
+	transition: 1s;
+}
+.loading-container.loading-container-hidden
+{
+	opacity: 0;
+}
+
+.loading-container .loading-bar {
+	margin-bottom:40px;
+}
+.loading-bar {
+	width:500px;
+	margin:0px auto;
+	height:37px;
+	border-radius:5px;
+	background-color:#253938;
+	padding:4px 2px;
+	box-shadow:inset 3px 0px 10px rgba(0,0,0,0.1);
+}
+
+.amount {
+	/* we haven't included the colour yet, we'll get to that later. */
+	height:47px;
+	border-radius:5px;
+	white-space:nowrap;
+	overflow:hidden;
+	margin-top:-9px;
+	width: 80%;
+}
+
+.lines {
+	/* the lines overflow the container. This creates a continuous flow of the background */
+	width:200%;
+	/* We use a SVG file as the background */
+	background:url('lines.svg') repeat-x;
+	height:120%;
+	text-align:center;
+	margin-top:-50px;
+	/* Any overflow is hidden */
+	overflow:hidden;
+	border-radius:50px;
+	/* Implement the animations, we'll get to that later */
+	-webkit-animation:moveBars 0.5s linear infinite;
+	-moz-animation:moveBars 0.5s linear infinite;
+	-ms-animation:moveBars 0.5s linear infinite;
+	-o-animation:moveBars 0.5s linear infinite;
+	animation:moveBars 0.5s linear infinite;
+	font-weight:bold;
+	color:#fff;
+	font-size:18px;
+	text-shadow:0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.loaded {
+	line-height: 47px;
+	text-align:center;
+	font-family:Helvetica, sans-serif;
+	font-weight:bold;
+	position:relative;
+	font-size:25px;
+	text-shadow:0px 0px 10px rgba(0,0,0,0.2);
+	color:#fff;
+	z-index:11;
+}
+
+.green {
+	background-color:#8ac320;
+	box-shadow:inset 0px 4px 40px rgba(255,255,255,0.2), 0 10px 10px -5px #79aa1e , 0 7px 0 #628c14;
+}
+
+.blue {
+	background-color:#20b9c3;
+	box-shadow:inset 0px 4px 40px rgba(255,255,255,0.2), 0 10px 10px -5px #1e8aaa, 0 7px 0 #13768c;
+}
+
+.red {
+	background-color:#dc6565;
+	box-shadow:inset 0px 4px 40px rgba(255,255,255,0.2), 0 10px 10px -5px #d23333, 0 7px 0 #8c1212;
+}
+
+/* ANIMATIONS */
+@keyframes moveBars { 100% { margin-left:-180px;} }
+@-webkit-keyframes moveBars { 100% { margin-left:-180px;} }
+@-moz-keyframes moveBars { 100% { margin-left:-180px;} }
+@-ms-keyframes moveBars { 100% { margin-left:-180px;} }
+@-o-keyframes moveBars { 100% { margin-left:-180px;} }
