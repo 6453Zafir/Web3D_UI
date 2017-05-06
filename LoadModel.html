@@ -26,8 +26,8 @@
 <div id="control-panel" style="display: none">
     <div id="centeredmenu" >
         <ul id="myTab" class="nav nav-tabs">
-            <li class="active"><a href="#layout" data-toggle="tab">Layout</a></li>
-            <li><a href="#backgoround" data-toggle="tab">Background</a></li>
+            <!--<li  ><a href="#layout" data-toggle="tab">Layout</a></li>-->
+            <li class="active"><a href="#backgoround" data-toggle="tab">Background</a></li>
             <li><a href="#component" data-toggle="tab">Component</a></li>
             <li><a href="#color" data-toggle="tab">Color</a></li>
             <li><a href="#material" data-toggle="tab">Material</a></li>
@@ -36,22 +36,22 @@
         </ul>
     </div>
     <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="layout">
-            <div class="templateBlock">
-                <button class="templateButton" id="template0"></button>
-                <p>Basic Layout</p>
-            </div>
-            <div class="templateBlock">
-                <button class="templateButton" id="template1"></button>
-                <p>Full Screen with draggable wizard</p>
-            </div>
-            <div class="templateBlock">
-                <button class="templateButton" id="template2"></button>
-                <p>Basic Layout with map</p>
-            </div>
-        </div>
+        <!--<div class="tab-pane fade in active" id="layout">-->
+            <!--<div class="templateBlock">-->
+                <!--<button class="templateButton" id="template0"></button>-->
+                <!--<p>Basic Layout</p>-->
+            <!--</div>-->
+            <!--<div class="templateBlock">-->
+                <!--<button class="templateButton" id="template1"></button>-->
+                <!--<p>Full Screen with draggable wizard</p>-->
+            <!--</div>-->
+            <!--<div class="templateBlock">-->
+                <!--<button class="templateButton" id="template2"></button>-->
+                <!--<p>Basic Layout with map</p>-->
+            <!--</div>-->
+        <!--</div>-->
 
-        <div class="tab-pane fade" id="backgoround">
+        <div class="tab-pane fade in active" id="backgoround">
             <div class="templateBlock">
                 <button class="templateButton" id="color-bg"></button>
                 <p>Color Background</p>
@@ -110,18 +110,18 @@
 
     <!--<div class="grid" style="display: none"></div>-->
 
-    <!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;processing bar&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="loading-container" id="processing">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="loading-bar">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="amount red" id="processingBar">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="loaded" id="processingText">&ndash;&gt;-->
-    <!--&lt;!&ndash;0%&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="lines"></div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;processing bar end&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+    <!----------------------------processing bar------------------------------>
+    <!--<div class="loading-container" id="processing">-->
+    <!--<div class="loading-bar">-->
+    <!--<div class="amount red" id="processingBar">-->
+    <!--<div class="loaded" id="processingText">-->
+    <!--0%-->
+    <!--</div>-->
+    <!--<div class="lines"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--------------------------processing bar end------------------------------>
 </div>
 
 
@@ -182,16 +182,36 @@
 <!--<script src="js/LoadSTL.js"></script>-->
 
 
-<!--<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">-->
-    <!--<div class="modal-dialog modal-lg" role="document">-->
-        <!--<div class="modal-content">-->
-            <!--...-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal" style="top:20%">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="text-align: center;height: 250px;">
+            <div class="modal-header">
+                <h4 class="modal-title">Please choose a template</h4>
+            </div>
+            <div class="templateBlock">
+            <button class="templateButton" id="template1"></button>
+            <p>Basic Layout</p>
+            </div>
+            <div class="templateBlock">
+            <button class="templateButton" id="template2"></button>
+            <p>Full Screen with draggable wizard</p>
+            </div>
+            <div class="templateBlock">
+            <button class="templateButton" id="template3"></button>
+            <p>Basic Layout with map</p>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
-//    $('#myModal').modal(options)
-//    var LayoutNum = 0;
+    var LayoutNum = 0;
+    layoutController();
+
+    if(LayoutNum == 0){
+        $('#myModal').modal('show');
+    }else{
+        $('#myModal').modal('hide');
+    }
 //    [
 //        'js/Layout.js',
 //        'js/easyModel.js'

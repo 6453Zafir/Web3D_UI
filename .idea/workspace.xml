@@ -2,88 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9c64b8-9af4-42c8-8703-4cb5d097cb0b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Flashlight-512.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/canva-direction-control-icon-MACK5sh49fs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/directLight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/grid1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/keyboard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/keyboard1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/nogrid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/nogrid1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/original.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/perspective.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pointLight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/reflected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/rotate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/color-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/img-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/template1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/template2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/upload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-bg_diagonals-medium_20_d34d17_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-bg_gloss-wave_45_817865_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-bg_gloss-wave_60_fece2f_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-bg_gloss-wave_70_ffdd57_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-bg_gloss-wave_90_fff9e5_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-bg_highlight-soft_100_feeebd_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-bg_inset-soft_30_ffffff_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-icons_3d3d3d_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-icons_bd7b00_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-icons_d19405_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-icons_eb990f_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-icons_ed9f26_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-icons_fadc7a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/images/ui-icons_ffe180_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BasicLayout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FullScreenLayout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LoadModel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/lines.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Background.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/DragDrop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Layout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/easyModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-1.3.2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/wizard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/Vue/vue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/Vue/vue.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/bootstrap/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/bootstrap/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/AUTHORS.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/external/jquery/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.structure.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jquery-ui-1.12.1.custom/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/three/CanvasRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/three/Projector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/three/SkyShader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/three/dat.gui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/version1.0.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LoadSTLModel.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadModel.html" afterPath="$PROJECT_DIR$/LoadModel.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/LoadOBJ&amp;MTL.js" afterPath="$PROJECT_DIR$/js/LoadOBJ&amp;MTL.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/DDSLoader.js" afterPath="$PROJECT_DIR$/libs/three/DDSLoader.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/Detector.js" afterPath="$PROJECT_DIR$/libs/three/Detector.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/MTLLoader.js" afterPath="$PROJECT_DIR$/libs/three/MTLLoader.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/OBJLoader.js" afterPath="$PROJECT_DIR$/libs/three/OBJLoader.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/STLLoader.js" afterPath="$PROJECT_DIR$/libs/three/STLLoader.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/Stats.js" afterPath="$PROJECT_DIR$/libs/three/Stats.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/Tween.js" afterPath="$PROJECT_DIR$/libs/three/Tween.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/geometry.js" afterPath="$PROJECT_DIR$/libs/three/geometry.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/stats.min.js" afterPath="$PROJECT_DIR$/libs/three/stats.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/three.js" afterPath="$PROJECT_DIR$/libs/three/three.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Layout.js" afterPath="$PROJECT_DIR$/js/Layout.js" />
     </list>
     <ignored path="LoadSTLTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,33 +30,35 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="120" column="11" selection-start-line="120" selection-start-column="11" selection-end-line="120" selection-end-column="11" />
+            <state relative-caret-position="496">
+              <caret line="396" column="10" selection-start-line="396" selection-start-column="10" selection-end-line="396" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadModel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="193" column="24" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
+            <state relative-caret-position="1158">
+              <caret line="213" column="5" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Layout.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Layout.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="175">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               <folding>
-                <element signature="e#0#40#0" expanded="false" />
+                <element signature="n#!!doc;n#layoutController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -154,8 +77,8 @@
       <file leaf-file-name="BasicLayout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BasicLayout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="91">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -191,13 +114,13 @@
         <option value="$PROJECT_DIR$/libs/bootstrap/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/widget.html" />
         <option value="$PROJECT_DIR$/texture/BasicLayout.html" />
-        <option value="$PROJECT_DIR$/js/Layout.js" />
         <option value="$PROJECT_DIR$/js/Background.js" />
         <option value="$PROJECT_DIR$/js/easyModel.js" />
         <option value="$PROJECT_DIR$/FullScreenLayout.html" />
         <option value="$PROJECT_DIR$/BasicLayout.html" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/LoadModel.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/Layout.js" />
       </list>
     </option>
   </component>
@@ -499,12 +422,12 @@
       <workItem from="1493815401480" duration="126000" />
       <workItem from="1493865037909" duration="14869000" />
       <workItem from="1493952350876" duration="6940000" />
-      <workItem from="1494051212430" duration="6567000" />
+      <workItem from="1494051212430" duration="7846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201458000" />
+    <option name="totallyTimeSpent" value="202737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -576,6 +499,8 @@
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -608,6 +533,8 @@
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -633,6 +560,8 @@
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -868,18 +797,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BasicLayout.html">
+    <entry file="file://$PROJECT_DIR$/LoadModel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="1158">
+          <caret line="213" column="5" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="120" column="11" selection-start-line="120" selection-start-column="11" selection-end-line="120" selection-end-column="11" />
+        <state relative-caret-position="496">
+          <caret line="396" column="10" selection-start-line="396" selection-start-column="10" selection-end-line="396" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -892,23 +826,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Layout.js">
+    <entry file="file://$PROJECT_DIR$/BasicLayout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="91">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoadModel.html">
+    <entry file="file://$PROJECT_DIR$/js/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="193" column="24" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
+        <state relative-caret-position="175">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc;n#layoutController#0" expanded="false" />
           </folding>
         </state>
       </provider>

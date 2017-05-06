@@ -8,7 +8,7 @@ body{
     margin: 0px;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: #253938;
+    background-color: #f7f7f7;
     font-family: "Microsoft YaHei UI Light";
 }
 
@@ -388,13 +388,13 @@ button:focus{
     box-shadow:0 0 10px rgba(174, 172, 180, .5);
 }
 
-#template0{
+#template1{
     background-image: url("../images/templates/template0.jpg");
 }
-#template1{
+#template2{
     background-image: url("../images/templates/template1.jpg");
 }
-#template2{
+#template3{
     background-image: url("../images/templates/template2.jpg");
 }
 #color-bg{
