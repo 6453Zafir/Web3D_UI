@@ -103,10 +103,7 @@
 
 <div class="canvasArea" id="canvasArea">
 
-    <!--&lt;!&ndash;<div class="ListArea">&ndash;&gt;-->
-        <!--&lt;!&ndash;<button class="btn btn-default addItemButton">+</button>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--<div class="moduleArea" id="moduleArea"></div>-->
+    <div class="moduleArea" id="moduleArea"></div>
 
     <!--<div class="grid" style="display: none"></div>-->
 
@@ -178,11 +175,14 @@
 <script src="libs/three/SkyShader.js"></script>
 
 <script src="js/Layout.js"></script>
+<script src="js/easyModel.js"></script>
+<!--------------------load different model----------------->
 <!--<script src="js/LoadOBJ&MTL.js"></script>-->
 <!--<script src="js/LoadSTL.js"></script>-->
+<!--------------------load different model----------------->
 
-
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal" style="top:20%">
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" id="myModal" backdrop="static" data-keyboard="false" style="top:20%">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content" style="text-align: center;height: 250px;">
             <div class="modal-header">
@@ -204,14 +204,19 @@
     </div>
 </div>
 <script>
+//----------------modal control-------------------------------
     var LayoutNum = 0;
     layoutController();
-
+    $('#myModal').modal({
+        backdrop: 'static',
+        keyboard: false
+    })
     if(LayoutNum == 0){
         $('#myModal').modal('show');
     }else{
         $('#myModal').modal('hide');
     }
+//----------------modal control end-------------------------------
 //    [
 //        'js/Layout.js',
 //        'js/easyModel.js'
