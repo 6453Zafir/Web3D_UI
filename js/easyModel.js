@@ -1,7 +1,7 @@
 /**
  * Created by admin on 2017/5/2.
  */
-function renderCanvas() {
+function renderEasyModel() {
 
     if(LayoutNum !=0){
         var container;
@@ -9,7 +9,7 @@ function renderCanvas() {
         var renderer;
         var camera;
         var scene;
-        var light;
+        // var light;
         var cube;
         var plane;
         var stats;
@@ -35,25 +35,23 @@ function renderCanvas() {
         })
 
 
-
         function initThree() {
             container = document.getElementById('moduleArea');
             width =container.clientWidth;
             height = container.clientHeight;
-            renderer = new THREE.WebGLRenderer({antialias:true});
-            renderer.setSize(width,height);
-            container.appendChild(renderer.domElement);
-            renderer.setClearColor(0xFFFFFF,1.0);
 
-
-            camera = new THREE.PerspectiveCamera(65,width/height,1,5000);
+            camera = new THREE.PerspectiveCamera(65,width/height,1,1000);
             camera.position.set(0,150,500);
 
             scene = new THREE.Scene();
 
-            // light = new THREE.DirectionalLight(0xff0000,1.0,0);
-            // light.position.set(200,200,200);
-            // scene.add(light);
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(width,height);
+            container.appendChild(renderer.domElement);
+            renderer.setClearColor(0xffffff,1);
+
+            initSky();
+
 
             //cube
             var Cubegeometry;
@@ -81,70 +79,6 @@ function renderCanvas() {
             var material = new THREE.MeshBasicMaterial({color:0xe0e0e0,overdraw:0.5});
             plane = new THREE.Mesh(geometry,material);
             scene.add(plane);
-
-            //sky
-            sky = new THREE.Sky();
-            scene.add( sky.mesh );
-            // Add Sun Helper
-            sunSphere = new THREE.Mesh(
-                new THREE.SphereBufferGeometry( 20000, 16, 8 ),
-                new THREE.MeshBasicMaterial( { color: 0xffffff } )
-            );
-            sunSphere.position.y =-70000;
-            sunSphere.visible = false;
-            scene.add( sunSphere );
-
-            var effectController  = {
-                turbidity: 10,
-                rayleigh: 2,
-                mieCoefficient: 0.005,
-                mieDirectionalG: 0.8,
-                luminance: 1,
-                inclination: 0.49, // elevation / inclination
-                azimuth: 0.25, // Facing front,
-                sun: ! true
-            };
-
-            var distance = 400000;
-
-            function guiChanged() {
-
-                var uniforms = sky.uniforms;
-                uniforms.turbidity.value = effectController.turbidity;
-                uniforms.rayleigh.value = effectController.rayleigh;
-                uniforms.luminance.value = effectController.luminance;
-                uniforms.mieCoefficient.value = effectController.mieCoefficient;
-                uniforms.mieDirectionalG.value = effectController.mieDirectionalG;
-
-                var theta = Math.PI * ( effectController.inclination - 0.5 );
-                var phi = 2 * Math.PI * ( effectController.azimuth - 0.5 );
-
-                sunSphere.position.x = distance * Math.cos( phi );
-                sunSphere.position.y = distance * Math.sin( phi ) * Math.sin( theta );
-                sunSphere.position.z = distance * Math.sin( phi ) * Math.cos( theta );
-
-                sunSphere.visible = effectController.sun;
-
-                sky.uniforms.sunPosition.value.copy( sunSphere.position );
-
-                renderer.render( scene, camera );
-
-            }
-
-            var gui = new dat.GUI();
-
-            gui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
-            gui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
-            gui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
-            gui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
-            gui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
-            gui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
-            gui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
-            gui.add( effectController, "sun" ).onChange( guiChanged );
-
-            guiChanged();
-
-
 
             //stats
             stats= new Stats();
@@ -243,6 +177,71 @@ function renderCanvas() {
         }
 
 
+
+        function initSky() {
+            //sky
+            sky = new THREE.Sky();
+            scene.add( sky.mesh );
+            // Add Sun Helper
+            sunSphere = new THREE.Mesh(
+                new THREE.SphereBufferGeometry( 20000, 16, 8 ),
+                new THREE.MeshBasicMaterial( { color: 0xffffff } )
+            );
+            sunSphere.position.y =-70000;
+            sunSphere.visible = false;
+            scene.add( sunSphere );
+
+            var effectController  = {
+                turbidity: 10,
+                rayleigh: 2,
+                mieCoefficient: 0.005,
+                mieDirectionalG: 0.8,
+                luminance: 1,
+                inclination: 0.49, // elevation / inclination
+                azimuth: 0.25, // Facing front,
+                sun: ! true
+            };
+
+            var distance = 400000;
+
+            function guiChanged() {
+
+                var uniforms = sky.uniforms;
+                uniforms.turbidity.value = effectController.turbidity;
+                uniforms.rayleigh.value = effectController.rayleigh;
+                uniforms.luminance.value = effectController.luminance;
+                uniforms.mieCoefficient.value = effectController.mieCoefficient;
+                uniforms.mieDirectionalG.value = effectController.mieDirectionalG;
+
+                var theta = Math.PI * ( effectController.inclination - 0.5 );
+                var phi = 2 * Math.PI * ( effectController.azimuth - 0.5 );
+
+                sunSphere.position.x = distance * Math.cos( phi );
+                sunSphere.position.y = distance * Math.sin( phi ) * Math.sin( theta );
+                sunSphere.position.z = distance * Math.sin( phi ) * Math.cos( theta );
+
+                sunSphere.visible = effectController.sun;
+
+                sky.uniforms.sunPosition.value.copy( sunSphere.position );
+
+                renderer.render( scene, camera );
+
+            }
+
+            var gui = new dat.GUI();
+
+            gui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
+            gui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
+            gui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
+            gui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
+            gui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
+            gui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
+            gui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
+            gui.add( effectController, "sun" ).onChange( guiChanged );
+
+            guiChanged();
+        }
+
 //    animate
         function animate() {
             requestAnimationFrame(animate);
@@ -255,7 +254,6 @@ function renderCanvas() {
 
             plane.rotation.y = cube.rotation.y += (targetRotation-cube.rotation.y)*0.005;
             plane.rotation.x = cube.rotation.x += (targetYRotation-cube.rotation.x)*0.001;
-//        camera.lookAt(scene.position)
             renderer.clear();
             renderer.render(scene,camera);
 

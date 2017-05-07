@@ -19,10 +19,6 @@ function layoutController() {
     })
 }
 
-
-var easyModelScript = document.createElement('script');
-easyModelScript.src = "js/easyModel.js";
-
 function basicLayout() {
     var html = [
         '<div class="ListArea">',
@@ -32,12 +28,13 @@ function basicLayout() {
     $("#canvasArea").prepend(html);
     $("#moduleArea").removeClass("moduleArea");
     $("#moduleArea").addClass("HalfModuleArea");
-    renderCanvas();
+    renderEasyModel()
+
 }
 function FullLayout() {
     $("#moduleArea").removeClass("HalfModuleArea");
     $("#moduleArea").addClass("moduleArea");
-    $("body").append(easyModelScript);
+
 }
 function mapLayout() {
 
