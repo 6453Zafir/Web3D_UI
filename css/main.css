@@ -400,6 +400,9 @@ button:focus{
 #color-bg{
     background-image: url("../images/templates/color-bg.jpg");
 }
+#skyShader-bg{
+    background-image: url("../images/templates/skyShader-bg.jpg");
+}
 #image-bg{
     background-image: url("../images/templates/img-bg.jpg");
 }

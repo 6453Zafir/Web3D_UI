@@ -4,7 +4,7 @@
 function layoutController() {
     // $("#canvasArea").load("FullScreenLayout.html");
     $("#template1").on("click", function() {
-        LayoutNum=1;
+        LayoutNum = 1;
         $('#myModal').modal('hide');
         basicLayout();
     })
@@ -20,6 +20,7 @@ function layoutController() {
 }
 
 function basicLayout() {
+
     var html = [
         '<div class="ListArea">',
         '<button class="btn btn-default addItemButton">+</button>',
@@ -29,7 +30,7 @@ function basicLayout() {
     $("#moduleArea").removeClass("moduleArea");
     $("#moduleArea").addClass("HalfModuleArea");
     renderEasyModel()
-
+    backgroundController();
 }
 function FullLayout() {
     $("#moduleArea").removeClass("HalfModuleArea");
