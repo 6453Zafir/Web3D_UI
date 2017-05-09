@@ -180,9 +180,9 @@ function renderEasyModel() {
             renderer.render(scene,camera);
 
         }
-    }else{
-        alert("haven't choose template yet");
-    }
+        }else{
+            alert("haven't choose template yet");
+        }
 }
 
 function initSky() {
@@ -247,4 +247,8 @@ function initSky() {
     gui.add( effectController, "sun" ).onChange( guiChanged );
 
     guiChanged();
+
+    $(".dg.ac").appendTo("#moduleArea");
+    $(".dg.ac").css("position","absolute");
+    $(".dg.ac").css("top","15px");
 }

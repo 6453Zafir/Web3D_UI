@@ -17,6 +17,7 @@ function layoutController() {
         LayoutNum=3;
         $('#myModal').modal('hide');
     })
+
 }
 
 function basicLayout() {
@@ -35,7 +36,8 @@ function basicLayout() {
 function FullLayout() {
     $("#moduleArea").removeClass("HalfModuleArea");
     $("#moduleArea").addClass("moduleArea");
-
+    renderEasyModel()
+    backgroundController();
 }
 function mapLayout() {
 
