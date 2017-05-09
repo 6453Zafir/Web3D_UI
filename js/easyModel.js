@@ -236,6 +236,7 @@ function initSky() {
     }
 
     var gui = new dat.GUI();
+    gui.domElement.parentNode.id= 'skyShader-controller';
 
     gui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
     gui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
@@ -251,4 +252,13 @@ function initSky() {
     $(".dg.ac").appendTo("#moduleArea");
     $(".dg.ac").css("position","absolute");
     $(".dg.ac").css("top","15px");
+
+
+}
+
+function clearSky(){
+    scene.remove(sky);
+    scene.remove(sunSphere);
+    var element = document.getElementById("skyShader-controller");
+    element.parentNode.removeChild(element);
 }
