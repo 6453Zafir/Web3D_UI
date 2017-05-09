@@ -25,6 +25,9 @@ var targetYRotation=0;
 var windowHalfX = window.innerWidth/2;
 var windowHalfY = window.innerHeight/2;
 
+var skyShadergui;
+
+
 function renderEasyModel() {
 
     if(LayoutNum !=0){
@@ -235,17 +238,17 @@ function initSky() {
 
     }
 
-    var gui = new dat.GUI();
-    gui.domElement.parentNode.id= 'skyShader-controller';
+    skyShadergui = new dat.GUI();
+    skyShadergui.domElement.parentNode.id= 'skyShader-controller';
 
-    gui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
-    gui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
-    gui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
-    gui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
-    gui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
-    gui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
-    gui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
-    gui.add( effectController, "sun" ).onChange( guiChanged );
+    skyShadergui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
+    skyShadergui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
+    skyShadergui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
+    skyShadergui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
+    skyShadergui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
+    skyShadergui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
+    skyShadergui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
+    skyShadergui.add( effectController, "sun" ).onChange( guiChanged );
 
     guiChanged();
 
@@ -257,8 +260,8 @@ function initSky() {
 }
 
 function clearSky(){
-    scene.remove(sky);
-    scene.remove(sunSphere);
-    var element = document.getElementById("skyShader-controller");
-    element.parentNode.removeChild(element);
+    scene.remove(sky.mesh);
+    scene.remove(sunSphere.mesh);
+    renderer.render( scene, camera );
+    skyShadergui.destroy();
 }
