@@ -268,11 +268,6 @@ function initSky() {
         sunSphere.visible = true;
         skyShadergui.show();
     }
-
-
-
-
-
 }
 
 function clearSky(){
@@ -282,28 +277,38 @@ function clearSky(){
     skyShadergui.hide();
 }
 
-
 function initBgColor(){
-    var controlbgColor  = {
-        color: backgroundColor,
-        opacity: backgroundOpacity,
-    };
+    if(!colordBgNewed){
+        var controlbgColor  = {
+            color: backgroundColor,
+            opacity: backgroundOpacity,
+        };
 
-    bgColorgui = new dat.GUI();
-    bgColorgui.domElement.parentNode.id= 'bgColor-controller';
+        bgColorgui = new dat.GUI();
+        bgColorgui.domElement.parentNode.id= 'bgColor-controller';
 
-    $(".dg.ac").appendTo("#moduleArea");
-    $(".dg.ac").css("position","absolute");
-    $(".dg.ac").css("top","15px");
+        $(".dg.ac").appendTo("#moduleArea");
+        $(".dg.ac").css("position","absolute");
+        $(".dg.ac").css("top","15px");
 
-    bgColorgui.addColor(controlbgColor, "color").onChange(guichanged());
-    bgColorgui.add(controlbgColor, "opacity",0,1).onChange(guichanged());
+        bgColorgui.addColor(controlbgColor, "color").onChange(function (e) {
+            renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
+            renderer.render( scene, camera );
+        });
+        bgColorgui.add(controlbgColor, "opacity",0,1).onChange(function (e) {
+            renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
+            renderer.render( scene, camera );
+        });
 
-    function guichanged() {
-        renderer.setClearColor(backgroundColor,backgroundOpacity);
-        renderer.render( scene, camera );
+        // function guichanged() {
+        //     renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
+        //     renderer.render( scene, camera );
+        // }
+        // guichanged();
+        colordBgNewed =true;
+    }else{
+        bgColorgui.show();
     }
-
 }
 
 function clearBgcolor(){

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9c64b8-9af4-42c8-8703-4cb5d097cb0b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadModel.html" afterPath="$PROJECT_DIR$/LoadModel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Background.js" afterPath="$PROJECT_DIR$/js/Background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easyModel.js" afterPath="$PROJECT_DIR$/js/easyModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/three/dat.gui.min.js" afterPath="$PROJECT_DIR$/libs/three/dat.gui.min.js" />
     </list>
     <ignored path="LoadSTLTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +30,12 @@
       <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadModel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5215">
-              <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
+            <state relative-caret-position="-4725">
+              <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -58,8 +58,8 @@
       <file leaf-file-name="easyModel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/easyModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="268" column="28" selection-start-line="268" selection-start-column="28" selection-end-line="268" selection-end-column="28" />
+            <state relative-caret-position="8715">
+              <caret line="306" column="0" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="24" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -103,8 +103,9 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/Layout.js" />
         <option value="$PROJECT_DIR$/FullScreenLayout.html" />
-        <option value="$PROJECT_DIR$/LoadModel.html" />
         <option value="$PROJECT_DIR$/js/Background.js" />
+        <option value="$PROJECT_DIR$/libs/three/dat.gui.min.js" />
+        <option value="$PROJECT_DIR$/LoadModel.html" />
         <option value="$PROJECT_DIR$/js/easyModel.js" />
       </list>
     </option>
@@ -399,12 +400,12 @@
       <workItem from="1494292835362" duration="6832000" />
       <workItem from="1494310810848" duration="2000" />
       <workItem from="1494313694227" duration="7804000" />
-      <workItem from="1494381126570" duration="10280000" />
+      <workItem from="1494381126570" duration="12727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247995000" />
+    <option name="totallyTimeSpent" value="250442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1924" height="1084" extended-state="0" />
@@ -471,6 +472,7 @@
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -505,6 +507,7 @@
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -532,6 +535,7 @@
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -756,33 +760,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/three/dat.gui.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="13" column="19422" selection-start-line="13" selection-start-column="19420" selection-end-line="13" selection-end-column="19422" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1295">
           <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc;n#layoutController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoadModel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5215">
-          <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -797,10 +780,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libs/three/dat.gui.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="13" column="20943" selection-start-line="13" selection-start-column="20943" selection-end-line="13" selection-end-column="20943" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoadModel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4725">
+          <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/easyModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="268" column="28" selection-start-line="268" selection-start-column="28" selection-end-line="268" selection-end-column="28" />
+        <state relative-caret-position="8715">
+          <caret line="306" column="0" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="24" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
