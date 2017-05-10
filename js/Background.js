@@ -27,7 +27,13 @@ function backgroundController() {
         })
         $("#image-bg").on("click", function () {
             if (BackgroundNum != 3) {
+                if(BackgroundNum==1){
+                    clearBgcolor();
+                }else if(BackgroundNum==2){
+                    clearSky()
+                }
                 BackgroundNum = 3;
+                initImageBackground();
             } else {
             }
         })

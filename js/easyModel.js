@@ -60,8 +60,6 @@ function renderEasyModel() {
             container.appendChild(renderer.domElement);
             renderer.setClearColor(backgroundColor,backgroundOpacity);
 
-
-
             //cube
             var Cubegeometry;
             var Cubematerial;
@@ -316,6 +314,30 @@ function clearBgcolor(){
 }
 
 
+function initImageBackground() {
+    var backgroundTexture = THREE.TextureLoader( 'images/black.jpg' );
+    var bg = new THREE.Mesh(
+        new THREE.PlaneGeometry(2, 2, 0),
+        new THREE.MeshBasicMaterial({map: backgroundTexture})
+    );
+
+// The bg plane shouldn't care about the z-buffer.
+    bg.material.depthTest = false;
+    bg.material.depthWrite = false;
+
+    var bgScene = new THREE.Scene();
+    var bgCam = new THREE.Camera();
+    bgScene.add(bgCam);
+    bgScene.add(bg);
+
+    renderer.autoClear = false;
+    renderer.clear();
+    renderer.render(bgScene, bgCam);
+}
+
+function clearImageBackground() {
+    
+}
 // ------------------------dat gui show-hide controller-----------------------
 dat.GUI.prototype.toggleHide = function() {
     if(this.domElement.hasAttribute("hidden")) {
