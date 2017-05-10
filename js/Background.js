@@ -7,35 +7,34 @@ function backgroundController() {
     } else {
         $("#skyShader-bg").on("click", function () {
             if (BackgroundNum != 2) {
+                if(BackgroundNum == 1){
+                    clearBgcolor();
+                }
                 BackgroundNum = 2;
                 initSky();
             } else {
-                console.log("it's already Sky shader background")
             }
         })
         $("#color-bg").on("click", function () {
             if (BackgroundNum != 1) {
+                if(BackgroundNum == 2){
+                    clearSky();
+                }
                 BackgroundNum = 1;
-                clearSky();
-                console.log(" now it's colored background")
+                initBgColor();
             } else {
-                console.log("it's already colored background")
             }
         })
         $("#image-bg").on("click", function () {
             if (BackgroundNum != 3) {
                 BackgroundNum = 3;
-                console.log(" now it's image background")
             } else {
-                console.log(" it's already image background")
             }
         })
         $("#skybox-bg").on("click", function () {
             if (BackgroundNum !=4) {
                 BackgroundNum = 4;
-                console.log(" now it's skybox background")
             } else {
-                console.log("it's already skybox background")
             }
         })
     }

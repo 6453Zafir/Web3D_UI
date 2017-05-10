@@ -9,7 +9,14 @@ var scene;
 // var light;
 var cube;
 var stats;
+
+
 var sky, sunSphere;
+var backgroundColor = 0xffffff;
+var backgroundOpacity = 1;
+
+var skyShaderNewed = false;
+var colordBgNewed = false;
 
 var mouseX=0;
 var mouseXOnMouseDown=0;
@@ -26,7 +33,7 @@ var windowHalfX = window.innerWidth/2;
 var windowHalfY = window.innerHeight/2;
 
 var skyShadergui;
-
+var bgColorgui;
 
 function renderEasyModel() {
 
@@ -51,7 +58,7 @@ function renderEasyModel() {
             renderer = new THREE.WebGLRenderer();
             renderer.setSize(width,height);
             container.appendChild(renderer.domElement);
-            renderer.setClearColor(0xffffff,1);
+            renderer.setClearColor(backgroundColor,backgroundOpacity);
 
 
 
@@ -190,78 +197,134 @@ function renderEasyModel() {
 
 function initSky() {
     //sky
-    sky = new THREE.Sky();
-    scene.add( sky.mesh );
-    // Add Sun Helper
-    sunSphere = new THREE.Mesh(
-        new THREE.SphereBufferGeometry( 20000, 16, 8 ),
-        new THREE.MeshBasicMaterial( { color: 0xffffff } )
-    );
-    sunSphere.position.y =-70000;
-    sunSphere.visible = false;
-    scene.add( sunSphere );
+    if(!skyShaderNewed){
+        sky = new THREE.Sky();
+        scene.add( sky.mesh );
+        // Add Sun Helper
+        sunSphere = new THREE.Mesh(
+            new THREE.SphereBufferGeometry( 20000, 16, 8 ),
+            new THREE.MeshBasicMaterial( { color: 0xffffff } )
+        );
+        sunSphere.position.y =-70000;
+        sunSphere.visible = false;
+        scene.add( sunSphere );
+        skyShaderNewed=true;
+        var effectController  = {
+            turbidity: 10,
+            rayleigh: 2,
+            mieCoefficient: 0.005,
+            mieDirectionalG: 0.8,
+            luminance: 1,
+            inclination: 0.49, // elevation / inclination
+            azimuth: 0.25, // Facing front,
+            sun: ! true
+        };
 
-    var effectController  = {
-        turbidity: 10,
-        rayleigh: 2,
-        mieCoefficient: 0.005,
-        mieDirectionalG: 0.8,
-        luminance: 1,
-        inclination: 0.49, // elevation / inclination
-        azimuth: 0.25, // Facing front,
-        sun: ! true
-    };
+        var distance = 400000;
 
-    var distance = 400000;
+        function guiChanged() {
 
-    function guiChanged() {
+            var uniforms = sky.uniforms;
+            uniforms.turbidity.value = effectController.turbidity;
+            uniforms.rayleigh.value = effectController.rayleigh;
+            uniforms.luminance.value = effectController.luminance;
+            uniforms.mieCoefficient.value = effectController.mieCoefficient;
+            uniforms.mieDirectionalG.value = effectController.mieDirectionalG;
 
-        var uniforms = sky.uniforms;
-        uniforms.turbidity.value = effectController.turbidity;
-        uniforms.rayleigh.value = effectController.rayleigh;
-        uniforms.luminance.value = effectController.luminance;
-        uniforms.mieCoefficient.value = effectController.mieCoefficient;
-        uniforms.mieDirectionalG.value = effectController.mieDirectionalG;
+            var theta = Math.PI * ( effectController.inclination - 0.5 );
+            var phi = 2 * Math.PI * ( effectController.azimuth - 0.5 );
 
-        var theta = Math.PI * ( effectController.inclination - 0.5 );
-        var phi = 2 * Math.PI * ( effectController.azimuth - 0.5 );
+            sunSphere.position.x = distance * Math.cos( phi );
+            sunSphere.position.y = distance * Math.sin( phi ) * Math.sin( theta );
+            sunSphere.position.z = distance * Math.sin( phi ) * Math.cos( theta );
 
-        sunSphere.position.x = distance * Math.cos( phi );
-        sunSphere.position.y = distance * Math.sin( phi ) * Math.sin( theta );
-        sunSphere.position.z = distance * Math.sin( phi ) * Math.cos( theta );
+            sunSphere.visible = effectController.sun;
 
-        sunSphere.visible = effectController.sun;
+            sky.uniforms.sunPosition.value.copy( sunSphere.position );
 
-        sky.uniforms.sunPosition.value.copy( sunSphere.position );
+            renderer.render( scene, camera );
 
-        renderer.render( scene, camera );
+        }
 
+        skyShadergui = new dat.GUI();
+        skyShadergui.domElement.parentNode.id= 'skyShader-controller';
+
+        skyShadergui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
+        skyShadergui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
+        skyShadergui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
+        skyShadergui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
+        skyShadergui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
+        skyShadergui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
+        skyShadergui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
+        skyShadergui.add( effectController, "sun" ).onChange( guiChanged );
+
+        guiChanged();
+
+        $(".dg.ac").appendTo("#moduleArea");
+        $(".dg.ac").css("position","absolute");
+        $(".dg.ac").css("top","15px");
+    }else{
+        sky.mesh.visible = true;
+        sunSphere.visible = true;
+        skyShadergui.show();
     }
 
-    skyShadergui = new dat.GUI();
-    skyShadergui.domElement.parentNode.id= 'skyShader-controller';
 
-    skyShadergui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
-    skyShadergui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
-    skyShadergui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
-    skyShadergui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
-    skyShadergui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
-    skyShadergui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
-    skyShadergui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
-    skyShadergui.add( effectController, "sun" ).onChange( guiChanged );
 
-    guiChanged();
-
-    $(".dg.ac").appendTo("#moduleArea");
-    $(".dg.ac").css("position","absolute");
-    $(".dg.ac").css("top","15px");
 
 
 }
 
 function clearSky(){
-    scene.remove(sky.mesh);
-    scene.remove(sunSphere.mesh);
+    sky.mesh.visible = false;
+    sunSphere.visible = false;
     renderer.render( scene, camera );
-    skyShadergui.destroy();
+    skyShadergui.hide();
 }
+
+
+function initBgColor(){
+    var controlbgColor  = {
+        color: backgroundColor,
+        opacity: backgroundOpacity,
+    };
+
+    bgColorgui = new dat.GUI();
+    bgColorgui.domElement.parentNode.id= 'bgColor-controller';
+
+    $(".dg.ac").appendTo("#moduleArea");
+    $(".dg.ac").css("position","absolute");
+    $(".dg.ac").css("top","15px");
+
+    bgColorgui.addColor(controlbgColor, "color").onChange(guichanged());
+    bgColorgui.add(controlbgColor, "opacity",0,1).onChange(guichanged());
+
+    function guichanged() {
+        renderer.setClearColor(backgroundColor,backgroundOpacity);
+        renderer.render( scene, camera );
+    }
+
+}
+
+function clearBgcolor(){
+    bgColorgui.hide();
+}
+
+
+// ------------------------dat gui show-hide controller-----------------------
+dat.GUI.prototype.toggleHide = function() {
+    if(this.domElement.hasAttribute("hidden")) {
+        this.domElement.removeAttribute("hidden");
+    } else {
+        this.domElement.setAttribute("hidden", true);
+    }
+};
+
+dat.GUI.prototype.hide = function() {
+    this.domElement.setAttribute("hidden", true);
+};
+
+dat.GUI.prototype.show = function() {
+    this.domElement.removeAttribute("hidden");
+};
+// ------------------------dat gui show-hide controller-----------------------
