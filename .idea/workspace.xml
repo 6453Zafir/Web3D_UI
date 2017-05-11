@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9c64b8-9af4-42c8-8703-4cb5d097cb0b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/black-image-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/default-image-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/gradient-image-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/imagebg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/imagebg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/imagebg-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/templates/upload-image-bg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FullScreenLayout.html" afterPath="$PROJECT_DIR$/FullScreenLayout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadModel.html" afterPath="$PROJECT_DIR$/LoadModel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Background.js" afterPath="$PROJECT_DIR$/js/Background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easyModel.js" afterPath="$PROJECT_DIR$/js/easyModel.js" />
     </list>
@@ -31,8 +39,8 @@
       <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadModel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="59" />
+            <state relative-caret-position="231">
+              <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -44,36 +52,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Background.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Background.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-              <folding>
-                <element signature="n#!!doc;n#backgroundController#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="770">
+              <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="easyModel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="421" column="0" selection-start-line="421" selection-start-column="0" selection-end-line="421" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easyModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/easyModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="314" column="4" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="4" />
+            <state relative-caret-position="204">
+              <caret line="318" column="75" selection-start-line="318" selection-start-column="75" selection-end-line="318" selection-end-column="75" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FullScreenLayout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FullScreenLayout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="41" column="69" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="69" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -111,13 +117,13 @@
         <option value="$PROJECT_DIR$/BasicLayout.html" />
         <option value="$PROJECT_DIR$/js/Shy.js" />
         <option value="$PROJECT_DIR$/js/Sky.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/Layout.js" />
         <option value="$PROJECT_DIR$/libs/three/dat.gui.min.js" />
-        <option value="$PROJECT_DIR$/LoadModel.html" />
         <option value="$PROJECT_DIR$/FullScreenLayout.html" />
-        <option value="$PROJECT_DIR$/js/Background.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/LoadModel.html" />
         <option value="$PROJECT_DIR$/js/easyModel.js" />
+        <option value="$PROJECT_DIR$/js/Background.js" />
       </list>
     </option>
   </component>
@@ -230,6 +236,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web3D_UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web3D_UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -248,19 +268,19 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/0-study/毕设/Web3D_UI/js/Background.js" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\0-study\毕设\Web3D_UI\images" />
-      <recent name="D:\0-study\毕设\Web3D_UI\images\templates" />
-      <recent name="D:\0-study\毕设\Web3D_UI\libs\Vue" />
-      <recent name="D:\0-study\毕设\Web3D_UI\libs\three" />
-      <recent name="D:\0-study\毕设\Web3D_UI" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\0-study\毕设\Web3D_UI\libs\three" />
       <recent name="D:\0-study\毕设\Web3D_UI\js" />
       <recent name="D:\0-study\毕设\Web3D_UI\libs" />
       <recent name="D:\0-study\毕设\Web3D_UI\js\tab-jquery" />
       <recent name="D:\0-study\毕设\Web3D_UI\css\tab-jquery" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\0-study\毕设\Web3D_UI\images\templates" />
+      <recent name="D:\0-study\毕设\Web3D_UI\images" />
+      <recent name="D:\0-study\毕设\Web3D_UI\libs\Vue" />
+      <recent name="D:\0-study\毕设\Web3D_UI\libs\three" />
+      <recent name="D:\0-study\毕设\Web3D_UI" />
     </key>
   </component>
   <component name="RunManager">
@@ -398,20 +418,21 @@
       <workItem from="1494310810848" duration="2000" />
       <workItem from="1494313694227" duration="7804000" />
       <workItem from="1494381126570" duration="16046000" />
-      <workItem from="1494468413565" duration="3127000" />
+      <workItem from="1494468413565" duration="8589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256888000" />
+    <option name="totallyTimeSpent" value="262350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -423,7 +444,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -463,13 +483,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libs/three/geometry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/LoadSTL.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -723,13 +736,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Sky.js" />
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="398" column="1" selection-start-line="398" selection-start-column="1" selection-end-line="398" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1295">
@@ -763,10 +769,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FullScreenLayout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="41" column="69" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LoadModel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="59" />
+        <state relative-caret-position="231">
+          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -777,31 +791,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FullScreenLayout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="41" column="69" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="69" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/images/templates/gradient-image-bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Background.js">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc;n#backgroundController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="439">
+          <caret line="421" column="0" selection-start-line="421" selection-start-column="0" selection-end-line="421" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/easyModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="314" column="4" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="4" />
+        <state relative-caret-position="204">
+          <caret line="318" column="75" selection-start-line="318" selection-start-column="75" selection-end-line="318" selection-end-column="75" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

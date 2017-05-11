@@ -15,6 +15,8 @@ var sky, sunSphere;
 var backgroundColor = 0xffffff;
 var backgroundOpacity = 1;
 
+var backgroundScene;
+
 var skyShaderNewed = false;
 var colordBgNewed = false;
 
@@ -309,8 +311,12 @@ function clearBgcolor(){
 }
 
 
-function initImageBackground() {
-    var texture1 = THREE.ImageUtils.loadTexture( 'images/black.jpg' );
+function initImageBackground(imageNum) {
+
+    $("#background").css("height","420px");
+    $("#background").css("transition","all 0.4s");
+    $(".ImageBackgroundArea").slideDown();
+    var texture1 = THREE.ImageUtils.loadTexture( 'images/templates/imagebg-'+imageNum+'.jpg' );
     // var texture2 = THREE.ImageUtils.loadTexture( 'images/black.jpg' );
     var backgroundMesh = new THREE.Mesh(
         new THREE.PlaneGeometry(2, 2, 0),
@@ -321,7 +327,7 @@ function initImageBackground() {
     backgroundMesh .material.depthTest = false;
     backgroundMesh .material.depthWrite = false;
 
-    var backgroundScene = new THREE.Scene();
+    backgroundScene = new THREE.Scene();
     var backgroundCamera = new THREE.Camera();
     backgroundScene .add(backgroundCamera );
     backgroundScene .add(backgroundMesh );
@@ -338,7 +344,12 @@ function initImageBackground() {
 }
 
 function clearImageBackground() {
-    
+    $("#background").css("height","250px");
+    $(".ImageBackgroundArea").hide(500);
+    backgroundScene.visible=false;
+    renderer.autoClear = true;
+    renderer.clear();
+    renderer.render( scene, camera );
 }
 // ------------------------dat gui show-hide controller-----------------------
 dat.GUI.prototype.toggleHide = function() {

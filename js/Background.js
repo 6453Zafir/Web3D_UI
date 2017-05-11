@@ -10,7 +10,7 @@ function backgroundController() {
                 if(BackgroundNum == 2){
                     clearSky();
                 }else if(BackgroundNum == 3){
-
+                    clearImageBackground();
                 }else if(BackgroundNum == 4){
 
                 }
@@ -23,7 +23,7 @@ function backgroundController() {
                 if(BackgroundNum == 1){
                     clearBgcolor();
                 }else if(BackgroundNum == 3){
-
+                    clearImageBackground();
                 }else if(BackgroundNum == 4){
 
                 }
@@ -32,6 +32,7 @@ function backgroundController() {
             }
         })
         $("#image-bg").on("click", function () {
+
             if (BackgroundNum != 3) {
                 if(BackgroundNum == 1){
                     clearBgcolor();
@@ -41,7 +42,20 @@ function backgroundController() {
 
                 }
                 BackgroundNum = 3;
-                initImageBackground();
+
+                $("#default-image-bg").on("click",function () {
+                    ImageBgNum = 1;
+                    initImageBackground(ImageBgNum);
+                })
+                $("#gradient-image-bg").on("click",function () {
+                    ImageBgNum = 2;
+                    initImageBackground(ImageBgNum);
+                })
+                $("#black-image-bg").on("click",function () {
+                    ImageBgNum = 3;
+                    initImageBackground(ImageBgNum);
+                })
+                initImageBackground(1);
             }
         })
         $("#skybox-bg").on("click", function () {
@@ -52,7 +66,7 @@ function backgroundController() {
             }else if(BackgroundNum == 2){
                 clearSky();
             }else if(BackgroundNum == 3){
-
+                clearImageBackground();
             }
         })
     }

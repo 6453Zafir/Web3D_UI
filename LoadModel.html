@@ -53,6 +53,24 @@
                 <button class="templateButton" id="skybox-bg"></button>
                 <p>Skybox Background</p>
             </div>
+            <div class="ImageBackgroundArea">
+                <div class="templateBlock">
+                    <button class="templateButton" id="default-image-bg"></button>
+                    <p>Default Background</p>
+                </div>
+                <div class="templateBlock">
+                    <button class="templateButton" id="gradient-image-bg"></button>
+                    <p>Gradient Background</p>
+                </div>
+                <div class="templateBlock">
+                    <button class="templateButton" id="black-image-bg"></button>
+                    <p>Metal Background</p>
+                </div>
+                <div class="templateBlock">
+                    <button class="templateButton" id="custom-image-bg"></button>
+                    <p>upload Background</p>
+                </div>
+            </div>
         </div>
 
         <div class="tab-pane fade" id="component">
@@ -198,6 +216,7 @@
 //----------------modal control-------------------------------
     var LayoutNum = 0;
     var BackgroundNum = 0;
+    var ImageBgNum = 0;
     layoutController();
     $('#myModal').modal({
         backdrop: 'static',

@@ -406,6 +406,20 @@ button:focus{
 #image-bg{
     background-image: url("../images/templates/img-bg.jpg");
 }
+#default-image-bg{
+    background-image: url("../images/templates/default-image-bg.jpg");
+}
+#gradient-image-bg{
+    background-image: url("../images/templates/gradient-image-bg.jpg");
+}
+#black-image-bg{
+    background-image: url("../images/templates/black-image-bg.jpg");
+}
+
+#custom-image-bg{
+    background-image: url("../images/templates/upload-image-bg.jpg");
+}
+
 #skybox-bg{
     background-image: url("../images/templates/skybox-bg.jpg");
 }
@@ -429,3 +443,12 @@ button:focus{
 }
 /*-------------------------Basic Layout------------------------------*/
 
+.ImageBackgroundArea{
+    width: 100%;
+    height: 200px;
+    -webkit-box-shadow:inset 0 3px 10px #b1b1b1;
+    -moz-box-shadow:inset 0 3px 10px #b1b1b1;
+    box-shadow: inset 0 3px 10px #b1b1b1;
+    margin: -10px 0;
+    display: none;
+}
