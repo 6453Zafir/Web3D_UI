@@ -298,11 +298,6 @@ function initBgColor(){
             renderer.render( scene, camera );
         });
 
-        // function guichanged() {
-        //     renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
-        //     renderer.render( scene, camera );
-        // }
-        // guichanged();
         colordBgNewed =true;
     }else{
         bgColorgui.show();
@@ -315,24 +310,31 @@ function clearBgcolor(){
 
 
 function initImageBackground() {
-    var backgroundTexture = THREE.TextureLoader( 'images/black.jpg' );
-    var bg = new THREE.Mesh(
+    var texture1 = THREE.ImageUtils.loadTexture( 'images/black.jpg' );
+    // var texture2 = THREE.ImageUtils.loadTexture( 'images/black.jpg' );
+    var backgroundMesh = new THREE.Mesh(
         new THREE.PlaneGeometry(2, 2, 0),
-        new THREE.MeshBasicMaterial({map: backgroundTexture})
-    );
+        new THREE.MeshBasicMaterial({
+            map: texture1
+        }));
 
-// The bg plane shouldn't care about the z-buffer.
-    bg.material.depthTest = false;
-    bg.material.depthWrite = false;
+    backgroundMesh .material.depthTest = false;
+    backgroundMesh .material.depthWrite = false;
 
-    var bgScene = new THREE.Scene();
-    var bgCam = new THREE.Camera();
-    bgScene.add(bgCam);
-    bgScene.add(bg);
+    var backgroundScene = new THREE.Scene();
+    var backgroundCamera = new THREE.Camera();
+    backgroundScene .add(backgroundCamera );
+    backgroundScene .add(backgroundMesh );
+    // backgroundMesh.material.map = texture2;
 
-    renderer.autoClear = false;
-    renderer.clear();
-    renderer.render(bgScene, bgCam);
+    var render = function () {
+        requestAnimationFrame(render);
+        renderer.autoClear = false;
+        renderer.clear();
+        renderer.render(backgroundScene , backgroundCamera );
+        renderer.render( scene, camera );
+    };
+    render();
 }
 
 function clearImageBackground() {
