@@ -16,7 +16,7 @@ var backgroundColor = 0xffffff;
 var backgroundOpacity = 1;
 
 var backgroundScene;
-
+var backgroundCamera;
 var skyShaderNewed = false;
 var colordBgNewed = false;
 
@@ -328,7 +328,7 @@ function initImageBackground(imageNum) {
     backgroundMesh .material.depthWrite = false;
 
     backgroundScene = new THREE.Scene();
-    var backgroundCamera = new THREE.Camera();
+    backgroundCamera = new THREE.Camera();
     backgroundScene .add(backgroundCamera );
     backgroundScene .add(backgroundMesh );
     // backgroundMesh.material.map = texture2;
@@ -346,7 +346,8 @@ function initImageBackground(imageNum) {
 function clearImageBackground() {
     $("#background").css("height","250px");
     $(".ImageBackgroundArea").hide(500);
-    backgroundScene.visible=false;
+    backgroundScene.delete;
+    backgroundCamera.delete;
     renderer.autoClear = true;
     renderer.clear();
     renderer.render( scene, camera );
