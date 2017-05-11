@@ -32,7 +32,7 @@
             <li><a href="#color" data-toggle="tab">Color</a></li>
             <li><a href="#material" data-toggle="tab">Material</a></li>
             <li><a href="#interact" data-toggle="tab">Interact</a></li>
-            <li><a href="#fg" data-toggle="tab">Fog&Ground</a></li>
+            <li><a href="#fg" data-toggle="tab">Effect</a></li>
         </ul>
     </div>
     <div id="myTabContent" class="tab-content">
@@ -68,7 +68,21 @@
                 </div>
                 <div class="templateBlock">
                     <button class="templateButton" id="custom-image-bg"></button>
-                    <p>upload Background</p>
+                    <p>Upload Background</p>
+                </div>
+            </div>
+            <div class="skyboxBackgroundArea">
+                <div class="templateBlock">
+                    <button class="templateButton" id="dawnmountain-skybox"></button>
+                    <p>Dawn mountain skybox</p>
+                </div>
+                <div class="templateBlock">
+                    <button class="templateButton" id="mountainwater-skybox"></button>
+                    <p>Mountain water skybox</p>
+                </div>
+                <div class="templateBlock">
+                    <button class="templateButton" id="custom-skybox"></button>
+                    <p>Upload skybox</p>
                 </div>
             </div>
         </div>
@@ -177,12 +191,12 @@
 <script src="libs/three/stats.min.js"></script>
 <script src="libs/three/Detector.js"></script>
 <script src="libs/three/Projector.js"></script>
-<!--<script src="libs/three/CanvasRenderer.js"></script>-->
 <script src="libs/three/dat.gui.min.js"></script>
 <script src="libs/three/SkyShader.js"></script>
 
 <script src="js/Layout.js"></script>
 <script src="js/Background.js"></script>
+<script src="js/Background-controller.js"></script>
 <script src="js/easyModel.js"></script>
 
 <!--------------------load different model----------------->
@@ -215,8 +229,6 @@
 <script>
 //----------------modal control-------------------------------
     var LayoutNum = 0;
-    var BackgroundNum = 0;
-    var ImageBgNum = 0;
     layoutController();
     $('#myModal').modal({
         backdrop: 'static',
