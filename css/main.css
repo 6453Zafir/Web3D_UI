@@ -429,6 +429,18 @@ button:focus{
     background-image: url("../images/templates/mountainwater-skybox.jpg");
 }
 
+#fog-effect{
+    background-image: url("../images/templates/fog.jpg");
+}
+#grid-effect{
+    background-image: url("../images/templates/grid.jpg");
+}
+#ground-effect{
+    background-image: url("../images/templates/ground.jpg");
+}
+#shadow-effect{
+    background-image: url("../images/templates/shadow.jpg");
+}
 
 /*------------------------template button end------------------------*/
 

@@ -32,12 +32,14 @@ function basicLayout() {
     $("#moduleArea").addClass("HalfModuleArea");
     renderEasyModel()
     backgroundController();
+    effectController();
 }
 function FullLayout() {
     $("#moduleArea").removeClass("HalfModuleArea");
     $("#moduleArea").addClass("moduleArea");
     renderEasyModel()
     backgroundController();
+    effectController();
 }
 function mapLayout() {
 
