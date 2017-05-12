@@ -58,7 +58,8 @@ function renderEasyModel() {
             var Cubematerial;
 
             Cubegeometry = new THREE.BoxGeometry(200,200,200);
-            Cubematerial = new THREE.MeshNormalMaterial( { overdraw: 0.5 } );
+            // Cubematerial = new THREE.MeshNormalMaterial( { overdraw: 0.5 } );
+            Cubematerial =  new THREE.MeshPhongMaterial( { color:0xffffff, shading: THREE.FlatShading } );
 
             Cubematerial.needsUpdate = true;
             Cubegeometry.needsUpdate = true;
@@ -71,6 +72,20 @@ function renderEasyModel() {
             cube=new THREE.Mesh(Cubegeometry,Cubematerial);
             cube.position.set(0,150,0);
             scene.add(cube);
+
+            // lights
+
+            light = new THREE.DirectionalLight( 0xffffff );
+            light.position.set( 1, 1, 1 );
+            scene.add( light );
+
+            light = new THREE.DirectionalLight( 0x002288 );
+            light.position.set( -1, -1, -1 );
+            scene.add( light );
+
+            light = new THREE.AmbientLight( 0x222222 );
+            scene.add( light );
+
 
             //stats
             stats= new Stats();

@@ -6,7 +6,10 @@ function effectController(){
         console.log("haven't choose template yet")
     }else{
         $("#fog-effect").on("click",function () {
-            initFog()
+            initFog();
+        })
+        $("#grid-effect").on("click",function () {
+            clearFog();
         })
     }
 }
