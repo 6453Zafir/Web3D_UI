@@ -11,23 +11,27 @@ var IsShadowNewed = false;
 var GridControl;
 
 var FogGui;
-var FogColor = 0xffffff;
-var FogDensity = 0.0009;
-
 
 var gridHelper;
 var GridGui;
 
 function initFog() {
     if(!IsFogNewed){
-        scene.fog = new THREE.FogExp2(FogColor,FogDensity)
+        scene.fog = new THREE.FogExp2(0xffffff,0.0009)
         renderer.setClearColor( scene.fog.color );
         renderer.render( scene, camera );
 
-        var controlFog  = {
-            color: FogColor,
-            density: FogDensity
+        var controlFog  = function(){
+            this.color="#ffffff";
+            this.density=0.0009;
+            this.delete = function () {
+                scene.fog.density=0;
+                renderer.setClearColor( backgroundColor );
+                renderer.render( scene, camera );
+                Foggui.hide();
+            }
         };
+        var FogObject = new controlFog();
 
         Foggui = new dat.GUI();
         Foggui.domElement.parentNode.id = 'fog-controller';
@@ -36,27 +40,25 @@ function initFog() {
         $(".dg.ac").css("position","absolute");
         $(".dg.ac").css("top","15px");
 
-        Foggui.addColor(controlFog, "color").onChange(function (e) {
-            scene.fog.color.set(controlFog.color);
+        Foggui.addColor(FogObject, 'color').onChange(function (e) {
+            scene.fog.color.set(FogObject.color);
             //the color variable can not ! use "=",must use the set funtion
             renderer.setClearColor( scene.fog.color );
             renderer.render( scene, camera );
         });
 
-        Foggui.add(controlFog, "density",0.0001,0.009).onChange(function (e) {
-            scene.fog.density = controlFog.density;
+        Foggui.add(FogObject, 'density',0.0001,0.009).onChange(function (e) {
+            scene.fog.density = FogObject.density;
             renderer.render( scene, camera );
         });
 
+        Foggui.add(FogObject, 'delete');
         IsFogNewed = true;
     }else{
         Foggui.show();
     }
 }
 function clearFog() {
-    scene.fog.density=0;
-    renderer.setClearColor( backgroundColor );
-    renderer.render( scene, camera );
     Foggui.hide();
 }
 

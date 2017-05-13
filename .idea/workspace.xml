@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9c64b8-9af4-42c8-8703-4cb5d097cb0b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/three/TransformControls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/templates/fog.jpg" afterPath="$PROJECT_DIR$/images/templates/fog.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/templates/ground.jpg" afterPath="$PROJECT_DIR$/images/templates/ground.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadModel.html" afterPath="$PROJECT_DIR$/LoadModel.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Effect-controller.js" afterPath="$PROJECT_DIR$/js/Effect-controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Effect.js" afterPath="$PROJECT_DIR$/js/Effect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easyModel.js" afterPath="$PROJECT_DIR$/js/easyModel.js" />
     </list>
     <ignored path="LoadSTLTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +51,8 @@
       <file leaf-file-name="Effect.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Effect.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-94">
-              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            <state relative-caret-position="700">
+              <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -67,8 +61,8 @@
       <file leaf-file-name="Effect-controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="420">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -445,16 +439,16 @@
       <workItem from="1494651827535" duration="1000" />
       <workItem from="1494651870757" duration="69000" />
       <workItem from="1494651968714" duration="10380000" />
-      <workItem from="1494678353408" duration="2515000" />
+      <workItem from="1494678353408" duration="3183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296096000" />
+    <option name="totallyTimeSpent" value="296764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17135416" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -774,14 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/easyModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="851">
@@ -800,10 +786,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Effect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="700">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
           <folding />
         </state>
       </provider>
