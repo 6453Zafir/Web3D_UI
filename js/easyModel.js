@@ -63,6 +63,7 @@ function renderEasyModel() {
 
             Cubematerial.needsUpdate = true;
             Cubegeometry.needsUpdate = true;
+
             for(var i=0;i<Cubegeometry.faces.length;i+=2){
                 var hex = Math.random()*0xffffff;
                 Cubegeometry.faces[i].color.setHex(hex);
