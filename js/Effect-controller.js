@@ -1,6 +1,10 @@
 /**
  * Created by admin on 2017/5/12.
  */
+$("#ef").on("click", function () {
+    clearBackroundController();
+})
+
 function effectController(){
     if(LayoutNum==0){
         console.log("haven't choose template yet")
@@ -34,5 +38,16 @@ function effectController(){
             EffectNum = 3
 
         })
+    }
+}
+function clearEffectController() {
+    if(EffectNum ==1){
+        clearFog();
+    }else if(EffectNum ==2){
+        clearGrid();
+    }else if(EffectNum ==3){
+        clearGround();
+    }else{
+
     }
 }

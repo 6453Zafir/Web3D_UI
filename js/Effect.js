@@ -10,15 +10,15 @@ var IsShadowNewed = false;
 
 var GridControl;
 var GroundControl;
-
-// var EffectControls=new Array(GridControl,GroundControl);
+var EffectControls=new Array(GridControl,GroundControl);
 
 var FogGui;
+var GridGui;
+var GroundGui;
+
+var EffectGuis=new Array(FogGui,GridGui,GroundGui);
 
 var gridHelper;
-var GridGui;
-
-var GroundGui;
 
 function initFog() {
     if(!IsFogNewed){
@@ -33,38 +33,38 @@ function initFog() {
                 scene.fog.density=0;
                 renderer.setClearColor( backgroundColor );
                 renderer.render( scene, camera );
-                Foggui.hide();
+                EffectGuis.Foggui.hide();
             }
         };
         var FogObject = new controlFog();
 
-        Foggui = new dat.GUI();
-        Foggui.domElement.parentNode.id = 'fog-controller';
+        EffectGuis.Foggui = new dat.GUI();
+        EffectGuis.Foggui.domElement.parentNode.id = 'fog-controller';
 
         $(".dg.ac").appendTo("#moduleArea");
         $(".dg.ac").css("position","absolute");
         $(".dg.ac").css("top","15px");
 
-        Foggui.addColor(FogObject, 'color').onChange(function (e) {
+        EffectGuis.Foggui.addColor(FogObject, 'color').onChange(function (e) {
             scene.fog.color.set(FogObject.color);
             //the color variable can not ! use "=",must use the set funtion
             renderer.setClearColor( scene.fog.color );
             renderer.render( scene, camera );
         });
 
-        Foggui.add(FogObject, 'density',0.0001,0.009).onChange(function (e) {
+        EffectGuis.Foggui.add(FogObject, 'density',0.0001,0.009).onChange(function (e) {
             scene.fog.density = FogObject.density;
             renderer.render( scene, camera );
         });
 
-        Foggui.add(FogObject, 'delete');
+        EffectGuis.Foggui.add(FogObject, 'delete');
         IsFogNewed = true;
     }else{
-        Foggui.show();
+        EffectGuis.Foggui.show();
     }
 }
 function clearFog() {
-    Foggui.hide();
+    EffectGuis.Foggui.hide();
 }
 
 // --------------------------------Grid--------------------------------------
@@ -77,12 +77,13 @@ function initGrid(){
         renderer.render( scene, camera );
 
         //--------control the position/rotation/range by mouse drag---------
-        GridControl = new THREE.TransformControls(camera,renderer.domElement);
-        GridControl.attach( gridHelper );
-        GridControl.addEventListener( 'change', function () {
+
+        EffectControls.GridControl = new THREE.TransformControls(camera,renderer.domElement);
+        EffectControls.GridControl.attach( gridHelper );
+        EffectControls.GridControl.addEventListener( 'change', function () {
             renderer.render( scene, camera );
         } );
-        scene.add( GridControl );
+        scene.add( EffectControls.GridControl );
         //--------control the position/rotation/range by mouse gui end---------
 
         var controlGrid = function() {
@@ -90,63 +91,65 @@ function initGrid(){
             this.division = 10;
             this.colorcenterline = "#5ae5e3";
             this.color = "#6d6d6d";
-            this.position = function() {GridControl.setMode( "translate" )};
-            this.rotation = function() {GridControl.setMode( "rotate" )};
-            this.scale =function() {GridControl.setMode( "scale" )};
+            this.position = function() {EffectControls.GridControl.setMode( "translate" )};
+            this.rotation = function() {EffectControls.GridControl.setMode( "rotate" )};
+            this.scale =function() {EffectControls.GridControl.setMode( "scale" )};
             this.delete = function () {
                 IsGridNewed = false;
                 scene.remove(gridHelper);
-                scene.remove(GridControl);
-                GridGui.hide();
+                scene.remove(EffectControls.GridControl);
+                EffectGuis.GridGui.hide();
                 renderer.render(scene,camera);
             }
         };
 
         var gridObject = new controlGrid();
-        GridGui = new dat.GUI();
-        GridGui.domElement.parentNode.id = 'grid-controller';
+        EffectGuis.GridGui = new dat.GUI();
+        EffectGuis.GridGui.domElement.parentNode.id = 'grid-controller';
 
         $(".dg.ac").appendTo("#moduleArea");
         $(".dg.ac").css("position","absolute");
         $(".dg.ac").css("top","15px");
 
 
-        GridGui.add(gridObject, 'size',100,10000).onChange( function (e) {
+        EffectGuis.GridGui.add(gridObject, 'size',100,10000).onChange( function (e) {
             gridHelper.size = gridObject.size;
             renderer.render( scene, camera );
         });
-        GridGui.add(gridObject, 'division', 10, 100).onChange( function (e) {
+        EffectGuis.GridGui.add(gridObject, 'division', 10, 100).onChange( function (e) {
             gridHelper.division = gridObject.division;
             renderer.render( scene, camera );
         });
-        GridGui.addColor(gridObject, 'colorcenterline').onChange( function (e) {
+        EffectGuis.GridGui.addColor(gridObject, 'colorcenterline').onChange( function (e) {
             // gridHelper.colorCenterLine.set(gridObject.colorcenterline);
             //
             // renderer.render( scene, camera );
         });
-        GridGui.addColor(gridObject, 'color').onChange( function (e) {
+        EffectGuis.GridGui.addColor(gridObject, 'color').onChange( function (e) {
             // gridHelper.colorGrid.setColors(gridObject.color);
             gridHelper.setColors(gridObject.color)
             renderer.render( scene, camera );
         });
 
-        var transform = GridGui.addFolder('Transform');
+        var transform = EffectGuis.GridGui.addFolder('Transform');
         transform.add(gridObject, 'position');
         transform.add(gridObject, 'rotation');
         transform.add(gridObject, 'scale');
 
-        GridGui.add(gridObject,'delete');
+        EffectGuis.GridGui.add(gridObject,'delete');
 
         IsGridNewed= true;
     }else{
-        GridControl.visible = true;
-        GridGui.show();
+        EffectControls.GridControl.enabled = true;
+        EffectControls.GridControl.visible = true;
+        EffectGuis.GridGui.show();
     }
 }
 
 function clearGrid() {
-    GridControl.visible = false;
-    GridGui.hide();
+    EffectControls.GridControl.enabled=false;
+    EffectControls.GridControl.visible=false;
+    EffectGuis.GridGui.hide();
 }
 
 function initGround() {
@@ -161,12 +164,12 @@ function initGround() {
         renderer.render(scene,camera);
 
         //--------control the position/rotation/range by mouse drag---------
-        GroundControl = new THREE.TransformControls(camera,renderer.domElement);
-        GroundControl.attach( plane );
-        GroundControl.addEventListener( 'change', function () {
+        EffectControls.GroundControl = new THREE.TransformControls(camera,renderer.domElement);
+        EffectControls.GroundControl.attach( plane );
+        EffectControls.GroundControl.addEventListener( 'change', function () {
             renderer.render( scene, camera );
         } );
-        scene.add( GroundControl );
+        scene.add( EffectControls.GroundControl );
         //--------control the position/rotation/range by mouse gui end---------
 
         var controlGround = function () {
@@ -174,38 +177,39 @@ function initGround() {
             this.height = 300;
             this.color = "#d5d5d5";
             this.opacity = 1;
-            this.position = function() {GroundControl.setMode( "translate" )};
-            this.rotation = function() {GroundControl.setMode( "rotate" )};
-            this.scale =function() {GroundControl.setMode( "scale" )};
+            this.position = function() {EffectControls.GroundControl.setMode( "translate" )};
+            this.rotation = function() {EffectControls.GroundControl.setMode( "rotate" )};
+            this.scale =function() {EffectControls.GroundControl.setMode( "scale" )};
             this.delete = function () {
                 scene.remove(plane);
-                GroundControl.visible=false;
+                scene.remove(EffectControls.GroundControl);
+                // EffectControls.GroundControl
                 renderer.render( scene, camera );
-                GroundGui.hide();
+                EffectGuis.GroundGui.hide();
                 IsGroundNewed = false;
             }
         }
 
         var GroundObject = new controlGround();
 
-        GroundGui = new dat.GUI();
-        GroundGui.domElement.parentNode.id = 'ground-controller';
+        EffectGuis.GroundGui = new dat.GUI();
+        EffectGuis.GroundGui.domElement.parentNode.id = 'ground-controller';
 
         $(".dg.ac").appendTo("#moduleArea");
         $(".dg.ac").css("position","absolute");
         $(".dg.ac").css("top","15px");
 
-        GroundGui.add(GroundObject, 'width',10,10000).onChange(gernerateGeometry);
-        GroundGui.add(GroundObject, 'height',10,10000).onChange(gernerateGeometry);
+        EffectGuis.GroundGui.add(GroundObject, 'width',10,10000).onChange(gernerateGeometry);
+        EffectGuis.GroundGui.add(GroundObject, 'height',10,10000).onChange(gernerateGeometry);
 
-        GroundGui.addColor(GroundObject, 'color').onChange(gernarateMaterial);
+        EffectGuis.GroundGui.addColor(GroundObject, 'color').onChange(gernarateMaterial);
 
-        var transform = GroundGui.addFolder('Transform');
+        var transform = EffectGuis.GroundGui.addFolder('Transform');
         transform.add(GroundObject, 'position');
         transform.add(GroundObject, 'rotation');
         transform.add(GroundObject, 'scale');
 
-        GroundGui.add(GroundObject,'delete');
+        EffectGuis.GroundGui.add(GroundObject,'delete');
 
         function gernerateGeometry(){
             updateGroupGeometry(plane, new THREE.PlaneGeometry(
@@ -230,13 +234,15 @@ function initGround() {
         }
         IsGroundNewed = material;
     }else{
-        GroundControl.visible = true;
-        GroundGui.show();
+        EffectControls.GroundControl.enabled = true;
+        EffectControls.GroundControl.visible = true;
+        EffectGuis.GroundGui.show();
     }
 }
 
 function clearGround() {
-    GroundControl.visible = false;
-    GroundGui.hide();
+    EffectControls.GroundControl.enabled = false;
+    EffectControls.GroundControl.visible = false;
+    EffectGuis.GroundGui.hide();
 
 }

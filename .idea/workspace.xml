@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9c64b8-9af4-42c8-8703-4cb5d097cb0b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadModel.html" afterPath="$PROJECT_DIR$/LoadModel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Background-controller.js" afterPath="$PROJECT_DIR$/js/Background-controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Background.js" afterPath="$PROJECT_DIR$/js/Background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Effect-controller.js" afterPath="$PROJECT_DIR$/js/Effect-controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Effect.js" afterPath="$PROJECT_DIR$/js/Effect.js" />
     </list>
@@ -30,30 +32,28 @@
       <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadModel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-448">
-              <caret line="208" column="41" selection-start-line="208" selection-start-column="41" selection-end-line="208" selection-end-column="41" />
+            <state relative-caret-position="427">
+              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="131" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="easyModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/easyModel.js">
+      <file leaf-file-name="Effect-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="72" column="16" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Effect.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/Effect.js">
+      <file leaf-file-name="Background-controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Background-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -62,21 +62,11 @@
       <file leaf-file-name="Background.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="77" column="97" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="97" />
+            <state relative-caret-position="525">
+              <caret line="147" column="42" selection-start-line="145" selection-start-column="4" selection-end-line="147" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Effect-controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,14 +106,14 @@
         <option value="$PROJECT_DIR$/js/Sky.js" />
         <option value="$PROJECT_DIR$/libs/three/dat.gui.min.js" />
         <option value="$PROJECT_DIR$/FullScreenLayout.html" />
-        <option value="$PROJECT_DIR$/js/Background.js" />
-        <option value="$PROJECT_DIR$/js/Background-controller.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/Layout.js" />
         <option value="$PROJECT_DIR$/js/easyModel.js" />
-        <option value="$PROJECT_DIR$/LoadModel.html" />
-        <option value="$PROJECT_DIR$/js/Effect-controller.js" />
         <option value="$PROJECT_DIR$/js/Effect.js" />
+        <option value="$PROJECT_DIR$/LoadModel.html" />
+        <option value="$PROJECT_DIR$/js/Background.js" />
+        <option value="$PROJECT_DIR$/js/Effect-controller.js" />
+        <option value="$PROJECT_DIR$/js/Background-controller.js" />
       </list>
     </option>
   </component>
@@ -435,12 +425,12 @@
       <workItem from="1494651968714" duration="10380000" />
       <workItem from="1494678353408" duration="3231000" />
       <workItem from="1494723328026" duration="7458000" />
-      <workItem from="1494741353948" duration="4629000" />
+      <workItem from="1494741353948" duration="8331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308899000" />
+    <option name="totallyTimeSpent" value="312601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="0" width="1924" height="1084" extended-state="0" />
@@ -726,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/three/TransformControls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -746,29 +729,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Background-controller.js">
+    <entry file="file://$PROJECT_DIR$/js/Effect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="70">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoadModel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-448">
-          <caret line="208" column="41" selection-start-line="208" selection-start-column="41" selection-end-line="208" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="77" column="97" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,18 +747,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
+    <entry file="file://$PROJECT_DIR$/js/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="355">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Effect.js">
+    <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoadModel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="131" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="147" column="42" selection-start-line="145" selection-start-column="4" selection-end-line="147" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Background-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
           <folding />
         </state>
       </provider>

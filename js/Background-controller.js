@@ -1,6 +1,10 @@
 /**
  * Created by admin on 2017/5/5.
  */
+$("#bg").on("click", function () {
+    clearEffectController();
+})
+
 function backgroundController() {
     if (LayoutNum == 0) {
         console.log("haven't choose template yet")
@@ -56,6 +60,10 @@ function backgroundController() {
                     initImageBackground(ImageBgNum);
                 })
                 initImageBackground(1);
+            }else{
+                $("#background").css("height","420px");
+                $("#background").css("transition","all 0.4s");
+                $(".ImageBackgroundArea").slideDown();
             }
         })
         $("#skybox-bg").on("click", function () {
@@ -79,7 +87,26 @@ function backgroundController() {
                     initSkybox(SkyboxName);
                 })
                 initSkybox("dawnmountain");
+            }else{
+                $("#background").css("height","420px");
+                $("#background").css("transition","all 0.4s");
+                $(".skyboxBackgroundArea").slideDown();
             }
         })
     }
+}
+
+function clearBackroundController() {
+    if (BackgroundNum == 1) {
+        BackgroundGuis.bgColorgui.hide();
+    } else if (BackgroundNum == 2) {
+        BackgroundGuis.skyShadergui.hide();
+    } else if (BackgroundNum == 3) {
+        $("#background").css("height","250px");
+        $(".ImageBackgroundArea").hide(500);
+    }else if(BackgroundNum == 4){
+        $("#background").css("height","250px");
+        $(".skyboxBackgroundArea").hide(500);
+    }else{};
+
 }

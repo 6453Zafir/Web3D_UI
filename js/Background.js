@@ -17,8 +17,44 @@ var skyBoxNewed = false;
 
 var skyShadergui;
 var bgColorgui;
+var BackgroundGuis = new Array(skyShadergui,bgColorgui)
 
 var skyBox
+
+// --------------------------------color background----------------------------------
+function initBgColor(){
+    if(!colordBgNewed){
+        var controlbgColor  = {
+            color: backgroundColor,
+            opacity: backgroundOpacity,
+        };
+
+        BackgroundGuis.bgColorgui = new dat.GUI();
+        BackgroundGuis.bgColorgui.domElement.parentNode.id= 'bgColor-controller';
+
+        $(".dg.ac").appendTo("#moduleArea");
+        $(".dg.ac").css("position","absolute");
+        $(".dg.ac").css("top","15px");
+
+        BackgroundGuis.bgColorgui.addColor(controlbgColor, "color").onChange(function (e) {
+            renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
+            renderer.render( scene, camera );
+        });
+        BackgroundGuis.bgColorgui.add(controlbgColor, "opacity",0,1).onChange(function (e) {
+            renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
+            renderer.render( scene, camera );
+        });
+
+        colordBgNewed =true;
+    }else{
+        BackgroundGuis.bgColorgui.show();
+    }
+}
+
+function clearBgcolor(){
+    BackgroundGuis.bgColorgui.hide();
+}
+// ------------------------------color background end--------------------------------
 
 // ----------------------------skyshader background------------------------------
 function initSky() {
@@ -72,17 +108,17 @@ function initSky() {
 
         }
 
-        skyShadergui = new dat.GUI();
-        skyShadergui.domElement.parentNode.id= 'skyShader-controller';
+        BackgroundGuis.skyShadergui = new dat.GUI();
+        BackgroundGuis.skyShadergui.domElement.parentNode.id= 'skyShader-controller';
 
-        skyShadergui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
-        skyShadergui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
-        skyShadergui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
-        skyShadergui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
-        skyShadergui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
-        skyShadergui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
-        skyShadergui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
-        skyShadergui.add( effectController, "sun" ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "turbidity", 1.0, 20.0, 0.1 ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "rayleigh", 0.0, 4, 0.001 ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "mieCoefficient", 0.0, 0.1, 0.001 ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "mieDirectionalG", 0.0, 1, 0.001 ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "luminance", 0.0, 2 ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "inclination", 0, 1, 0.0001 ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "azimuth", 0, 1, 0.0001 ).onChange( guiChanged );
+        BackgroundGuis.skyShadergui.add( effectController, "sun" ).onChange( guiChanged );
 
         guiChanged();
 
@@ -92,7 +128,7 @@ function initSky() {
     }else{
         sky.mesh.visible = true;
         sunSphere.visible = true;
-        skyShadergui.show();
+        BackgroundGuis.skyShadergui.show();
     }
 }
 
@@ -100,43 +136,10 @@ function clearSky(){
     sky.mesh.visible = false;
     sunSphere.visible = false;
     renderer.render( scene, camera );
-    skyShadergui.hide();
+    BackgroundGuis.skyShadergui.hide();
 }
 // ----------------------------skyshader background end------------------------------
-// --------------------------------color background----------------------------------
-function initBgColor(){
-    if(!colordBgNewed){
-        var controlbgColor  = {
-            color: backgroundColor,
-            opacity: backgroundOpacity,
-        };
 
-        bgColorgui = new dat.GUI();
-        bgColorgui.domElement.parentNode.id= 'bgColor-controller';
-
-        $(".dg.ac").appendTo("#moduleArea");
-        $(".dg.ac").css("position","absolute");
-        $(".dg.ac").css("top","15px");
-
-        bgColorgui.addColor(controlbgColor, "color").onChange(function (e) {
-            renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
-            renderer.render( scene, camera );
-        });
-        bgColorgui.add(controlbgColor, "opacity",0,1).onChange(function (e) {
-            renderer.setClearColor(controlbgColor.color,controlbgColor.opacity);
-            renderer.render( scene, camera );
-        });
-
-        colordBgNewed =true;
-    }else{
-        bgColorgui.show();
-    }
-}
-
-function clearBgcolor(){
-    bgColorgui.hide();
-}
-// ------------------------------color background end--------------------------------
 // --------------------------------image background----------------------------------
 function initImageBackground(imageNum) {
 
