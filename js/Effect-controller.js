@@ -8,6 +8,8 @@ function effectController(){
         $("#fog-effect").on("click", function () {
             if (EffectNum == 2) {
                 clearGrid();
+            }else if(EffectNum == 3){
+                clearGround();
             }
             initFog();
             EffectNum = 1
@@ -15,9 +17,21 @@ function effectController(){
         $("#grid-effect").on("click", function () {
             if (EffectNum == 1) {
                 clearFog();
+            }else if(EffectNum == 3){
+                clearGround();
             }
             initGrid();
             EffectNum = 2
+
+        })
+        $("#ground-effect").on("click", function () {
+            if (EffectNum == 1) {
+                clearFog();
+            }else if(EffectNum ==2){
+                clearGrid();
+            }
+            initGround();
+            EffectNum = 3
 
         })
     }

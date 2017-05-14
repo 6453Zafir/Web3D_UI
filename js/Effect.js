@@ -5,15 +5,20 @@ var EffectNum = 0;
 
 var IsFogNewed = false;
 var IsGridNewed = false;
-var IsTerrianNewed = false;
+var IsGroundNewed = false;
 var IsShadowNewed = false;
 
 var GridControl;
+var GroundControl;
+
+// var EffectControls=new Array(GridControl,GroundControl);
 
 var FogGui;
 
 var gridHelper;
 var GridGui;
+
+var GroundGui;
 
 function initFog() {
     if(!IsFogNewed){
@@ -144,3 +149,94 @@ function clearGrid() {
     GridGui.hide();
 }
 
+function initGround() {
+    var plane;
+    var geometry;
+    var material;
+    if(!IsGroundNewed){
+        geometry = new THREE.PlaneGeometry(300,300,1,1 );
+        material = new THREE.MeshBasicMaterial( {color: 0xd5d5d5, side: THREE.DoubleSide} );
+        plane = new THREE.Mesh( geometry, material );
+        scene.add( plane );
+        renderer.render(scene,camera);
+
+        //--------control the position/rotation/range by mouse drag---------
+        GroundControl = new THREE.TransformControls(camera,renderer.domElement);
+        GroundControl.attach( plane );
+        GroundControl.addEventListener( 'change', function () {
+            renderer.render( scene, camera );
+        } );
+        scene.add( GroundControl );
+        //--------control the position/rotation/range by mouse gui end---------
+
+        var controlGround = function () {
+            this.width = 300;
+            this.height = 300;
+            this.color = "#d5d5d5";
+            this.opacity = 1;
+            this.position = function() {GroundControl.setMode( "translate" )};
+            this.rotation = function() {GroundControl.setMode( "rotate" )};
+            this.scale =function() {GroundControl.setMode( "scale" )};
+            this.delete = function () {
+                scene.remove(plane);
+                GroundControl.visible=false;
+                renderer.render( scene, camera );
+                GroundGui.hide();
+                IsGroundNewed = false;
+            }
+        }
+
+        var GroundObject = new controlGround();
+
+        GroundGui = new dat.GUI();
+        GroundGui.domElement.parentNode.id = 'ground-controller';
+
+        $(".dg.ac").appendTo("#moduleArea");
+        $(".dg.ac").css("position","absolute");
+        $(".dg.ac").css("top","15px");
+
+        GroundGui.add(GroundObject, 'width',10,10000).onChange(gernerateGeometry);
+        GroundGui.add(GroundObject, 'height',10,10000).onChange(gernerateGeometry);
+
+        GroundGui.addColor(GroundObject, 'color').onChange(gernarateMaterial);
+
+        var transform = GroundGui.addFolder('Transform');
+        transform.add(GroundObject, 'position');
+        transform.add(GroundObject, 'rotation');
+        transform.add(GroundObject, 'scale');
+
+        GroundGui.add(GroundObject,'delete');
+
+        function gernerateGeometry(){
+            updateGroupGeometry(plane, new THREE.PlaneGeometry(
+                GroundObject.width,GroundObject.height,1,1
+            ))
+        }
+        function updateGroupGeometry(mesh,geometry) {
+            mesh.geometry.dispose();
+            // mesh.children[0].geometry = new THREE.WireframeGeometry(geometry);
+            mesh.geometry = geometry;
+        }
+
+        function gernarateMaterial() {
+            updateGroupMaterial(plane,new THREE.MeshBasicMaterial(
+                {color:GroundObject.color,side: THREE.DoubleSide}
+            ))
+        }
+        function updateGroupMaterial(mesh,material) {
+            mesh.material.dispose();
+            // mesh.children[0].geometry = new THREE.WireframeGeometry(geometry);
+            mesh.material = material;
+        }
+        IsGroundNewed = material;
+    }else{
+        GroundControl.visible = true;
+        GroundGui.show();
+    }
+}
+
+function clearGround() {
+    GroundControl.visible = false;
+    GroundGui.hide();
+
+}
