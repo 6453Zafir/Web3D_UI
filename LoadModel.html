@@ -30,7 +30,7 @@
             <li id="bg" class="active"><a href="#background" data-toggle="tab">Background</a></li>
             <li id="cp"><a href="#component" data-toggle="tab">Component</a></li>
             <li id="co"><a href="#color" data-toggle="tab">Color</a></li>
-            <li id="ma"><a href="#material" data-toggle="tab">Material</a></li>
+            <li id="li"><a href="#light" data-toggle="tab">Light</a></li>
             <li id="in"><a href="#interact" data-toggle="tab">Interact</a></li>
             <li id="ef"><a href="#effect" data-toggle="tab">Effect</a></li>
         </ul>
@@ -86,7 +86,6 @@
                 </div>
             </div>
         </div>
-
         <div class="tab-pane fade" id="component">
             <div class="templateBlock">
                 <div id="el">
@@ -103,10 +102,19 @@
             <p>Haven't designed yet</p>
             <p>Haven't designed yet</p>
         </div>
-        <div class="tab-pane fade" id="material">
-            <p>Haven't designed yet</p>
-            <p>Haven't designed yet</p>
-            <p>Haven't designed yet</p>
+        <div class="tab-pane fade" id="light">
+            <div class="templateBlock">
+                <button class="templateButton" id="point-light"></button>
+                <p>Point Light</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="spot-light"></button>
+                <p>Spot Light</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="directional-light"></button>
+                <p>Directional Light</p>
+            </div>
         </div>
         <div class="tab-pane fade" id="interact">
             <p>Haven't designed yet</p>
@@ -206,6 +214,9 @@
 <script src="libs/three/Projector.js"></script>
 <script src="libs/three/dat.gui.min.js"></script>
 <script src="libs/three/SkyShader.js"></script>
+
+<script src="libs/three/RectAreaLightUniformsLib.js"></script>
+
 <script src="libs/three/TransformControls.js"></script>
 
 <script src="js/Layout.js"></script>
@@ -213,6 +224,9 @@
 <script src="js/Background-controller.js"></script>
 <script src="js/Effect.js"></script>
 <script src="js/Effect-controller.js"></script>
+<script src="js/Light.js"></script>
+<script src="js/Light-controller.js"></script>
+
 <script src="js/easyModel.js"></script>
 
 <!--------------------load different model----------------->

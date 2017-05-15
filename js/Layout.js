@@ -33,6 +33,7 @@ function basicLayout() {
     renderEasyModel()
     backgroundController();
     effectController();
+    lightController();
 }
 function FullLayout() {
     $("#moduleArea").removeClass("HalfModuleArea");
@@ -40,6 +41,7 @@ function FullLayout() {
     renderEasyModel()
     backgroundController();
     effectController();
+    lightController();
 }
 function mapLayout() {
 
