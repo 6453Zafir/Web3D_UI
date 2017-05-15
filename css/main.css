@@ -438,6 +438,9 @@ button:focus{
 #directional-light{
     background-image: url("../images/templates/directionalLight.jpg");
 }
+#area-light{
+    background-image: url("../images/templates/areaLight.jpg");
+}
 
 #fog-effect{
     background-image: url("../images/templates/fog.jpg");
