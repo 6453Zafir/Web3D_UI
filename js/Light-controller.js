@@ -14,5 +14,9 @@ function lightController() {
             initDirectionalLight();
             LightNum = 3;
         })
+        $("#point-light").on("click", function () {
+            initPointLight();
+            LightNum = 1;
+        })
     }
 }
