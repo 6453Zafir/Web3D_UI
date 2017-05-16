@@ -455,6 +455,16 @@ button:focus{
     background-image: url("../images/templates/shadow.jpg");
 }
 
+#default-control{
+    background-image: url("../images/templates/default-control.jpg");
+}
+#orbit-control{
+    background-image: url("../images/templates/orbit-control.jpg");
+}
+#fps-control{
+    background-image: url("../images/templates/fps-control.jpg");
+}
+
 /*------------------------template button end------------------------*/
 
 /*-------------------------Basic Layout------------------------------*/

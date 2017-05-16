@@ -34,6 +34,7 @@ function basicLayout() {
     backgroundController();
     effectController();
     lightController();
+    interactController();
 }
 function FullLayout() {
     $("#moduleArea").removeClass("HalfModuleArea");
@@ -42,6 +43,7 @@ function FullLayout() {
     backgroundController();
     effectController();
     lightController();
+    interactController();
 }
 function mapLayout() {
 
