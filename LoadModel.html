@@ -28,11 +28,11 @@
         <ul id="myTab" class="nav nav-tabs">
             <!--<li  ><a href="#layout" data-toggle="tab">Layout</a></li>-->
             <li id="bg" class="active"><a href="#background" data-toggle="tab">Background</a></li>
+            <li id="li"><a href="#light" data-toggle="tab">Light</a></li>
+            <li id="ef"><a href="#effect" data-toggle="tab">Effect</a></li>
+            <li id="in"><a href="#interact" data-toggle="tab">Interact</a></li>
             <li id="cp"><a href="#component" data-toggle="tab">Component</a></li>
             <li id="co"><a href="#color" data-toggle="tab">Color</a></li>
-            <li id="li"><a href="#light" data-toggle="tab">Light</a></li>
-            <li id="in"><a href="#interact" data-toggle="tab">Interact</a></li>
-            <li id="ef"><a href="#effect" data-toggle="tab">Effect</a></li>
         </ul>
     </div>
     <div id="myTabContent" class="tab-content">
@@ -111,10 +111,10 @@
                 <button class="templateButton" id="spot-light"></button>
                 <p>Spot Light</p>
             </div>
-            <div class="templateBlock">
-                <button class="templateButton" id="directional-light"></button>
-                <p>Directional Light</p>
-            </div>
+            <!--<div class="templateBlock">-->
+                <!--<button class="templateButton" id="directional-light"></button>-->
+                <!--<p>Directional Light</p>-->
+            <!--</div>-->
             <div class="templateBlock">
                 <button class="templateButton" id="area-light"></button>
                 <p>Area Light</p>
@@ -263,6 +263,7 @@
 <script>
 //----------------modal control-------------------------------
     var LayoutNum = 0;
+    var CurrentTabNum = 0;
     layoutController();
     $('#myModal').modal({
         backdrop: 'static',

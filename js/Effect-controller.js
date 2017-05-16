@@ -2,7 +2,12 @@
  * Created by admin on 2017/5/12.
  */
 $("#ef").on("click", function () {
-    clearBackroundController();
+    if(CurrentTabNum==1){
+        clearBackroundController();
+    }else if(CurrentTabNum==2){
+        clearLightController();
+    }
+    CurrentTabNum = 3;
 })
 
 function effectController(){

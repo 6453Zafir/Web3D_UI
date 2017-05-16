@@ -314,12 +314,154 @@ function clearPointLight() {
     lightGuis.PointLightGui.hide();
 }
 
-// function clearThisGuiSlibling(thisgui) {
-//     for(i=0;i<lightGuis.length;i++){
-//         if(lightGuis[i] != thisgui){
-//             lightGuis[i].hide();
-//         }else{
-//             lightGuis[i].show();
-//         }
-//     }
-// }
+function initSpotLight() {
+    if(!IsSpotLightNewed){
+        var spotLight = new THREE.SpotLight( 0xffb110, 1 );
+        var lightHelper = new THREE.SpotLightHelper(spotLight);
+        var param = { color: '0xffb110' };
+
+        function init() {
+                renderer.shadowMap.enabled = true;
+                renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                renderer.gammaInput = true;
+                renderer.gammaOutput = true;
+
+                spotLight.position.set(15, 20, 10);
+                spotLight.castShadow = true;
+                spotLight.angle = Math.PI / 8
+                spotLight.penumbra = 0.05;
+                spotLight.decay = 2;
+                spotLight.distance = 200;
+                spotLight.shadow.mapSize.width = 1024;
+                spotLight.shadow.mapSize.height = 1024;
+                spotLight.shadow.camera.near = 1;
+                spotLight.shadow.camera.far = 200;
+
+                scene.add(spotLight);
+                scene.add(lightHelper);
+                scene.add(new THREE.AxisHelper(10));
+            }
+            function render() {
+                lightHelper.update(); // required
+                renderer.render( scene, camera );
+            }
+
+            function clearGui() {
+                if ( lightGuis.SpotLightGui ) lightGuis.SpotLightGui.destroy();
+                lightGuis.SpotLightGui = new dat.GUI();
+                $(".dg.ac").appendTo("#moduleArea");
+                $(".dg.ac").css("position","absolute");
+                $(".dg.ac").css("top","15px");
+                lightGuis.SpotLightGui.open();
+
+            }
+
+            function buildGui() {
+
+                //--------control the position/rotation/range by mouse drag---------
+                lightControls.spotLightControl= new THREE.TransformControls(camera,renderer.domElement);
+                lightControls.spotLightControl.attach( spotLight );
+                lightControls.spotLightControl.addEventListener( 'change', function () {
+                    renderer.render( scene, camera );
+                } );
+                scene.add( lightControls.spotLightControl );
+                //--------control the position/rotation/range by mouse gui end---------
+
+                clearGui();
+                addGui( 'light color', spotLight.color.getHex(), function( val ) {
+                    spotLight.color.setHex( val );
+                    render();
+                }, true );
+                addGui( 'intensity', spotLight.intensity, function( val ) {
+                    spotLight.intensity = val;
+                    render();
+                }, false, 0, 2 );
+
+                addGui( 'distance', spotLight.distance, function( val ) {
+                    spotLight.distance = val;
+                    render();
+                }, false, 0, 200 );
+
+                addGui( 'angle', spotLight.angle, function( val ) {
+                    spotLight.angle = val;
+                    render();
+                }, false, 0, Math.PI / 3 );
+
+                addGui( 'penumbra', spotLight.penumbra, function( val ) {
+                    spotLight.penumbra = val;
+                    render();
+                }, false, 0, 1 );
+
+                addGui( 'decay', spotLight.decay, function( val ) {
+                    spotLight.decay = val;
+                    render();
+                }, false, 1, 2 );
+
+                var spotLightData = function(){
+                    this.visible = true;
+                    // this.move = true;
+                    this.position = function () {lightControls.spotLightControl.setMode("translate")};
+                    this.rotation = function () {lightControls.spotLightControl.setMode("rotate")};
+                    this.scale = function () {lightControls.spotLightControl.setMode("scale")};
+                    this.delete = function () {
+                        scene.remove(spotLight);
+                        scene.remove(lightHelper);
+                        lightGuis.SpotLightGui.hide();
+                        scene.remove(lightControls.spotLightControl);
+                        IsSpotLightNewed = false;
+                    };
+                }
+
+                var spotLightObject = new spotLightData();
+                lightGuis.SpotLightGui.add( spotLightObject, 'visible' ).onChange( function ( val ) {
+                    if(val == false){
+                        lightHelper.visible = false;
+                    }else{
+                        lightHelper.visible = true;
+                    }
+                    renderer.render(scene,camera);
+                } );
+
+                var transform = lightGuis.SpotLightGui.addFolder('Transform');
+                transform.add(spotLightObject, 'position');
+                transform.add(spotLightObject, 'rotation');
+                transform.add(spotLightObject, 'scale');
+
+                lightGuis.SpotLightGui.add(spotLightObject,'delete');
+            }
+
+            function addGui( name, value, callback, isColor, min, max ) {
+                var node;
+                param[ name ] = value;
+                if ( isColor ) {
+                    node = lightGuis.SpotLightGui.addColor( param, name ).onChange( function() {
+                        callback( param[ name ] );
+                    } );
+
+                } else if ( typeof value == 'object' ) {
+                    node = lightGuis.SpotLightGui.add( param, name, value ).onChange( function() {
+                        callback( param[ name ] );
+                    } );
+                } else {
+                    node = lightGuis.SpotLightGui.add( param, name, min, max ).onChange( function() {
+                        callback( param[ name ] );
+                    } );
+
+                }
+                return node;
+            }
+            init();
+            buildGui();
+            render();
+        } else{
+            lightControls.spotLightControl.visible = true;
+            lightControls.spotLightControl.enabled = true;
+            lightGuis.SpotLightGui.show();
+        }
+}
+function clearSpotLight() {
+    lightControls.spotLightControl.visible = false;
+    lightControls.spotLightControl.enabled = false;
+    lightGuis.SpotLightGui.hide();
+}
+

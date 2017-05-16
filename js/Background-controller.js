@@ -2,7 +2,12 @@
  * Created by admin on 2017/5/5.
  */
 $("#bg").on("click", function () {
-    clearEffectController();
+    if(CurrentTabNum ==2){
+        clearLightController()
+    }else if(CurrentTabNum ==3){
+        clearEffectController();
+    }
+    CurrentTabNum = 1;
 })
 
 function backgroundController() {
