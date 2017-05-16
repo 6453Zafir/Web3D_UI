@@ -11,14 +11,20 @@ function lightController() {
         console.log("haven't choose template yet")
     }else {
         $("#point-light").on("click", function () {
+            if(LightNum == 4){
+                clearAreaLight();
+            }
             initPointLight();
             LightNum = 1;
         })
         $("#directional-light").on("click", function () {
-            initDirectionalLight();
+            // initDirectionalLight();
             LightNum = 3;
         })
         $("#area-light").on("click", function () {
+            if(LightNum == 1){
+                clearPointLight();
+            }
             initAreaLight();
             LightNum = 4;
         })
