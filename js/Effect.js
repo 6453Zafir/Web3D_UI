@@ -71,7 +71,7 @@ function clearFog() {
 function initGrid(){
     if(!IsGridNewed){
         gridHelper = new THREE.GridHelper( 1000,10,0x5ae5e3,0x6d6d6d );
-        gridHelper.position.y = 0;
+        gridHelper.position.y = -20;
         gridHelper.position.x = 0;
         scene.add( gridHelper );
         renderer.render( scene, camera );
@@ -157,7 +157,7 @@ function initGround() {
     var geometry;
     var material;
     if(!IsGroundNewed){
-        geometry = new THREE.PlaneGeometry(300,300,1,1 );
+        geometry = new THREE.PlaneGeometry(80,80,1,1 );
         material = new THREE.MeshBasicMaterial( {color: 0xd5d5d5, side: THREE.DoubleSide} );
         plane = new THREE.Mesh( geometry, material );
         scene.add( plane );
@@ -173,8 +173,8 @@ function initGround() {
         //--------control the position/rotation/range by mouse gui end---------
 
         var controlGround = function () {
-            this.width = 300;
-            this.height = 300;
+            this.width = 80;
+            this.height = 80;
             this.color = "#d5d5d5";
             this.opacity = 1;
             this.position = function() {EffectControls.GroundControl.setMode( "translate" )};
@@ -199,8 +199,8 @@ function initGround() {
         $(".dg.ac").css("position","absolute");
         $(".dg.ac").css("top","15px");
 
-        EffectGuis.GroundGui.add(GroundObject, 'width',10,10000).onChange(gernerateGeometry);
-        EffectGuis.GroundGui.add(GroundObject, 'height',10,10000).onChange(gernerateGeometry);
+        EffectGuis.GroundGui.add(GroundObject, 'width',10,1000).onChange(gernerateGeometry);
+        EffectGuis.GroundGui.add(GroundObject, 'height',10,1000).onChange(gernerateGeometry);
 
         EffectGuis.GroundGui.addColor(GroundObject, 'color').onChange(gernarateMaterial);
 

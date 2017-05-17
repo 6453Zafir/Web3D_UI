@@ -464,6 +464,9 @@ button:focus{
 #fps-control{
     background-image: url("../images/templates/fps-control.jpg");
 }
+#fly-control{
+    background-image: url("../images/templates/fps-control.jpg");
+}
 
 /*------------------------template button end------------------------*/
 

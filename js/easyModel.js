@@ -8,7 +8,7 @@ var camera;
 var scene;
 // var light;
 var cube;
-var stats;
+
 
 
 
