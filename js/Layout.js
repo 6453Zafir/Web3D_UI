@@ -24,7 +24,7 @@ function basicLayout() {
 
     var html = [
         '<div class="ListArea">',
-        '<button class="btn btn-default addItemButton">+</button>',
+        '<button class="btn btn-default addItemButton"  id="addItemButton">+</button>',
         '</div>'
     ].join("\n");
     $("#canvasArea").prepend(html);
@@ -48,3 +48,12 @@ function FullLayout() {
 function mapLayout() {
 
 }
+
+$(document).ready(function () {
+    var nav1s = [];
+    $("#addItemButton").on("click",function () {
+
+    })
+})
+
+
