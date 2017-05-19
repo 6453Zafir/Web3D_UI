@@ -1,105 +1,28 @@
-<!--<html>-->
-<!--<body>-->
 
-<!--<script src="libs/three/three.js"></script>-->
-<!--<script>-->
-    <!--var color = 0x000000;-->
-
-    <!--// Create your main scene-->
-    <!--var scene = new THREE.Scene();-->
-
-    <!--// Create your main camera-->
-    <!--var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);-->
-
-    <!--// Create lights-->
-    <!--var light = new THREE.PointLight(0xEEEEEE);-->
-    <!--light.position.set(20, 0, 20);-->
-    <!--scene.add(light);-->
-
-    <!--var lightAmb = new THREE.AmbientLight(0x777777);-->
-    <!--scene.add(lightAmb);-->
-
-    <!--// Create your renderer-->
-    <!--var renderer = new THREE.WebGLRenderer();-->
-    <!--renderer.setSize(window.innerWidth, window.innerHeight);-->
-    <!--document.body.appendChild(renderer.domElement);-->
-
-    <!--// Create a cube-->
-    <!--var geometry = new THREE.BoxGeometry(1, 1, 1);-->
-    <!--var material = new THREE.MeshLambertMaterial({-->
-        <!--color: 0xff00ff,-->
-        <!--ambient: 0x121212,-->
-        <!--emissive: 0x121212-->
-    <!--});-->
-
-    <!--var cube = new THREE.Mesh(geometry, material);-->
-    <!--scene.add(cube);-->
-
-    <!--// Set up the main camera-->
-    <!--camera.position.z = 5;-->
-
-    <!--// Load the background texture-->
-    <!--var texture = THREE.ImageUtils.loadTexture( 'images/black.jpg' );-->
-    <!--var backgroundMesh = new THREE.Mesh(-->
-            <!--new THREE.PlaneGeometry(2, 2, 0),-->
-            <!--new THREE.MeshBasicMaterial({-->
-                <!--map: texture-->
-            <!--}));-->
-
-    <!--backgroundMesh .material.depthTest = false;-->
-    <!--backgroundMesh .material.depthWrite = false;-->
-
-    <!--// Create your background scene-->
-    <!--var backgroundScene = new THREE.Scene();-->
-    <!--var backgroundCamera = new THREE.Camera();-->
-    <!--backgroundScene .add(backgroundCamera );-->
-    <!--backgroundScene .add(backgroundMesh );-->
-
-    <!--// Rendering function-->
-    <!--var render = function () {-->
-        <!--requestAnimationFrame(render);-->
-
-        <!--// Update the color to set-->
-        <!--if (color < 0xdddddd) color += 0x0000ff;-->
-
-        <!--// Update the cube color-->
-        <!--cube.material.color.setHex(color);-->
-
-        <!--// Update the cube rotations-->
-        <!--cube.rotation.x += 0.05;-->
-        <!--cube.rotation.y += 0.02;-->
-
-        <!--renderer.autoClear = false;-->
-        <!--renderer.clear();-->
-        <!--renderer.render(backgroundScene , backgroundCamera );-->
-        <!--renderer.render(scene, camera);-->
-    <!--};-->
-
-    <!--render();-->
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
-
-
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>菜鸟教程(runoob.com)</title>
 
-    <link rel="stylesheet" href="http://static.runoob.com/assets/js/jquery-treeview/jquery.treeview.css" />
+    <!--<link rel="stylesheet" href="http://static.runoob.com/assets/js/jquery-treeview/jquery.treeview.css" />-->
+    <link rel="stylesheet" href="libs/jquery-treeview/jquery.treeview.css" />
     <!--<link rel="stylesheet" href="http://static.runoob.com/assets/js/jquery-treeview/screen.css" />-->
     <link rel="Stylesheet" href="libs/bootstrap/css/bootstrap.min.css" type="text/css" media="screen">
 
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
     <link rel=StyleSheet href="css/main.css" TYPE="text/css" MEDIA=screen>
 
     <!--<script src="http://static.runoob.com/assets/js/jquery-treeview/jquery.cookie.js"></script>-->
-    <script src="http://static.runoob.com/assets/js/jquery-treeview/jquery.treeview.js" type="text/javascript"></script>
+    <script src="libs/jquery-treeview/jquery.treeview.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
+
+            var currentElememt;
+
             $("#browser").treeview({
                 toggle: function() {
                     console.log("%s was toggled.", $(this).find(">span").text());
@@ -117,31 +40,65 @@
 
             $(".file,.folder").on("click",function (e) {
                 var buttonGroup = $("#buttonGroup");
-
                 if(buttonGroup!=null){
                     buttonGroup.remove();
                 }
-
-                var ele = $( event.target );
-                ele.attr("contentEditable","true");
+                currentElememt = $( event.target );
 
                 var x = e.pageX +20+ 'px';
                 var y = e.pageY -20+ 'px';
-                var buttonGroup = $("<button class='editButton' id='edit'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
-                        "<button class='editButton' id='delete'><span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></button>"+
-                        "<button class='editButton' id='comform'><span class='glyphicon glyphicon-ok-circle' aria-hidden='true'></span></button>"+
-                        "<button class='editButton' id='addchild'><span class='glyphicon glyphicon-collapse-down' aria-hidden='true'></span></button>");
-                var div = $('<div id="buttonGroup">').css({
+                $("#button-group").css({
+                    "display":"block",
                     "position": "absolute",
                     "left": x,
                     "top": y
                 });
-                div.append(buttonGroup);
-                $(document.body).append(div);
             });
+
+            $(document).on('click', '.file, .folder', function (e) {
+                var buttonGroup = $("#buttonGroup");
+                if (buttonGroup != null) {
+                    buttonGroup.remove();
+                }
+                currentElememt = $(event.target);
+
+                var x = e.pageX + 20 + 'px';
+                var y = e.pageY - 20 + 'px';
+                $("#button-group").css({
+                    "display": "block",
+                    "position": "absolute",
+                    "left": x,
+                    "top": y
+                });
+            });
+
+            $("#edit").on('click',function () {
+                currentElememt.attr("contentEditable","true");
+            })
+            $("#delete").on('click',function () {
+                currentElememt.parent().remove();
+                $("#button-group").css({
+                    "display":"none",
+                });
+            })
+            $("#conform").on('click',function () {
+                currentElememt.attr("contentEditable","false");
+                $("#button-group").css({
+                    "display":"none",
+                });
+
+            })
+            $("#addchild").on('click',function () {
+                if(currentElememt.hasClass("folder")){
+                    var newChild = $("<li><span class='file'>heiehihei</span></li>");
+                    $( "ul .file" ).after( newChild);
+                }else if(currentElememt.hasClass("file")){
+                    currentElememt.removeClass("file");
+                    currentElememt.addClass("folder");
+                    var newChild = $("<ul><li><span class='file'>New Item</span></li> </ul>").appendTo(currentElememt.parent());
+                }
+            })
         });
-
-
     </script>
 </head>
 <body>
@@ -176,7 +133,7 @@
                             <li><span class="file">File 3.1</span></li>
                         </ul>
                     </li>
-                    <li><span class="file" contenteditable="false" id="test">File 4</span></li>
+                    <li><span class="file">File 4</span></li>
                 </ul>
             </li>
         </ul>
@@ -184,10 +141,12 @@
         <button id="add">Add!</button>
 
 
-        <div class="buttonGroup">
-            <button class="editButton"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
-            <button class="editButton"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
-            <button class="editButton"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></button>
+        <div class="buttonGroup" id="button-group">
+            <button class='editButton' id='edit'><span class='glyphicon glyphicon-edit' aria-hidden='true' ></span></button>
+            <button class='editButton' id='delete'><span class='glyphicon glyphicon-remove-circle' aria-hidden='true' ></span></button>
+            <button class='editButton' id='addchild'><span class='glyphicon glyphicon-collapse-down' aria-hidden='true' ></span></button>
+            <button class='editButton' id='conform'><span class='glyphicon glyphicon-ok-circle' aria-hidden='true' ></span></button>
+
         </div>
 
     </div>

@@ -498,15 +498,18 @@ button:focus{
 
 
 .buttonGroup{
-
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
 }
 
 .editButton{
     margin: 1px;
     border: none;
     display: inline-block;
-    width: 40px;
+    width: 30px;
     height: 30px;
-    border-radius: 3px;
-    background-color: #d2d2d2;
+    border-radius: 50%;
+    background-color: #c2e8c9;
 }
