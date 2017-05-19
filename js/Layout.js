@@ -21,15 +21,15 @@ function layoutController() {
 }
 
 function basicLayout() {
-
-    var html = [
-        '<div class="ListArea">',
-        '<button class="btn btn-default addItemButton"  id="addItemButton">+</button>',
-        '</div>'
-    ].join("\n");
-    $("#canvasArea").prepend(html);
-    $("#moduleArea").removeClass("moduleArea");
-    $("#moduleArea").addClass("HalfModuleArea");
+    //
+    // var html = [
+    //     '<div class="ListArea">',
+    //     '<button class="btn btn-default addItemButton"  id="addItemButton">+</button>',
+    //     '</div>'
+    // ].join("\n");
+    // $("#canvasArea").prepend(html);
+    // $("#moduleArea").removeClass("moduleArea");
+    // $("#moduleArea").addClass("HalfModuleArea");
     renderEasyModel()
     backgroundController();
     effectController();
@@ -37,6 +37,7 @@ function basicLayout() {
     interactController();
 }
 function FullLayout() {
+    $("#list-area").remove();
     $("#moduleArea").removeClass("HalfModuleArea");
     $("#moduleArea").addClass("moduleArea");
     renderEasyModel()

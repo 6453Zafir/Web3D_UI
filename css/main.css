@@ -476,12 +476,16 @@ button:focus{
     background-color: #f5f5f5;
     display: inline-block;
     height: 100%;
-    text-align: center;
 }
 
 .addItemButton{
-    width: 80%;
+    display: block;
+    width: 89%;
     margin: 10px 0 ;
+    outline: none;
+}
+.addItemButton :focus{
+    outline: none;
 }
 /*-------------------------Basic Layout------------------------------*/
 
