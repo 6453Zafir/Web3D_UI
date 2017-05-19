@@ -428,6 +428,9 @@ button:focus{
 #mountainwater-skybox{
     background-image: url("../images/templates/mountainwater-skybox.jpg");
 }
+#swedishshroyalcastle-skybox{
+    background-image: url("../images/templates/swedishroyalcastle-skybox.jpg");
+}
 
 #point-light{
     background-image: url("../images/templates/pointLight.jpg");

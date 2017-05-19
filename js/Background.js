@@ -190,7 +190,7 @@ function initSkybox(skyboxName) {
     $("#background").css("transition","all 0.4s");
     $(".skyboxBackgroundArea").slideDown();
     if(!skyBoxNewed){
-        var imagePrefix = "images/skyboxs/dawnmountain/dawnmountain-";
+        // var imagePrefix = "images/skyboxs/dawnmountain/dawnmountain-";
         var imagePrefix = "images/skyboxs/"+skyboxName+"/"+skyboxName+"-";
         var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
         var imageSuffix = ".png";

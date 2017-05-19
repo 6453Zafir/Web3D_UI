@@ -91,6 +91,11 @@ function backgroundController() {
                     SkyboxName = "mountainwater";
                     initSkybox(SkyboxName);
                 })
+                $("#swedishshroyalcastle-skybox").on("click",function () {
+                    clearslibingSkybox();
+                    SkyboxName = "swedishroyalcastle";
+                    initSkybox(SkyboxName);
+                })
                 initSkybox("dawnmountain");
             }else{
                 $("#background").css("height","420px");
