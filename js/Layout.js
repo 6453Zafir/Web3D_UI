@@ -21,15 +21,30 @@ function layoutController() {
 }
 
 function basicLayout() {
-    //
-    // var html = [
-    //     '<div class="ListArea">',
-    //     '<button class="btn btn-default addItemButton"  id="addItemButton">+</button>',
-    //     '</div>'
-    // ].join("\n");
-    // $("#canvasArea").prepend(html);
-    // $("#moduleArea").removeClass("moduleArea");
-    // $("#moduleArea").addClass("HalfModuleArea");
+    if(!IsSettingTipShowed){
+        $("#setting-tip").css("display","block");
+        $("#setting-tip,#settingButton").on("click",function () {
+            $("#setting-tip").css("display","none");
+            IsSettingTipShowed = true;
+        })
+    }
+
+    $("#add-button").on("click",function (e) {
+        if(!IsDblclickTipShowed){
+            var x = e.pageX  + 'px';
+            var y = e.pageY  + 'px';
+            $("#dblclick-tip .addingImg").css("top",y);
+            $("#dblclick-tip .addingImg").css("left",x);
+            $("#dblclick-tip").css("display","block");
+            IsDblclickTipShowed = true;
+        }
+
+    $("#dblclick-tip").on("click",function () {
+        $("#dblclick-tip").css("display","none");
+    })
+    })
+
+
     renderEasyModel()
     backgroundController();
     effectController();
