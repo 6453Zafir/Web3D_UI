@@ -286,13 +286,16 @@ function initFPSControl() {
         renderer.render( scene, camera );
 
     }
+    currentControlNum =3;
 }
 function clearFPSControl() {
     FPSControl.enabled = false;
+    camera.position.set(0,0,50);
 }
 //-----------------------------FPS control end----------------------------------------
 //-----------------------------fly control -----------------------------------------
 function initFlyControl() {
+    currentControlNum =4;
     if(!IsFlyControlNewed){
         clock.start();
         stats = new Stats();
@@ -305,28 +308,30 @@ function initFlyControl() {
         FlyControl.autoForward = false;
         FlyControl.dragToLook = false;
 
-        animate();
-
-        function animate() {
-            requestAnimationFrame( animate );
-            render();
-            stats.update();
-
-        }
-
-        function render() {
-            var delta = clock.getDelta();
-            FlyControl.update( delta );
-            renderer.render(scene,camera);
-        }
         IsFlyControlNewed = true;
     }else{
         FlyControl.enabled = true;
+    }
+
+    animate();
+
+    function animate() {
+        if(currentControlNum ==4){
+            requestAnimationFrame( animate );
+            render();
+            stats.update();
+        }
+    }
+    function render() {
+        var delta = clock.getDelta();
+        FlyControl.update( delta );
+        renderer.render(scene,camera);
     }
 }
 
 
 function clearFlyControl() {
-    FlyControl.enabled=false;
+    FlyControl.enabled = false;
+    camera.position.set(0,0,50);
 }
 //-----------------------------fly control end----------------------------------------

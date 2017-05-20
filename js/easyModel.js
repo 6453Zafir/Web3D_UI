@@ -71,7 +71,21 @@ function renderEasyModel() {
             cube=new THREE.Mesh(Cubegeometry,Cubematerial);
             cube.position.set(0,0,0);
             scene.add(cube);
+            randomColor( cube );
 
+            function randomColor( target ) {
+
+                if ( target !== undefined ) {
+
+                    if ( target.material !== undefined ) target = target.material;
+
+                    if ( target.color !== undefined ) {
+
+                        target.color.setHex( 0xffffff * Math.random() );
+
+                    }
+                }
+            }
             // lights
 
             light = new THREE.DirectionalLight( 0xffffff );

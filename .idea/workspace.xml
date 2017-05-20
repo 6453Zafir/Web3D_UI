@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9c64b8-9af4-42c8-8703-4cb5d097cb0b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tips/dblclickTip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tips/savingTip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tips/settingTip.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadModel.html" afterPath="$PROJECT_DIR$/LoadModel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/DynamicList.js" afterPath="$PROJECT_DIR$/js/DynamicList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Layout.js" afterPath="$PROJECT_DIR$/js/Layout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interact.js" afterPath="$PROJECT_DIR$/js/Interact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Light.js" afterPath="$PROJECT_DIR$/js/Light.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easyModel.js" afterPath="$PROJECT_DIR$/js/easyModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/three/FlyControls.js" afterPath="$PROJECT_DIR$/libs/three/FlyControls.js" />
     </list>
     <ignored path="LoadSTLTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +32,7 @@
       <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LoadModel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6091">
+            <state relative-caret-position="6441">
               <caret line="301" column="35" selection-start-line="301" selection-start-column="35" selection-end-line="301" selection-end-column="35" />
               <folding>
                 <element signature="n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -51,11 +48,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Layout.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/Layout.js">
+      <file leaf-file-name="Light.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Light.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state relative-caret-position="292">
+              <caret line="347" column="59" selection-start-line="347" selection-start-column="56" selection-end-line="347" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interact-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Interact-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1230">
+              <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easyModel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/easyModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,11 +124,7 @@
         <option value="$PROJECT_DIR$/libs/three/dat.gui.min.js" />
         <option value="$PROJECT_DIR$/js/Light-controller.js" />
         <option value="$PROJECT_DIR$/js/Effect-controller.js" />
-        <option value="$PROJECT_DIR$/js/Light.js" />
-        <option value="$PROJECT_DIR$/js/easyModel.js" />
         <option value="$PROJECT_DIR$/js/Interact-controller.js" />
-        <option value="$PROJECT_DIR$/js/Interact.js" />
-        <option value="$PROJECT_DIR$/libs/three/FlyControls.js" />
         <option value="$PROJECT_DIR$/FullScreenLayout.html" />
         <option value="$PROJECT_DIR$/libs/jquery-treeview/jquery.treeview.css" />
         <option value="$PROJECT_DIR$/js/Background.js" />
@@ -121,6 +134,10 @@
         <option value="$PROJECT_DIR$/js/Background-controller.js" />
         <option value="$PROJECT_DIR$/LoadModel.html" />
         <option value="$PROJECT_DIR$/js/Layout.js" />
+        <option value="$PROJECT_DIR$/js/Interact.js" />
+        <option value="$PROJECT_DIR$/libs/three/FlyControls.js" />
+        <option value="$PROJECT_DIR$/js/easyModel.js" />
+        <option value="$PROJECT_DIR$/js/Light.js" />
       </list>
     </option>
   </component>
@@ -261,19 +278,19 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/0-study/毕设/Web3D_UI/LoadModel.html" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\0-study\毕设\Web3D_UI\images\tips" />
-      <recent name="D:\0-study\毕设\Web3D_UI\images\templates" />
-      <recent name="D:\0-study\毕设\Web3D_UI\libs\jquery-treeview\images" />
-      <recent name="D:\0-study\毕设\Web3D_UI\images" />
-      <recent name="D:\0-study\毕设\Web3D_UI\libs\bootstrap\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\0-study\毕设\Web3D_UI\images" />
       <recent name="D:\0-study\毕设\Web3D_UI\libs\jquery-treeview" />
       <recent name="D:\0-study\毕设\Web3D_UI" />
       <recent name="D:\0-study\毕设\Web3D_UI\libs\three" />
       <recent name="D:\0-study\毕设\Web3D_UI\images\skyboxs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\0-study\毕设\Web3D_UI\images\tips" />
+      <recent name="D:\0-study\毕设\Web3D_UI\images\templates" />
+      <recent name="D:\0-study\毕设\Web3D_UI\libs\jquery-treeview\images" />
+      <recent name="D:\0-study\毕设\Web3D_UI\images" />
+      <recent name="D:\0-study\毕设\Web3D_UI\libs\bootstrap\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -438,12 +455,12 @@
       <workItem from="1495244168561" duration="1707000" />
       <workItem from="1495267766465" duration="111000" />
       <workItem from="1495275682535" duration="704000" />
-      <workItem from="1495282363104" duration="2739000" />
+      <workItem from="1495282363104" duration="5713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400123000" />
+    <option name="totallyTimeSpent" value="403097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1084" extended-state="0" />
@@ -498,7 +515,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -635,24 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Light.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14665">
-          <caret line="421" column="50" selection-start-line="421" selection-start-column="50" selection-end-line="421" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Effect-controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Light-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -667,27 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="39138" column="8" selection-start-line="39138" selection-start-column="8" selection-end-line="39138" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/three/FlyControls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="143" column="41" selection-start-line="143" selection-start-column="41" selection-end-line="143" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Interact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="324" column="5" selection-start-line="324" selection-start-column="5" selection-end-line="324" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/easyModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -784,6 +766,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Background-controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -792,17 +782,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Interact-controller.js">
+    <entry file="file://$PROJECT_DIR$/js/easyModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1855">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+        <state relative-caret-position="425">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/three/FlyControls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Interact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="321" column="27" selection-start-line="321" selection-start-column="27" selection-end-line="321" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoadModel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6091">
+        <state relative-caret-position="6441">
           <caret line="301" column="35" selection-start-line="301" selection-start-column="35" selection-end-line="301" selection-end-column="35" />
           <folding>
             <element signature="n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -817,10 +823,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Layout.js">
+    <entry file="file://$PROJECT_DIR$/js/Interact-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        <state relative-caret-position="1230">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Light-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Light.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="347" column="59" selection-start-line="347" selection-start-column="56" selection-end-line="347" selection-end-column="59" />
           <folding />
         </state>
       </provider>

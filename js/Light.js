@@ -20,6 +20,7 @@ var movePointLight = true;
 var moveSpotLight = true;
 
 function initAreaLight() {
+    LightNum = 3;
     if(!IsAreaLightNewed){
         var matParams = {
             specular: 0xFFFFFF,
@@ -57,8 +58,6 @@ function initAreaLight() {
             rectLight.position.set( 15, 15, 0 );
             rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
             rectLight.add( rectLightHelper );
-
-            randomColor( cube );
 
             cube.castShadow = true;
             cube.receiveShadow = true;
@@ -174,19 +173,6 @@ function initAreaLight() {
             lightGuis.AreaLightGui.add(param,'delete');
 
         }
-        function randomColor( target ) {
-
-            if ( target !== undefined ) {
-
-                if ( target.material !== undefined ) target = target.material;
-
-                if ( target.color !== undefined ) {
-
-                    target.color.setHex( 0xffffff * Math.random() );
-
-                }
-            }
-        }
         init();
         buildGui();
         tick();
@@ -196,7 +182,6 @@ function initAreaLight() {
         lightControls.areaLightControl.enabled = true;
         lightGuis.AreaLightGui.show();
     }
-
 }
 function clearAreaLight() {
     lightControls.areaLightControl.visible = false;
@@ -205,6 +190,7 @@ function clearAreaLight() {
 }
 
 function initPointLight(){
+    LightNum =1;
     if(!IsPointLightNewed){
         var clock = new THREE.Clock();
         var pointlight;
@@ -315,6 +301,7 @@ function clearPointLight() {
 }
 
 function initSpotLight() {
+    LightNum =2;
     if(!IsSpotLightNewed){
         var spotLight = new THREE.SpotLight( 0xffb110, 1 );
         var lightHelper = new THREE.SpotLightHelper(spotLight);
