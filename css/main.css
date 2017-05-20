@@ -12,7 +12,31 @@ body{
     font-family: "Microsoft YaHei UI Light";
 }
 
+.TipPanel{
+    display: none;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 8, 13, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.TipPanel .settingImg{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 30px;
+    left: 75%;
+}
 
+.TipPanel .addingImg{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    left: 17%;
+}
 
 /*--------------------nav bar block-----------------------*/
 .navBar{
@@ -25,8 +49,8 @@ body{
     padding:0px 20px;
     line-height: 42px;
     font-size: small;
-    z-index: 3;
     border-top: solid 3px #fe8b6c;
+    z-index: 20;
 }
 
 .settingButton,.uploadButton,.saveButton{

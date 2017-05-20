@@ -12,7 +12,7 @@ $(document).ready(function(){
         }
     });
 
-    $("#add").click(function() {
+    $("#add-button").click(function() {
         FolderNum += 1;
         var branches = $("<li><span class='folder' id='Folder'+FolderNum>New Folder</span><ul>" +
             "<li><span class='file'>New Item</span></li>").appendTo("#browser");

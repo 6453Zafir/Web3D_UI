@@ -14,7 +14,16 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-<div class="navBar">
+
+<div class="TipPanel" id="setting-tip">
+    <img src="images/tips/settingTip.png" class="settingImg">
+</div>
+
+<div class="TipPanel" id="dblclick-tip">
+    <img src="images/tips/dblclickTip.png" class="addingImg">
+</div>
+
+<div class="navBar" id="navBar">
     Web3D Template System
     <div class="menu_container">
         <button class="saveButton" id="saveButton"></button>
@@ -83,7 +92,6 @@
                     <button class="templateButton" id="swedishshroyalcastle-skybox"></button>
                     <p>Swedish castle skybox</p>
                 </div>
-
             </div>
         </div>
         <div class="tab-pane fade" id="component">
@@ -159,15 +167,13 @@
         <div id="main" style = "display: block;margin: 10px auto;width: 95%">
             <ul id="browser" class="filetree treeview-famfamfam">
             </ul>
-            <button id="add" class = "btn btn-default addItemButton" style="outline: none;display: block;margin: 10px auto">+</button>
+            <button id="add-button" class = "btn btn-default addItemButton" style="outline: none;display: block;margin: 10px auto">+</button>
             <div class="buttonGroup" id="button-group">
                 <button title="Edit" class='editButton' id='edit'><span class='glyphicon glyphicon-edit' aria-hidden='true' ></span></button>
                 <button title="Delete" class='editButton' id='delete'><span class='glyphicon glyphicon-remove-circle' aria-hidden='true' ></span></button>
                 <button title="Add child" class='editButton' id='addchild'><span class='glyphicon glyphicon-collapse-down' aria-hidden='true' ></span></button>
                 <button title="Confrom" class='editButton' id='conform'><span class='glyphicon glyphicon-ok-circle' aria-hidden='true' ></span></button>
-
             </div>
-
         </div>
     </div>
 
@@ -292,7 +298,11 @@
 <script>
 //----------------modal control-------------------------------
     var LayoutNum = 0;
-    var CurrentTabNum = 0;
+    var CurrentTabNum = 1;
+    var IsSettingTipShowed = false;
+    var IsAddingButtonClicked = false;
+    var IsDblclickTipShowed =false;
+
     layoutController();
     $('#myModal').modal({
         backdrop: 'static',
