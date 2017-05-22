@@ -494,7 +494,21 @@ button:focus{
 #fly-control{
     background-image: url("../images/templates/fps-control.jpg");
 }
-
+#wizard1{
+    background-image: url("../images/wizards/wizard1.jpg");
+}
+#wizard2{
+    background-image: url("../images/wizards/wizard2.jpg");
+}
+#wizard3{
+    background-image: url("../images/wizards/wizard3.jpg");
+}
+#wizard4{
+    background-image: url("../images/wizards/wizard4.jpg");
+}
+#wizard5{
+    background-image: url("../images/wizards/wizard5.jpg");
+}
 /*------------------------template button end------------------------*/
 
 /*-------------------------Basic Layout------------------------------*/
@@ -529,6 +543,7 @@ button:focus{
 
 
 .buttonGroup{
+    z-index: 20;
     display: none;
     position: absolute;
     top:0;
@@ -539,8 +554,8 @@ button:focus{
     margin: 1px;
     border: none;
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #c2e8c9;
+    background-color: #fe8b6c;
 }

@@ -7,12 +7,21 @@
     <script src="libs/Vue/vue.min.js"></script>
 
     <link rel="Stylesheet" href="libs/jquery-treeview/jquery.treeview.css" />
+    <link rel="Stylesheet" href="libs/gooey-menu/gooey.min.css" />
+    <link rel="Stylesheet" href="libs/gooey-menu/livedemo.css" />
+    <link rel="Stylesheet" href="libs/font-awesome.min.css" type="text/css" media="screen">
     <link rel="Stylesheet" href="libs/bootstrap/css/bootstrap.min.css" type="text/css" media="screen">
     <link rel="StyleSheet" href="css/main.css" TYPE="text/css" MEDIA=screen>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="libs/gooey-menu/gooey.min.js"></script>
 </head>
+<style>
+    .prettyprint ol.linenums > li {
+        list-style-type: decimal;
+    }
+</style>
 <body>
 
 <div class="TipPanel" id="setting-tip">
@@ -94,17 +103,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="component">
-            <div class="templateBlock">
-                <div id="el">
-                    <wizard></wizard>
-                </div>
-                <p>Wizard</p>
-            </div>
-            <div class="templateBlock"></div>
-            <div class="templateBlock"></div>
-        </div>
-        <div class="tab-pane fade" id="light">
+        <div class="tab-pane fade" id="light" style="height: 250px">
             <div class="templateBlock">
                 <button class="templateButton" id="point-light"></button>
                 <p>Point Light</p>
@@ -122,7 +121,7 @@
                 <p>Area Light</p>
             </div>
         </div>
-        <div class="tab-pane fade" id="interact">
+        <div class="tab-pane fade" id="interact" style="height: 250px">
             <div class="templateBlock">
                 <button class="templateButton" id="default-control"></button>
                 <p>Default Control</p>
@@ -140,7 +139,7 @@
                 <p>Free Roaming</p>
             </div>
         </div>
-        <div class="tab-pane fade" id="effect">
+        <div class="tab-pane fade" id="effect" style="height: 250px">
             <div class="templateBlock">
                 <button class="templateButton" id="fog-effect"></button>
                 <p>Fog</p>
@@ -158,8 +157,50 @@
                 <!--<p>Shadow</p>-->
             <!--</div>-->
         </div>
-    </div>
+        <div class="tab-pane fade" id="component" style="height: 250px">
+            <!--<div class="templateBlock">-->
+            <!--<div id="el">-->
+            <!--<wizard></wizard>-->
+            <!--</div>-->
+            <!--<p>Wizard</p>-->
+            <!--</div>-->
+            <div class="templateBlock">
+                <button class="templateButton" id="wizard1"></button>
+                <p>Circle Wizard</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="wizard2"></button>
+                <p>Horizontal glue Wizard</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="wizard3"></button>
+                <p>Horizontal space Wizard</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="wizard4"></button>
+                <p>Vertical glue Wizard</p>
+            </div>
+            <div class="templateBlock">
+                <button class="templateButton" id="wizard5"></button>
+                <p>Vertical space Wizard</p>
+            </div>
+            <!--<div class="templateBlock">-->
+                <!--<nav id="gooey-round">-->
+                    <!--<input type="checkbox" class="menu-open" name="menu-open3" id="menu-open3"/>-->
+                    <!--<label class="open-button" for="menu-open3">-->
+                        <!--<span class="burger burger-1"></span>-->
+                        <!--<span class="burger burger-2"></span>-->
+                        <!--<span class="burger burger-3"></span>-->
+                    <!--</label>-->
 
+                    <!--<a href="#" class="gooey-menu-item"> <i class="fa fa-soundcloud" aria-hidden="true"> </i> </a>-->
+                    <!--<a href="#" class="gooey-menu-item"> <i class="fa fa-table"></i> </a>-->
+                    <!--<a href="#" class="gooey-menu-item"> <i class="fa fa-square-o"></i> </a>-->
+                    <!--<a href="#" class="gooey-menu-item"> <i class="fa fa-trash-o"></i> </a>-->
+                <!--</nav>-->
+            <!--</div>-->
+        </div>
+    </div>
 </div>
 
 <div class="canvasArea" id="canvasArea">
@@ -168,11 +209,12 @@
             <ul id="browser" class="filetree treeview-famfamfam">
             </ul>
             <button id="add-button" class = "btn btn-default addItemButton" style="outline: none;display: block;margin: 10px auto">+</button>
+
             <div class="buttonGroup" id="button-group">
-                <button title="Edit" class='editButton' id='edit'><span class='glyphicon glyphicon-edit' aria-hidden='true' ></span></button>
-                <button title="Delete" class='editButton' id='delete'><span class='glyphicon glyphicon-remove-circle' aria-hidden='true' ></span></button>
-                <button title="Add child" class='editButton' id='addchild'><span class='glyphicon glyphicon-collapse-down' aria-hidden='true' ></span></button>
-                <button title="Confrom" class='editButton' id='conform'><span class='glyphicon glyphicon-ok-circle' aria-hidden='true' ></span></button>
+                <button title="Edit" class='editButton' id='edit'><i class="fa fa-edit"></i></button>
+                <button title="Delete" class='editButton' id='delete'><i class="fa fa-trash-o"></i></span></button>
+                <button title="Add child" class='editButton' id='addchild'><span class='fa fa-sitemap' aria-hidden='true' ></span></button>
+                <button title="Confrom" class='editButton' id='conform'><span class='fa fa-check-square-o' aria-hidden='true' ></span></button>
             </div>
         </div>
     </div>
@@ -237,6 +279,8 @@
 
 <script src="js/DragDrop.js"></script>
 <script src="js/DynamicList.js"></script>
+<script src="js/gooey-menu.js"></script>
+
 
 <script src="libs/three/three.js"></script>
 <!--<script src="libs/three/STLLoader.js"></script>-->
@@ -273,6 +317,8 @@
 <!--<script src="js/LoadSTL.js"></script>-->
 <!--------------------load different model----------------->
 
+
+<!---------------------------modal--------------------------------->
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
      aria-labelledby="myLargeModalLabel" id="myModal" backdrop="static" data-keyboard="false" style="top:20%">
     <div class="modal-dialog modal-lg" role="document">
@@ -281,22 +327,22 @@
                 <h4 class="modal-title"><b>Please choose a template</b></h4>
             </div>
             <div class="templateBlock">
-            <button class="templateButton" id="template1"></button>
-            <p>Basic Layout</p>
+                <button class="templateButton" id="template1"></button>
+                <p>Basic Layout</p>
             </div>
             <div class="templateBlock">
-            <button class="templateButton" id="template2"></button>
-            <p>Full Screen with draggable wizard</p>
+                <button class="templateButton" id="template2"></button>
+                <p>Full Screen with draggable wizard</p>
             </div>
             <div class="templateBlock">
-            <button class="templateButton" id="template3"></button>
-            <p>Basic Layout with map</p>
+                <button class="templateButton" id="template3"></button>
+                <p>Basic Layout with map</p>
             </div>
         </div>
     </div>
 </div>
+
 <script>
-//----------------modal control-------------------------------
     var LayoutNum = 0;
     var CurrentTabNum = 1;
     var IsSettingTipShowed = false;
@@ -314,6 +360,7 @@
         $('#myModal').modal('hide');
     }
 </script>
+<!---------------------------modal--------------------------------->
 
 </body>
 </html>

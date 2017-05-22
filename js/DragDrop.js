@@ -110,11 +110,12 @@
 //     // }
 //
 // });
-
+var IsPanelOpen = false;
 $(document).ready(function() {
 
     $("#settingButton").click(function () {
         $("#control-panel").slideToggle();
+        IsPanelOpen = !IsPanelOpen;
     })
 })
 

@@ -2,7 +2,6 @@
  * Created by admin on 2017/5/19.
  */
 $(document).ready(function(){
-
     var currentElememt;
     var FolderNum = 0;
 
@@ -44,9 +43,13 @@ $(document).ready(function(){
             buttonGroup.remove();
         }
         currentElememt = $(event.target);
-
-        var x = e.pageX + 20 + 'px';
-        var y = e.pageY -40 + 'px';
+        if(IsPanelOpen){
+            var x = e.pageX + 20 + 'px';
+            var y = e.pageY -300 + 'px';
+        }else{
+            var x = e.pageX + 20 + 'px';
+            var y = e.pageY -40 + 'px';
+        }
         $("#button-group").css({
             "display": "block",
             "position": "absolute",

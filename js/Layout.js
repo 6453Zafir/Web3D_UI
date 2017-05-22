@@ -43,8 +43,6 @@ function basicLayout() {
         $("#dblclick-tip").css("display","none");
     })
     })
-
-
     renderEasyModel()
     backgroundController();
     effectController();
