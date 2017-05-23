@@ -64,6 +64,7 @@ function initFog() {
     }
 }
 function clearFog() {
+    IsFogNewed = false;
     EffectGuis.Foggui.hide();
 }
 
@@ -147,6 +148,7 @@ function initGrid(){
 }
 
 function clearGrid() {
+    IsGridNewed = false;
     EffectControls.GridControl.enabled=false;
     EffectControls.GridControl.visible=false;
     EffectGuis.GridGui.hide();

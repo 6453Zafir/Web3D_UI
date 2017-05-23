@@ -48,6 +48,7 @@ function basicLayout() {
     effectController();
     lightController();
     interactController();
+    wizardController();
 }
 function FullLayout() {
     $("#list-area").remove();
@@ -58,6 +59,7 @@ function FullLayout() {
     effectController();
     lightController();
     interactController();
+    wizardController();
 }
 function mapLayout() {
 

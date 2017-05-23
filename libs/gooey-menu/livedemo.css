@@ -104,8 +104,8 @@ i.desc {
 }
 #gooey-h .open-button,
 #gooey-h .gooey-menu-item {
-    margin-top: 4.2em;
-    margin-left: .6em;
+    margin-top: 4.5em;
+    margin-left: 4.5em;
 }
 #gooey-v .open-button,
 #gooey-v .gooey-menu-item {
@@ -113,15 +113,13 @@ i.desc {
 }
 #gooey-round,
 #gooey-API {
-    left: 30%;
-    top: 50%;
 }
 #gooey-round .open-button,
 #gooey-API .open-button,
 #gooey-round .gooey-menu-item,
 #gooey-API .gooey-menu-item {
-    margin-top: 6.5em;
-    margin-left: 3.2em;
+    margin-top: 4.5em;
+    margin-left: 4.5em;
 }
 .fa.fa-angle-double-up {
     position: fixed;
