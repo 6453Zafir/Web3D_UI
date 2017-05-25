@@ -34,11 +34,9 @@ function defaultControl() {
     }
 
     function render() {
-
         cube.rotation.y += (targetRotation-cube.rotation.y)*0.005;
         cube.rotation.x += (targetYRotation-cube.rotation.x)*0.001;
         renderer.render(scene,camera);
-
     }
     if(IsDefaultControlNewed){
         animate();
@@ -67,10 +65,10 @@ function defaultControl() {
     function onDocumentMouseMove(event) {
         mouseX = event.clientX-windowHalfX;
         targetRotation = targetRotationOnMouseDown+(mouseX-mouseXOnMouseDown)*0.02;
-
         mouseY = event.clientX-windowHalfX;
         targetYRotation = targetYRotationOnMouseDown+(mouseY-mouseYOnMouseDown)*0.02;
     }
+
     function onDocumentMouseUp(event) {
         document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
         document.removeEventListener( 'mouseup', onDocumentMouseUp, false );

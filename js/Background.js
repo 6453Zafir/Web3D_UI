@@ -147,21 +147,17 @@ function initImageBackground(imageNum) {
     $("#background").css("transition","all 0.4s");
     $(".ImageBackgroundArea").slideDown();
     var texture1 = THREE.ImageUtils.loadTexture( 'images/image-backgrounds/imagebg-'+imageNum+'.jpg' );
-    // var texture2 = THREE.ImageUtils.loadTexture( 'images/black.jpg' );
     var backgroundMesh = new THREE.Mesh(
         new THREE.PlaneGeometry(2, 2, 0),
         new THREE.MeshBasicMaterial({
             map: texture1
         }));
-
     backgroundMesh .material.depthTest = false;
     backgroundMesh .material.depthWrite = false;
-
     backgroundScene = new THREE.Scene();
     backgroundCamera = new THREE.Camera();
     backgroundScene .add(backgroundCamera );
     backgroundScene .add(backgroundMesh );
-    // backgroundMesh.material.map = texture2;
 
     var render = function () {
         requestAnimationFrame(render);
@@ -190,7 +186,6 @@ function initSkybox(skyboxName) {
     $("#background").css("transition","all 0.4s");
     $(".skyboxBackgroundArea").slideDown();
     if(!skyBoxNewed){
-        // var imagePrefix = "images/skyboxs/dawnmountain/dawnmountain-";
         var imagePrefix = "images/skyboxs/"+skyboxName+"/"+skyboxName+"-";
         var directions  = ["xpos", "xneg", "ypos", "yneg", "zpos", "zneg"];
         var imageSuffix = ".png";
