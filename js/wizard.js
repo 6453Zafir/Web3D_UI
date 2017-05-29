@@ -43,29 +43,29 @@ function wizardController() {
                 scroll: false
             });
 
-            // gooeyMenu.mouseup(function () {
-            //     var posy =  gooeyMenu.offset().top;
-            //     if(posy >=500){
-            //         if(gooeyMenu.hasClass("gooey-v")){
-            //             gooeyMenu.removeClass("gooey-v");
-            //             gooeyMenu.addClass("gooey-v-u");
-            //         }
-            //         if(gooeyMenu.hasClass("gooey-v-s")){
-            //             gooeyMenu.removeClass("gooey-v-s");
-            //             gooeyMenu.addClass("gooey-v-s-u");
-            //         }
-            //     }else{
-            //         if(gooeyMenu.hasClass("gooey-v")){
-            //             gooeyMenu.removeClass("gooey-v");
-            //             gooeyMenu.addClass("gooey-v-u");
-            //         }
-            //         if(gooeyMenu.hasClass("gooey-v-s")){
-            //             gooeyMenu.removeClass("gooey-v-s");
-            //             gooeyMenu.addClass("gooey-v-s-u");
-            //         }
-            //     }
-            //     reGooey();
-            // })
+            gooeyMenu.mouseup(function () {
+                var posy =  gooeyMenu.offset().top;
+                if(posy >= window.innerHeight/2){
+                    if(gooeyMenu.hasClass("gooey-v")){
+                        gooeyMenu.removeClass("gooey-v");
+                        gooeyMenu.addClass("gooey-v-u");
+                    }
+                    if(gooeyMenu.hasClass("gooey-v-s")){
+                        gooeyMenu.removeClass("gooey-v-s");
+                        gooeyMenu.addClass("gooey-v-s-u");
+                    }
+                }else{
+                    if(gooeyMenu.hasClass("gooey-v-u")){
+                        gooeyMenu.removeClass("gooey-v-u");
+                        gooeyMenu.addClass("gooey-v");
+                    }
+                    if(gooeyMenu.hasClass("gooey-v-s-u")){
+                        gooeyMenu.removeClass("gooey-v-s-u");
+                        gooeyMenu.addClass("gooey-v-s");
+                    }
+                }
+                reGooey();
+            })
 
 
         

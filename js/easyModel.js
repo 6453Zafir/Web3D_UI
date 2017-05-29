@@ -1,30 +1,27 @@
 /**
  * Created by admin on 2017/5/2.
  */
-var container;
-
-var renderer;
-var camera;
-var scene;
-// var light;
-var cube;
-
-
-
-
-var mouseX=0;
-var mouseXOnMouseDown=0;
-var mouseY=0;
-var mouseYOnMouseDown=0;
-
-var targetRotationOnMouseDown=0;
-var targetRotation=0;
-
-var targetYRotationOnMouseDown=0;
-var targetYRotation=0;
-
-var windowHalfX = window.innerWidth/2;
-var windowHalfY = window.innerHeight/2;
+// var container;
+//
+// var renderer;
+// var camera;
+// var scene;
+//
+// var cube;
+//
+// var mouseX=0;
+// var mouseXOnMouseDown=0;
+// var mouseY=0;
+// var mouseYOnMouseDown=0;
+//
+// var targetRotationOnMouseDown=0;
+// var targetRotation=0;
+//
+// var targetYRotationOnMouseDown=0;
+// var targetYRotation=0;
+//
+// var windowHalfX = window.innerWidth/2;
+// var windowHalfY = window.innerHeight/2;
 
 
 
@@ -214,23 +211,3 @@ function renderEasyModel() {
         }
 }
 
-
-
-
-// ------------------------dat gui show-hide controller-----------------------
-dat.GUI.prototype.toggleHide = function() {
-    if(this.domElement.hasAttribute("hidden")) {
-        this.domElement.removeAttribute("hidden");
-    } else {
-        this.domElement.setAttribute("hidden", true);
-    }
-};
-
-dat.GUI.prototype.hide = function() {
-    this.domElement.setAttribute("hidden", true);
-};
-
-dat.GUI.prototype.show = function() {
-    this.domElement.removeAttribute("hidden");
-};
-// ------------------------dat gui show-hide controller-----------------------

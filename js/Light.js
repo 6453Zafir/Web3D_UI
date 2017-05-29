@@ -291,7 +291,6 @@ function initPointLight(){
         lightControls.pointLightControl.enabled = true;
         lightGuis.PointLightGui.show();
     }
-
 }
 
 function clearPointLight() {
@@ -340,11 +339,9 @@ function initSpotLight() {
                 $(".dg.ac").css("position","absolute");
                 $(".dg.ac").css("top","15px");
                 lightGuis.SpotLightGui.open();
-
             }
 
             function buildGui() {
-
                 //--------control the position/rotation/range by mouse drag---------
                 lightControls.spotLightControl= new THREE.TransformControls(camera,renderer.domElement);
                 lightControls.spotLightControl.attach( spotLight );
