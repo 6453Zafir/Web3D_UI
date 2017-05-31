@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9c64b8-9af4-42c8-8703-4cb5d097cb0b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL0047.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL0050.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL0090.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL0224.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL0599.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL0679.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL0909.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL1717.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL1966.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL2061.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL2566.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL2600.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL2799.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL3275.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL3573.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~WRL3873.tmp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/~$web3D的智能可编辑UI模板库docx.docx" afterPath="$PROJECT_DIR$/doc/~$web3D的智能可编辑UI模板库docx.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/基于web3D的智能可编辑UI模板库docx.docx" afterPath="$PROJECT_DIR$/doc/基于web3D的智能可编辑UI模板库docx.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoadModel.html" afterPath="$PROJECT_DIR$/LoadModel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Layout.js" afterPath="$PROJECT_DIR$/js/Layout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Light.js" afterPath="$PROJECT_DIR$/js/Light.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/LoadSTL.js" afterPath="$PROJECT_DIR$/js/LoadSTL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easyModel.js" afterPath="$PROJECT_DIR$/js/easyModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/wizard.js" afterPath="$PROJECT_DIR$/js/wizard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/gooey-menu/gooey.min.css" afterPath="$PROJECT_DIR$/libs/gooey-menu/gooey.min.css" />
     </list>
     <ignored path="LoadSTLTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoadModel.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LoadModel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="324" column="39" selection-start-line="324" selection-start-column="39" selection-end-line="324" selection-end-column="39" />
+            <state relative-caret-position="112">
+              <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
               <folding>
                 <element signature="n#style#1;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -76,16 +53,35 @@
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#nav#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#script#29;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Layout.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoadOBJ&amp;MTL.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/LoadOBJ&amp;MTL.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Light.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Light.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6965">
+              <caret line="199" column="64" selection-start-line="199" selection-start-column="7" selection-end-line="199" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Layout.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="3465">
               <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="113" selection-end-column="2" />
               <folding />
             </state>
@@ -95,7 +91,7 @@
       <file leaf-file-name="wizard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/wizard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
+            <state relative-caret-position="2135">
               <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
               <folding />
             </state>
@@ -105,7 +101,7 @@
       <file leaf-file-name="easyModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/easyModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
+            <state relative-caret-position="805">
               <caret line="23" column="41" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="41" />
               <folding />
             </state>
@@ -125,8 +121,18 @@
       <file leaf-file-name="Background.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="2170">
+              <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SkyShader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/three/SkyShader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7455">
+              <caret line="213" column="8" selection-start-line="213" selection-start-column="8" selection-end-line="213" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -190,12 +196,13 @@
         <option value="$PROJECT_DIR$/js/Background.js" />
         <option value="$PROJECT_DIR$/js/Interact.js" />
         <option value="$PROJECT_DIR$/js/Light.js" />
-        <option value="$PROJECT_DIR$/LoadModel.html" />
         <option value="$PROJECT_DIR$/js/easyModel.js" />
         <option value="$PROJECT_DIR$/js/LoadSTL.js" />
         <option value="$PROJECT_DIR$/js/Layout.js" />
         <option value="$PROJECT_DIR$/libs/gooey-menu/gooey.min.css" />
         <option value="$PROJECT_DIR$/js/wizard.js" />
+        <option value="$PROJECT_DIR$/libs/three/SkyShader.js" />
+        <option value="$PROJECT_DIR$/LoadModel.html" />
       </list>
     </option>
   </component>
@@ -338,15 +345,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../library/1253025郭宇/1253025郭宇/毕业设计/WebGLEditor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -548,17 +555,22 @@
       <workItem from="1495864176991" duration="4005000" />
       <workItem from="1495936645435" duration="658000" />
       <workItem from="1496034474369" duration="3795000" />
+      <workItem from="1496110451438" duration="2696000" />
+      <workItem from="1496149813633" duration="1635000" />
+      <workItem from="1496159383377" duration="716000" />
+      <workItem from="1496248247249" duration="16000" />
+      <workItem from="1496251556827" duration="1613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="462787000" />
+    <option name="totallyTimeSpent" value="469463000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1924" height="1084" extended-state="0" />
+    <frame x="-9" y="-9" width="1924" height="1084" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16526757" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16474292" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -594,11 +606,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/templates/default-image-bg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/image-backgrounds/imagebg-3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -800,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="356" column="8" selection-start-line="356" selection-start-column="8" selection-end-line="356" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="191" column="45" selection-start-line="188" selection-start-column="4" selection-end-line="191" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,14 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="24" column="10" selection-start-line="16" selection-start-column="6" selection-end-line="24" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Light.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3500">
-          <caret line="340" column="46" selection-start-line="340" selection-start-column="46" selection-end-line="340" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -852,41 +849,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/LoadOBJ&amp;MTL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1680">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/version1.0.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Effect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8400">
-          <caret line="240" column="36" selection-start-line="240" selection-start-column="36" selection-end-line="240" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/LoadSTL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,14 +868,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="121" selection-start-line="0" selection-start-column="121" selection-end-line="0" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Light.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6965">
+          <caret line="199" column="64" selection-start-line="199" selection-start-column="7" selection-end-line="199" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3465">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="113" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/wizard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2135">
+          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/easyModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/LoadSTL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1015">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2170">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/three/SkyShader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7455">
+          <caret line="213" column="8" selection-start-line="213" selection-start-column="8" selection-end-line="213" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Effect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8400">
+          <caret line="240" column="36" selection-start-line="240" selection-start-column="36" selection-end-line="240" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/LoadOBJ&amp;MTL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoadModel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="324" column="39" selection-start-line="324" selection-start-column="39" selection-end-line="324" selection-end-column="39" />
+        <state relative-caret-position="112">
+          <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
           <folding>
             <element signature="n#style#1;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -931,32 +968,7 @@
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#29;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/easyModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/wizard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="113" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
