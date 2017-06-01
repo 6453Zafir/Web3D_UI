@@ -58,9 +58,9 @@ function initAreaLight() {
             rectLight.position.set( 15, 15, 0 );
             rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
             rectLight.add( rectLightHelper );
-
-            cube.castShadow = true;
-            cube.receiveShadow = true;
+            //
+            // cube.castShadow = true;
+            // cube.receiveShadow = true;
 
             scene.add( rectLight );
         }

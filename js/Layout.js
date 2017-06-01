@@ -66,8 +66,9 @@ function basicLayout() {
         $("#dblclick-tip").css("display","none");
     })
     })
-    renderEasyModel();
+    // renderEasyModel();
     // LoadSTLModel();
+    loadOBJ();
     backgroundController();
     effectController();
     lightController();
@@ -79,15 +80,15 @@ function FullLayout() {
     $("#moduleArea").removeClass("HalfModuleArea");
     $("#moduleArea").addClass("moduleArea");
     renderEasyModel()
+    // LoadSTLModel();
+    // loadOBJ();
     backgroundController();
     effectController();
     lightController();
     interactController();
     wizardController();
 }
-function mapLayout() {
 
-}
 
 $(document).ready(function () {
     var nav1s = [];

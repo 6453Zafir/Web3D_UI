@@ -204,7 +204,7 @@
     </div>
 
     <div class="HalfModuleArea" id="moduleArea">
-            <nav id="gooey-menu" style="display: none;position: absolute">
+        <nav id="gooey-menu" style="display: none;position: absolute">
                 <input type="checkbox" class="menu-open" name="menu-open3" id="menu-open3"/>
                 <label class="open-button" for="menu-open3">
                     <span class="burger burger-1"></span>
@@ -217,21 +217,23 @@
                 <a href="#" id="ground-wizard" class="gooey-menu-item" title="ground"> <i class="fa fa-square-o"></i> </a>
                 <a href="#" id="delete-wizard" class="gooey-menu-item" title="delete-wizard"> <i class="fa fa-trash-o"></i> </a>
             </nav>
+        <div class="loading-container" id="processing">
+            <div class="loading-bar">
+                <div class="amount red" id="processingBar">
+                    <div class="loaded" id="processingText">
+                        0%
+                    </div>
+                    <div class="lines"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--<div class="grid" style="display: none"></div>-->
 
     <!----------------------------processing bar------------------------------>
-    <!--<div class="loading-container" id="processing">-->
-    <!--<div class="loading-bar">-->
-    <!--<div class="amount red" id="processingBar">-->
-    <!--<div class="loaded" id="processingText">-->
-    <!--0%-->
-    <!--</div>-->
-    <!--<div class="lines"></div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
+
+
     <!--------------------------processing bar end------------------------------>
 </div>
 
@@ -294,9 +296,9 @@
 
 <script src="libs/three/three.js"></script>
 <script src="libs/three/STLLoader.js"></script>
-<!--<script src="libs/three/MTLLoader.js"></script>-->
-<!--<script src="libs/three/OBJLoader.js"></script>-->
-<!--<script src="libs/three/DDSLoader.js"></script>-->
+<script src="libs/three/MTLLoader.js"></script>
+<script src="libs/three/OBJLoader.js"></script>
+<script src="libs/three/DDSLoader.js"></script>
 <script src="libs/three/stats.min.js"></script>
 <script src="libs/three/Detector.js"></script>
 <script src="libs/three/Projector.js"></script>
@@ -322,7 +324,7 @@
 <script src="js/wizard.js"></script>
 <!--------------------load different model----------------->
 <script src="js/easyModel.js"></script>
-<!--<script src="js/LoadOBJ&MTL.js"></script>-->
+<script src="js/LoadOBJ&MTL.js"></script>
 <script src="js/LoadSTL.js"></script>
 <!--------------------load different model----------------->
 
@@ -330,7 +332,7 @@
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
      aria-labelledby="myLargeModalLabel" id="myModal" backdrop="static" data-keyboard="false" style="top:20%">
     <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content" style="text-align: center;height: 250px;">
+        <div class="modal-content" style="text-align: center;height: 250px;margin: auto;width: 70%;">
             <div class="modal-header">
                 <h4 class="modal-title"><b>Please choose a template</b></h4>
             </div>
@@ -340,12 +342,12 @@
             </div>
             <div class="templateBlock">
                 <button class="templateButton" id="template2"></button>
-                <p>Full Screen with draggable wizard</p>
+                <p>Full Screen Layout</p>
             </div>
-            <div class="templateBlock">
-                <button class="templateButton" id="template3"></button>
-                <p>Basic Layout with map</p>
-            </div>
+            <!--<div class="templateBlock">-->
+                <!--<button class="templateButton" id="template3"></button>-->
+                <!--<p>Basic Layout with map</p>-->
+            <!--</div>-->
         </div>
     </div>
 </div>

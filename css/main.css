@@ -50,7 +50,6 @@ body{
     line-height: 42px;
     font-size: small;
     border-top: solid 3px #fe8b6c;
-    z-index: 20;
 }
 
 .settingButton,.uploadButton,.saveButton{

@@ -29,10 +29,12 @@ function renderEasyModel() {
     if(LayoutNum !=0){
         $(document).ready( function() {
             initThree();
-            // animate();
+            animate();
         })
 
         function initThree() {
+            document.getElementById("processing").style.display="none";
+
             container = document.getElementById('moduleArea');
             width =container.clientWidth;
             height = container.clientHeight;
@@ -97,10 +99,10 @@ function renderEasyModel() {
             scene.add( light );
             renderer.clear();
             renderer.render(scene,camera);
-            // //stats
-            // stats= new Stats();
-            // container.appendChild(stats.dom);
-            //
+            //stats
+            stats= new Stats();
+            container.appendChild(stats.dom);
+
             // document.addEventListener( 'mousedown',onDocuemntMouseDown,false);
             // document.addEventListener( 'touchstart', onDocumentTouchStart, {passive: false} );
             // document.addEventListener( 'touchmove', onDocumentTouchMove, {passive: false} );
@@ -190,24 +192,20 @@ function renderEasyModel() {
 
 
 
-// //    animate
-//         function animate() {
-//             requestAnimationFrame(animate);
-//             stats.begin();
-//             render();
-//             stats.end();
-//         }
-//
-//         function render() {
-//
-//             cube.rotation.y += (targetRotation-cube.rotation.y)*0.005;
-//             cube.rotation.x += (targetYRotation-cube.rotation.x)*0.001;
-//             renderer.clear();
-//             renderer.render(scene,camera);
-//
-//         }
+//    animate
+
         }else{
             alert("haven't choose template yet");
         }
 }
 
+function animate() {
+    requestAnimationFrame(animate);
+    stats.begin();
+    render();
+    stats.end();
+}
+
+function render() {
+    renderer.render(scene,camera);
+}

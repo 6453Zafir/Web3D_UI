@@ -2,7 +2,7 @@
  * Created by admin on 2017/5/16.
  */
 
-var stats;
+// var stats;
 
 var orbitControl;
 var FPSControl;
@@ -19,19 +19,15 @@ var clock = new THREE.Clock();
 function defaultControl() {
     currentControlNum = 1;
     IsDefaultControlNewed = true;
-    stats= new Stats();
-    container.appendChild(stats.dom);
     document.addEventListener( 'mousedown',onDocuemntMouseDown,false);
     document.addEventListener( 'touchstart', onDocumentTouchStart, {passive: false} );
     document.addEventListener( 'touchmove', onDocumentTouchMove, {passive: false} );
 
-    //    animate
-    function animate() {
-        requestAnimationFrame(animate);
-        stats.begin();
-        render();
-        stats.end();
-    }
+    // //    animate
+    // function animate() {
+    //     requestAnimationFrame(animate);
+    //     render();
+    // }
 
     function render() {
         cube.rotation.y += (targetRotation-cube.rotation.y)*0.005;
@@ -115,17 +111,12 @@ function initOrbitControl() {
     orbitControl.addEventListener('change',render);
     orbitControl.enableZoom = false;
 
-    stats = new Stats();
-    container.appendChild( stats.dom );
-
 
     function animate() {
 
         requestAnimationFrame( animate );
 
         orbitControls.update(); // required if controls.enableDamping = true, or if controls.autoRotate = true
-
-        stats.update();
 
         render();
 
@@ -296,8 +287,6 @@ function initFlyControl() {
     currentControlNum =4;
     if(!IsFlyControlNewed){
         clock.start();
-        stats = new Stats();
-        container.appendChild( stats.dom );
 
         FlyControl = new THREE.FlyControls( camera ,container);
         FlyControl.movementSpeed = 10;
@@ -317,7 +306,6 @@ function initFlyControl() {
         if(currentControlNum ==4){
             requestAnimationFrame( animate );
             render();
-            stats.update();
         }
     }
     function render() {
