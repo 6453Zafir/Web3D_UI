@@ -21,7 +21,8 @@ var EffectGuis=new Array(FogGui,GridGui,GroundGui);
 var gridHelper;
 
 function initFog() {
-    if(!IsFogNewed){
+    EffectNum =1;
+  if(!IsFogNewed){
         scene.fog = new THREE.FogExp2(0xffffff,0.0009)
         renderer.setClearColor( scene.fog.color );
         renderer.render( scene, camera );
@@ -70,6 +71,7 @@ function clearFog() {
 
 // --------------------------------Grid--------------------------------------
 function initGrid(){
+    EffectNum =2;
     if(!IsGridNewed){
         gridHelper = new THREE.GridHelper( 1000,10,0x5ae5e3,0x6d6d6d );
         gridHelper.position.y = -20;
@@ -155,6 +157,7 @@ function clearGrid() {
 }
 
 function initGround() {
+    EffectNum =3;
     var plane;
     var geometry;
     var material;

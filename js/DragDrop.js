@@ -121,83 +121,167 @@ $(document).ready(function() {
     })
 
     $("#saveButton").click(function () {
-        var myscene = scene;
-        var exporter = new THREE.OBJExporter();
-        var sceneJson = JSON.stringify(exporter.parse(myscene));
-        localStorage.setItem('scene', sceneJson);
-        saveString( sceneJson, 'scene.json' );
+        if(skyShaderNewed){
+            scene.remove(sky.mesh);
+            scene.remove(sunSphere);
+        }
+        if(skyBoxNewed){
+            scene.remove(skyBox);
+        }
+        var output = scene.toJSON();
+
+        try {
+            output = JSON.stringify( output, parseNumber, '\t' );
+            output = output.replace( /[\n\t]+([\d\.e\-\[\]]+)/g, '$1' );
+        } catch ( e ) {
+
+            output = JSON.stringify( output );
+
+        }
+        saveString( output, 'scene.json' );
+        localStorage.setItem('scene', output );
         alert("scene saved");
     })
 
-    $('#uploadButton').bind("click" , function () {
+    $('#uploadButton').bind("click", function () {
         $('#upload').click();
     });
 
     // $('#upload').addEventListener( 'change', function ( event ) {
     //     loader.loadFile( this.files[ 0 ] );
     // } );
+
     $("#clearButton").click(function () {
-        while (scene.children.length>0){
-            if(backgroundScene!=null){
-                while (backgroundScene.children.length>0){
-                    backgroundScene.remove(backgroundScene.children[0]);
-                }
+        if (backgroundScene != null) {
+            while (backgroundScene.children.length > 0) {
+                backgroundScene.remove(backgroundScene.children[0]);
             }
+        }
+        while (scene.children.length > 0) {
             scene.remove(scene.children[0]);
             render();
         }
 
+        skyShaderNewed = false;
+        colordBgNewed = false;
+        skyBoxNewed = false;
+        IsFogNewed = false;
+        IsGridNewed = false;
+        IsGroundNewed = false;
+        IsShadowNewed = false;
+        IsDefaultControlNewed = false;
+        IsOrbitControlNewed = false;
+        IsFPSNewed = false;
+        IsFlyControlNewed = false;
+        IsAreaLightNewed = false;
+        IsPointLightNewed = false;
+        IsDirectionalLightNewed = false;
+        IsSpotLightNewed = false;
+
+        var Cubegeometry;
+        var Cubematerial;
+
+        Cubegeometry = new THREE.BoxGeometry(20,20,20,1,1,1);
+        Cubematerial =new THREE.MeshPhongMaterial( { specular: 0xFFFFFF,shininess: 10000} );
+
+        Cubematerial.needsUpdate = true;
+        Cubegeometry.needsUpdate = true;
+
+        for(var i=0;i<Cubegeometry.faces.length;i+=2){
+            var hex = Math.random()*0xffffff;
+            Cubegeometry.faces[i].color.setHex(hex);
+            Cubegeometry.faces[i+1].color.setHex(hex);
+        }
+
+        cube=new THREE.Mesh(Cubegeometry,Cubematerial);
+        cube.position.set(0,0,0);
+        scene.add(cube);
+        randomColor( cube );
+
+        function randomColor( target ) {
+
+            if ( target !== undefined ) {
+
+                if ( target.material !== undefined ) target = target.material;
+
+                if ( target.color !== undefined ) {
+
+                    target.color.setHex( 0xffffff * Math.random() );
+
+                }
+            }
+        }
+        // lights
+
+        light = new THREE.DirectionalLight( 0xffffff );
+        light.position.set( 1, 1, 1 );
+        scene.add( light );
+
+        light = new THREE.DirectionalLight( 0x002288 );
+        light.position.set( -1, -1, -1 );
+        scene.add( light );
+
+        light = new THREE.AmbientLight( 0x222222 );
+        scene.add( light );
     })
 
 
     $("#importButton").click(function () {
-        var json = (localStorage.getItem('scene'));
-        var loader = new THREE.ObjectLoader();
-
-        loader.load(
-            // resource URL
-            "models/test.json",
-
-            // pass the loaded data to the onLoad function.
-//Here it is assumed to be an object
-            function ( obj ) {
-                //add the loaded object to the scene
-                scene.add( obj );
-            },
-
-            // Function called when download progresses
-            function ( xhr ) {
-                console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-            },
-
-            // Function called when download errors
-            function ( xhr ) {
-                console.error( 'An error happened' );
-            }
-        );
+        scene.remove(cube);
+        // var json = (localStorage.getItem('scene'));
 
 
 // // Alternatively, to parse a previously loaded JSON structure
 //         var object = loader.parse( json );
 //         scene.add( object );
-//     })
 // //
-})
 
-var link = document.createElement( 'a' );
-link.style.display = 'none';
-document.body.appendChild( link );
+        //
+        var loader = new THREE.ObjectLoader();
 
-function save( blob, filename ) {
+        loader.load(
+            // resource URL
+            "models/scene.json",
 
-    link.href = URL.createObjectURL( blob );
-    link.download = filename || 'data.json';
-    link.click();
+            function (obj) {
+                //add the loaded object to the scene
+                scene.add(obj);
+            },
+            // Function called when download progresses
+            function (xhr) {
+                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+            },
+            // Function called when download errors
+            function (xhr) {
+                console.error('An error happened');
+            }
+        );
 
-}
 
-function saveString( text, filename ) {
+// // Alternatively, to parse a previously loaded JSON structure
+//         var object = loader.parse(a_json_object);
+//
+//         scene.add(object);
+        render();
+    });
 
-    save( new Blob( [ text ], { type: 'text/plain' } ), filename );
 
-}
+    var link = document.createElement('a');
+    link.style.display = 'none';
+    document.body.appendChild(link);
+
+    function save(blob, filename) {
+
+        link.href = URL.createObjectURL(blob);
+        link.download = filename || 'data.json';
+        link.click();
+
+    }
+
+    function saveString(text, filename) {
+
+        save(new Blob([text], {type: 'text/plain'}), filename);
+
+    }
+
+});

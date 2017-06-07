@@ -304,6 +304,7 @@ function initSpotLight() {
     if(!IsSpotLightNewed){
         var spotLight = new THREE.SpotLight( 0xffb110, 1 );
         var lightHelper = new THREE.SpotLightHelper(spotLight);
+        spotLight.add(lightHelper);
         var param = { color: '0xffb110' };
 
         function init() {
@@ -446,6 +447,7 @@ function initSpotLight() {
 function clearSpotLight() {
     lightControls.spotLightControl.visible = false;
     lightControls.spotLightControl.enabled = false;
+
     lightGuis.SpotLightGui.hide();
 }
 

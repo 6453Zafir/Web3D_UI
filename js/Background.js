@@ -172,8 +172,7 @@ function initImageBackground(imageNum) {
 function clearImageBackground() {
     $("#background").css("height","250px");
     $(".ImageBackgroundArea").hide(500);
-    backgroundScene.delete;
-    backgroundCamera.delete;
+    backgroundScene.remove(backgroundCamera);
     renderer.autoClear = true;
     renderer.clear();
     renderer.render( scene, camera );

@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.THREE = global.THREE || {})));
+		typeof define === 'function' && define.amd ? define(['exports'], factory) :
+			(factory((global.THREE = global.THREE || {})));
 }(this, (function (exports) { 'use strict';
 
 	// Polyfills
@@ -1507,15 +1507,15 @@
 
 			if ( s < 0.0001 ) {
 
-				 this.x = 1;
-				 this.y = 0;
-				 this.z = 0;
+				this.x = 1;
+				this.y = 0;
+				this.z = 0;
 
 			} else {
 
-				 this.x = q.x / s;
-				 this.y = q.y / s;
-				 this.z = q.z / s;
+				this.x = q.x / s;
+				this.y = q.y / s;
+				this.z = q.z / s;
 
 			}
 
@@ -1540,17 +1540,17 @@
 				m31 = te[ 2 ], m32 = te[ 6 ], m33 = te[ 10 ];
 
 			if ( ( Math.abs( m12 - m21 ) < epsilon ) &&
-			     ( Math.abs( m13 - m31 ) < epsilon ) &&
-			     ( Math.abs( m23 - m32 ) < epsilon ) ) {
+				( Math.abs( m13 - m31 ) < epsilon ) &&
+				( Math.abs( m23 - m32 ) < epsilon ) ) {
 
 				// singularity found
 				// first check for identity matrix which must have +1 for all terms
 				// in leading diagonal and zero in other terms
 
 				if ( ( Math.abs( m12 + m21 ) < epsilon2 ) &&
-				     ( Math.abs( m13 + m31 ) < epsilon2 ) &&
-				     ( Math.abs( m23 + m32 ) < epsilon2 ) &&
-				     ( Math.abs( m11 + m22 + m33 - 3 ) < epsilon2 ) ) {
+					( Math.abs( m13 + m31 ) < epsilon2 ) &&
+					( Math.abs( m23 + m32 ) < epsilon2 ) &&
+					( Math.abs( m11 + m22 + m33 - 3 ) < epsilon2 ) ) {
 
 					// this singularity is identity matrix so angle = 0
 
@@ -1636,8 +1636,8 @@
 			// as we have reached here there are no singularities so we can handle normally
 
 			var s = Math.sqrt( ( m32 - m23 ) * ( m32 - m23 ) +
-			                   ( m13 - m31 ) * ( m13 - m31 ) +
-			                   ( m21 - m12 ) * ( m21 - m12 ) ); // used to normalize
+				( m13 - m31 ) * ( m13 - m31 ) +
+				( m21 - m12 ) * ( m21 - m12 ) ); // used to normalize
 
 			if ( Math.abs( s ) < 0.001 ) s = 1;
 
@@ -1874,7 +1874,7 @@
 	 In options, we can specify:
 	 * Texture parameters for an auto-generated target texture
 	 * depthBuffer/stencilBuffer: Booleans to indicate if we should generate these buffers
-	*/
+	 */
 	function WebGLRenderTarget( width, height, options ) {
 
 		this.uuid = _Math.generateUUID();
@@ -1993,7 +1993,7 @@
 		},
 
 		slerpFlat: function(
-				dst, dstOffset, src0, srcOffset0, src1, srcOffset1, t ) {
+			dst, dstOffset, src0, srcOffset0, src1, srcOffset1, t ) {
 
 			// fuzz-free, array-based Quaternion SLERP operation
 
@@ -3769,35 +3769,35 @@
 			return (
 				n41 * (
 					+ n14 * n23 * n32
-					 - n13 * n24 * n32
-					 - n14 * n22 * n33
-					 + n12 * n24 * n33
-					 + n13 * n22 * n34
-					 - n12 * n23 * n34
+					- n13 * n24 * n32
+					- n14 * n22 * n33
+					+ n12 * n24 * n33
+					+ n13 * n22 * n34
+					- n12 * n23 * n34
 				) +
 				n42 * (
 					+ n11 * n23 * n34
-					 - n11 * n24 * n33
-					 + n14 * n21 * n33
-					 - n13 * n21 * n34
-					 + n13 * n24 * n31
-					 - n14 * n23 * n31
+					- n11 * n24 * n33
+					+ n14 * n21 * n33
+					- n13 * n21 * n34
+					+ n13 * n24 * n31
+					- n14 * n23 * n31
 				) +
 				n43 * (
 					+ n11 * n24 * n32
-					 - n11 * n22 * n34
-					 - n14 * n21 * n32
-					 + n12 * n21 * n34
-					 + n14 * n22 * n31
-					 - n12 * n24 * n31
+					- n11 * n22 * n34
+					- n14 * n21 * n32
+					+ n12 * n21 * n34
+					+ n14 * n22 * n31
+					- n12 * n24 * n31
 				) +
 				n44 * (
 					- n13 * n22 * n31
-					 - n11 * n23 * n32
-					 + n11 * n22 * n33
-					 + n13 * n21 * n32
-					 - n12 * n21 * n33
-					 + n12 * n23 * n31
+					- n11 * n23 * n32
+					+ n11 * n22 * n33
+					+ n13 * n21 * n32
+					- n12 * n21 * n33
+					+ n12 * n23 * n31
 				)
 
 			);
@@ -3959,10 +3959,10 @@
 
 			this.set(
 
-				 c, 0, s, 0,
-				 0, 1, 0, 0,
+				c, 0, s, 0,
+				0, 1, 0, 0,
 				- s, 0, c, 0,
-				 0, 0, 0, 1
+				0, 0, 0, 1
 
 			);
 
@@ -4006,7 +4006,7 @@
 
 			);
 
-			 return this;
+			return this;
 
 		},
 
@@ -4727,8 +4727,8 @@
 				// bare name or "pure" bottom-level array "[0]" suffix
 
 				addUniform( container, subscript === undefined ?
-						new SingleUniform( id, activeInfo, addr ) :
-						new PureArrayUniform( id, activeInfo, addr ) );
+					new SingleUniform( id, activeInfo, addr ) :
+					new PureArrayUniform( id, activeInfo, addr ) );
 
 				break;
 
@@ -6071,7 +6071,7 @@
 		},
 
 		/* -------------------------------------------------------------------------
-		//	Cube map shader
+		 //	Cube map shader
 		 ------------------------------------------------------------------------- */
 
 		cube: {
@@ -6088,7 +6088,7 @@
 		},
 
 		/* -------------------------------------------------------------------------
-		//	Cube map shader
+		 //	Cube map shader
 		 ------------------------------------------------------------------------- */
 
 		equirect: {
@@ -6259,7 +6259,7 @@
 		containsPoint: function ( point ) {
 
 			return point.x < this.min.x || point.x > this.max.x ||
-				point.y < this.min.y || point.y > this.max.y ? false : true;
+			point.y < this.min.y || point.y > this.max.y ? false : true;
 
 		},
 
@@ -6288,7 +6288,7 @@
 
 			// using 6 splitting planes to rule out intersections.
 			return box.max.x < this.min.x || box.min.x > this.max.x ||
-				box.max.y < this.min.y || box.min.y > this.max.y ? false : true;
+			box.max.y < this.min.y || box.min.y > this.max.y ? false : true;
 
 		},
 
@@ -6366,8 +6366,8 @@
 
 			var vertices = new Float32Array( [
 				- 1, - 1,  0, 0,
-				 1, - 1,  1, 0,
-				 1,  1,  1, 1,
+				1, - 1,  1, 0,
+				1,  1,  1, 1,
 				- 1,  1,  0, 1
 			] );
 
@@ -6426,33 +6426,33 @@
 
 					"void main() {",
 
-						"vUV = uv;",
+					"vUV = uv;",
 
-						"vec2 pos = position;",
+					"vec2 pos = position;",
 
-						"if ( renderType == 2 ) {",
+					"if ( renderType == 2 ) {",
 
-							"vec4 visibility = texture2D( occlusionMap, vec2( 0.1, 0.1 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.5, 0.1 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.9, 0.1 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.9, 0.5 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.9, 0.9 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.5, 0.9 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.1, 0.9 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.1, 0.5 ) );",
-							"visibility += texture2D( occlusionMap, vec2( 0.5, 0.5 ) );",
+					"vec4 visibility = texture2D( occlusionMap, vec2( 0.1, 0.1 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.5, 0.1 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.9, 0.1 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.9, 0.5 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.9, 0.9 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.5, 0.9 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.1, 0.9 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.1, 0.5 ) );",
+					"visibility += texture2D( occlusionMap, vec2( 0.5, 0.5 ) );",
 
-							"vVisibility =        visibility.r / 9.0;",
-							"vVisibility *= 1.0 - visibility.g / 9.0;",
-							"vVisibility *=       visibility.b / 9.0;",
-							"vVisibility *= 1.0 - visibility.a / 9.0;",
+					"vVisibility =        visibility.r / 9.0;",
+					"vVisibility *= 1.0 - visibility.g / 9.0;",
+					"vVisibility *=       visibility.b / 9.0;",
+					"vVisibility *= 1.0 - visibility.a / 9.0;",
 
-							"pos.x = cos( rotation ) * position.x - sin( rotation ) * position.y;",
-							"pos.y = sin( rotation ) * position.x + cos( rotation ) * position.y;",
+					"pos.x = cos( rotation ) * position.x - sin( rotation ) * position.y;",
+					"pos.y = sin( rotation ) * position.x + cos( rotation ) * position.y;",
 
-						"}",
+					"}",
 
-						"gl_Position = vec4( ( pos * scale + screenPosition.xy ).xy, screenPosition.z, 1.0 );",
+					"gl_Position = vec4( ( pos * scale + screenPosition.xy ).xy, screenPosition.z, 1.0 );",
 
 					"}"
 
@@ -6471,28 +6471,28 @@
 
 					"void main() {",
 
-						// pink square
+					// pink square
 
-						"if ( renderType == 0 ) {",
+					"if ( renderType == 0 ) {",
 
-							"gl_FragColor = vec4( 1.0, 0.0, 1.0, 0.0 );",
+					"gl_FragColor = vec4( 1.0, 0.0, 1.0, 0.0 );",
 
-						// restore
+					// restore
 
-						"} else if ( renderType == 1 ) {",
+					"} else if ( renderType == 1 ) {",
 
-							"gl_FragColor = texture2D( map, vUV );",
+					"gl_FragColor = texture2D( map, vUV );",
 
-						// flare
+					// flare
 
-						"} else {",
+					"} else {",
 
-							"vec4 texture = texture2D( map, vUV );",
-							"texture.a *= opacity * vVisibility;",
-							"gl_FragColor = texture;",
-							"gl_FragColor.rgb *= color;",
+					"vec4 texture = texture2D( map, vUV );",
+					"texture.a *= opacity * vVisibility;",
+					"gl_FragColor = texture;",
+					"gl_FragColor.rgb *= color;",
 
-						"}",
+					"}",
 
 					"}"
 
@@ -6755,8 +6755,8 @@
 
 			var vertices = new Float32Array( [
 				- 0.5, - 0.5,  0, 0,
-				  0.5, - 0.5,  1, 0,
-				  0.5,   0.5,  1, 1,
+				0.5, - 0.5,  1, 0,
+				0.5,   0.5,  1, 1,
 				- 0.5,   0.5,  0, 1
 			] );
 
@@ -7002,21 +7002,21 @@
 
 				'void main() {',
 
-					'vUV = uvOffset + uv * uvScale;',
+				'vUV = uvOffset + uv * uvScale;',
 
-					'vec2 alignedPosition = position * scale;',
+				'vec2 alignedPosition = position * scale;',
 
-					'vec2 rotatedPosition;',
-					'rotatedPosition.x = cos( rotation ) * alignedPosition.x - sin( rotation ) * alignedPosition.y;',
-					'rotatedPosition.y = sin( rotation ) * alignedPosition.x + cos( rotation ) * alignedPosition.y;',
+				'vec2 rotatedPosition;',
+				'rotatedPosition.x = cos( rotation ) * alignedPosition.x - sin( rotation ) * alignedPosition.y;',
+				'rotatedPosition.y = sin( rotation ) * alignedPosition.x + cos( rotation ) * alignedPosition.y;',
 
-					'vec4 finalPosition;',
+				'vec4 finalPosition;',
 
-					'finalPosition = modelViewMatrix * vec4( 0.0, 0.0, 0.0, 1.0 );',
-					'finalPosition.xy += rotatedPosition;',
-					'finalPosition = projectionMatrix * finalPosition;',
+				'finalPosition = modelViewMatrix * vec4( 0.0, 0.0, 0.0, 1.0 );',
+				'finalPosition.xy += rotatedPosition;',
+				'finalPosition = projectionMatrix * finalPosition;',
 
-					'gl_Position = finalPosition;',
+				'gl_Position = finalPosition;',
 
 				'}'
 
@@ -7041,32 +7041,32 @@
 
 				'void main() {',
 
-					'vec4 texture = texture2D( map, vUV );',
+				'vec4 texture = texture2D( map, vUV );',
 
-					'if ( texture.a < alphaTest ) discard;',
+				'if ( texture.a < alphaTest ) discard;',
 
-					'gl_FragColor = vec4( color * texture.xyz, texture.a * opacity );',
+				'gl_FragColor = vec4( color * texture.xyz, texture.a * opacity );',
 
-					'if ( fogType > 0 ) {',
+				'if ( fogType > 0 ) {',
 
-						'float depth = gl_FragCoord.z / gl_FragCoord.w;',
-						'float fogFactor = 0.0;',
+				'float depth = gl_FragCoord.z / gl_FragCoord.w;',
+				'float fogFactor = 0.0;',
 
-						'if ( fogType == 1 ) {',
+				'if ( fogType == 1 ) {',
 
-							'fogFactor = smoothstep( fogNear, fogFar, depth );',
+				'fogFactor = smoothstep( fogNear, fogFar, depth );',
 
-						'} else {',
+				'} else {',
 
-							'const float LOG2 = 1.442695;',
-							'fogFactor = exp2( - fogDensity * fogDensity * depth * depth * LOG2 );',
-							'fogFactor = 1.0 - clamp( fogFactor, 0.0, 1.0 );',
+				'const float LOG2 = 1.442695;',
+				'fogFactor = exp2( - fogDensity * fogDensity * depth * depth * LOG2 );',
+				'fogFactor = 1.0 - clamp( fogFactor, 0.0, 1.0 );',
 
-						'}',
+				'}',
 
-						'gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );',
+				'gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );',
 
-					'}',
+				'}',
 
 				'}'
 
@@ -7923,8 +7923,8 @@
 		containsPoint: function ( point ) {
 
 			return point.x < this.min.x || point.x > this.max.x ||
-				point.y < this.min.y || point.y > this.max.y ||
-				point.z < this.min.z || point.z > this.max.z ? false : true;
+			point.y < this.min.y || point.y > this.max.y ||
+			point.z < this.min.z || point.z > this.max.z ? false : true;
 
 		},
 
@@ -7955,8 +7955,8 @@
 
 			// using 6 splitting planes to rule out intersections.
 			return box.max.x < this.min.x || box.min.x > this.max.x ||
-				box.max.y < this.min.y || box.min.y > this.max.y ||
-				box.max.z < this.min.z || box.min.z > this.max.z ? false : true;
+			box.max.y < this.min.y || box.min.y > this.max.y ||
+			box.max.z < this.min.z || box.min.z > this.max.z ? false : true;
 
 		},
 
@@ -9316,8 +9316,8 @@
 			}
 
 			if ( _renderer.localClippingEnabled &&
-					material.clipShadows === true &&
-					material.clippingPlanes.length !== 0 ) {
+				material.clipShadows === true &&
+				material.clippingPlanes.length !== 0 ) {
 
 				// in this case we need a unique material instance reflecting the
 				// appropriate state
@@ -15501,7 +15501,7 @@
 	 * @author mrdoob / http://mrdoob.com/
 	 * @author mikael emtinger / http://gomo.se/
 	 * @author WestLangley / http://github.com/WestLangley
-	*/
+	 */
 
 	function Camera() {
 
@@ -17955,9 +17955,9 @@
 					}
 
 					var image = cubeImage[ 0 ],
-					isPowerOfTwoImage = isPowerOfTwo( image ),
-					glFormat = paramThreeToGL( texture.format ),
-					glType = paramThreeToGL( texture.type );
+						isPowerOfTwoImage = isPowerOfTwo( image ),
+						glFormat = paramThreeToGL( texture.format ),
+						glType = paramThreeToGL( texture.type );
 
 					setTextureParameters( _gl.TEXTURE_CUBE_MAP, texture, isPowerOfTwoImage );
 
@@ -18117,8 +18117,8 @@
 			}
 
 			var isPowerOfTwoImage = isPowerOfTwo( image ),
-			glFormat = paramThreeToGL( texture.format ),
-			glType = paramThreeToGL( texture.type );
+				glFormat = paramThreeToGL( texture.format ),
+				glType = paramThreeToGL( texture.type );
 
 			setTextureParameters( _gl.TEXTURE_2D, texture, isPowerOfTwoImage );
 
@@ -18149,7 +18149,7 @@
 					// (https://www.khronos.org/registry/webgl/extensions/WEBGL_depth_texture/)
 					if ( texture.type !== UnsignedShortType && texture.type !== UnsignedIntType ) {
 
-					        console.warn( 'THREE.WebGLRenderer: Use UnsignedShortType or UnsignedIntType for DepthFormat DepthTexture.' );
+						console.warn( 'THREE.WebGLRenderer: Use UnsignedShortType or UnsignedIntType for DepthFormat DepthTexture.' );
 
 						texture.type = UnsignedShortType;
 						glType = paramThreeToGL( texture.type );
@@ -18169,7 +18169,7 @@
 					// (https://www.khronos.org/registry/webgl/extensions/WEBGL_depth_texture/)
 					if ( texture.type !== UnsignedInt248Type ) {
 
-					        console.warn( 'THREE.WebGLRenderer: Use UnsignedInt248Type for DepthStencilFormat DepthTexture.' );
+						console.warn( 'THREE.WebGLRenderer: Use UnsignedInt248Type for DepthStencilFormat DepthTexture.' );
 
 						texture.type = UnsignedInt248Type;
 						glType = paramThreeToGL( texture.type );
@@ -18320,8 +18320,8 @@
 
 			// upload an empty depth texture with framebuffer size
 			if ( !properties.get( renderTarget.depthTexture ).__webglTexture ||
-					renderTarget.depthTexture.image.width !== renderTarget.width ||
-					renderTarget.depthTexture.image.height !== renderTarget.height ) {
+				renderTarget.depthTexture.image.width !== renderTarget.width ||
+				renderTarget.depthTexture.image.height !== renderTarget.height ) {
 				renderTarget.depthTexture.image.width = renderTarget.width;
 				renderTarget.depthTexture.image.height = renderTarget.height;
 				renderTarget.depthTexture.needsUpdate = true;
@@ -18463,8 +18463,8 @@
 			var texture = renderTarget.texture;
 
 			if ( texture.generateMipmaps && isPowerOfTwo( renderTarget ) &&
-					texture.minFilter !== NearestFilter &&
-					texture.minFilter !== LinearFilter ) {
+				texture.minFilter !== NearestFilter &&
+				texture.minFilter !== LinearFilter ) {
 
 				var target = (renderTarget && renderTarget.isWebGLRenderTargetCube) ? _gl.TEXTURE_CUBE_MAP : _gl.TEXTURE_2D;
 				var webglTexture = properties.get( texture ).__webglTexture;
@@ -18769,8 +18769,8 @@
 				setFunc: function ( stencilFunc, stencilRef, stencilMask ) {
 
 					if ( currentStencilFunc !== stencilFunc ||
-					     currentStencilRef 	!== stencilRef 	||
-					     currentStencilFuncMask !== stencilMask ) {
+						currentStencilRef 	!== stencilRef 	||
+						currentStencilFuncMask !== stencilMask ) {
 
 						gl.stencilFunc( stencilFunc, stencilRef, stencilMask );
 
@@ -18785,8 +18785,8 @@
 				setOp: function ( stencilFail, stencilZFail, stencilZPass ) {
 
 					if ( currentStencilFail	 !== stencilFail 	||
-					     currentStencilZFail !== stencilZFail ||
-					     currentStencilZPass !== stencilZPass ) {
+						currentStencilZFail !== stencilZFail ||
+						currentStencilZPass !== stencilZPass ) {
 
 						gl.stencilOp( stencilFail, stencilZFail, stencilZPass );
 
@@ -19018,8 +19018,8 @@
 				compressedTextureFormats = [];
 
 				if ( extensions.get( 'WEBGL_compressed_texture_pvrtc' ) ||
-				     extensions.get( 'WEBGL_compressed_texture_s3tc' ) ||
-				     extensions.get( 'WEBGL_compressed_texture_etc1' ) ) {
+					extensions.get( 'WEBGL_compressed_texture_s3tc' ) ||
+					extensions.get( 'WEBGL_compressed_texture_etc1' ) ) {
 
 					var formats = gl.getParameter( gl.COMPRESSED_TEXTURE_FORMATS );
 
@@ -19491,7 +19491,7 @@
 			if ( precision === 'highp' ) {
 
 				if ( gl.getShaderPrecisionFormat( gl.VERTEX_SHADER, gl.HIGH_FLOAT ).precision > 0 &&
-				     gl.getShaderPrecisionFormat( gl.FRAGMENT_SHADER, gl.HIGH_FLOAT ).precision > 0 ) {
+					gl.getShaderPrecisionFormat( gl.FRAGMENT_SHADER, gl.HIGH_FLOAT ).precision > 0 ) {
 
 					return 'highp';
 
@@ -19504,7 +19504,7 @@
 			if ( precision === 'mediump' ) {
 
 				if ( gl.getShaderPrecisionFormat( gl.VERTEX_SHADER, gl.MEDIUM_FLOAT ).precision > 0 &&
-				     gl.getShaderPrecisionFormat( gl.FRAGMENT_SHADER, gl.MEDIUM_FLOAT ).precision > 0 ) {
+					gl.getShaderPrecisionFormat( gl.FRAGMENT_SHADER, gl.MEDIUM_FLOAT ).precision > 0 ) {
 
 					return 'mediump';
 
@@ -19689,8 +19689,8 @@
 		this.setState = function( planes, clipIntersection, clipShadows, camera, cache, fromCache ) {
 
 			if ( ! localClippingEnabled ||
-					planes === null || planes.length === 0 ||
-					renderingShadows && ! clipShadows ) {
+				planes === null || planes.length === 0 ||
+				renderingShadows && ! clipShadows ) {
 				// there's no local clipping
 
 				if ( renderingShadows ) {
@@ -19766,10 +19766,10 @@
 					}
 
 					for ( var i = 0, i4 = dstOffset;
-										i !== nPlanes; ++ i, i4 += 4 ) {
+						  i !== nPlanes; ++ i, i4 += 4 ) {
 
 						plane.copy( planes[ i ] ).
-								applyMatrix4( viewMatrix, viewNormalMatrix );
+						applyMatrix4( viewMatrix, viewNormalMatrix );
 
 						plane.normal.toArray( dstArray, i4 );
 						dstArray[ i4 + 3 ] = plane.constant;
@@ -19784,7 +19784,7 @@
 			}
 
 			scope.numPlanes = nPlanes;
-			
+
 			return dstArray;
 
 		}
@@ -20995,59 +20995,59 @@
 		};
 
 		/*
-		// TODO Duplicated code (Frustum)
+		 // TODO Duplicated code (Frustum)
 
-		var _sphere = new Sphere();
+		 var _sphere = new Sphere();
 
-		function isObjectViewable( object ) {
+		 function isObjectViewable( object ) {
 
-			var geometry = object.geometry;
+		 var geometry = object.geometry;
 
-			if ( geometry.boundingSphere === null )
-				geometry.computeBoundingSphere();
+		 if ( geometry.boundingSphere === null )
+		 geometry.computeBoundingSphere();
 
-			_sphere.copy( geometry.boundingSphere ).
-			applyMatrix4( object.matrixWorld );
+		 _sphere.copy( geometry.boundingSphere ).
+		 applyMatrix4( object.matrixWorld );
 
-			return isSphereViewable( _sphere );
+		 return isSphereViewable( _sphere );
 
-		}
+		 }
 
-		function isSpriteViewable( sprite ) {
+		 function isSpriteViewable( sprite ) {
 
-			_sphere.center.set( 0, 0, 0 );
-			_sphere.radius = 0.7071067811865476;
-			_sphere.applyMatrix4( sprite.matrixWorld );
+		 _sphere.center.set( 0, 0, 0 );
+		 _sphere.radius = 0.7071067811865476;
+		 _sphere.applyMatrix4( sprite.matrixWorld );
 
-			return isSphereViewable( _sphere );
+		 return isSphereViewable( _sphere );
 
-		}
+		 }
 
-		function isSphereViewable( sphere ) {
+		 function isSphereViewable( sphere ) {
 
-			if ( ! _frustum.intersectsSphere( sphere ) ) return false;
+		 if ( ! _frustum.intersectsSphere( sphere ) ) return false;
 
-			var numPlanes = _clipping.numPlanes;
+		 var numPlanes = _clipping.numPlanes;
 
-			if ( numPlanes === 0 ) return true;
+		 if ( numPlanes === 0 ) return true;
 
-			var planes = _this.clippingPlanes,
+		 var planes = _this.clippingPlanes,
 
-				center = sphere.center,
-				negRad = - sphere.radius,
-				i = 0;
+		 center = sphere.center,
+		 negRad = - sphere.radius,
+		 i = 0;
 
-			do {
+		 do {
 
-				// out when deeper than radius in the negative halfspace
-				if ( planes[ i ].distanceToPoint( center ) < negRad ) return false;
+		 // out when deeper than radius in the negative halfspace
+		 if ( planes[ i ].distanceToPoint( center ) < negRad ) return false;
 
-			} while ( ++ i !== numPlanes );
+		 } while ( ++ i !== numPlanes );
 
-			return true;
+		 return true;
 
-		}
-		*/
+		 }
+		 */
 
 		function projectObject( object, camera, sortObjects ) {
 
@@ -23294,7 +23294,7 @@
 				gbone = this.geometry.bones[ b ];
 
 				if ( gbone.parent !== - 1 && gbone.parent !== null &&
-						bones[ gbone.parent ] !== undefined ) {
+					bones[ gbone.parent ] !== undefined ) {
 
 					bones[ gbone.parent ].add( bones[ b ] );
 
@@ -24314,7 +24314,7 @@
 	 * @author clockworkgeek / https://github.com/clockworkgeek
 	 * @author timothypratley / https://github.com/timothypratley
 	 * @author WestLangley / http://github.com/WestLangley
-	*/
+	 */
 
 	function PolyhedronGeometry( vertices, indices, radius, detail ) {
 
@@ -24741,7 +24741,7 @@
 
 	function IcosahedronGeometry( radius, detail ) {
 
-	 	Geometry.call( this );
+		Geometry.call( this );
 
 		this.type = 'IcosahedronGeometry';
 
@@ -24768,15 +24768,15 @@
 
 		var vertices = [
 			- 1,  t,  0,    1,  t,  0,   - 1, - t,  0,    1, - t,  0,
-			 0, - 1,  t,    0,  1,  t,    0, - 1, - t,    0,  1, - t,
-			 t,  0, - 1,    t,  0,  1,   - t,  0, - 1,   - t,  0,  1
+			0, - 1,  t,    0,  1,  t,    0, - 1, - t,    0,  1, - t,
+			t,  0, - 1,    t,  0,  1,   - t,  0, - 1,   - t,  0,  1
 		];
 
 		var indices = [
-			 0, 11,  5,    0,  5,  1,    0,  1,  7,    0,  7, 10,    0, 10, 11,
-			 1,  5,  9,    5, 11,  4,   11, 10,  2,   10,  7,  6,    7,  1,  8,
-			 3,  9,  4,    3,  4,  2,    3,  2,  6,    3,  6,  8,    3,  8,  9,
-			 4,  9,  5,    2,  4, 11,    6,  2, 10,    8,  6,  7,    9,  8,  1
+			0, 11,  5,    0,  5,  1,    0,  1,  7,    0,  7, 10,    0, 10, 11,
+			1,  5,  9,    5, 11,  4,   11, 10,  2,   10,  7,  6,    7,  1,  8,
+			3,  9,  4,    3,  4,  2,    3,  2,  6,    3,  6,  8,    3,  8,  9,
+			4,  9,  5,    2,  4, 11,    6,  2, 10,    8,  6,  7,    9,  8,  1
 		];
 
 		PolyhedronBufferGeometry.call( this, vertices, indices, radius, detail );
@@ -24830,16 +24830,16 @@
 			// (±1, ±1, ±1)
 			- 1, - 1, - 1,    - 1, - 1,  1,
 			- 1,  1, - 1,    - 1,  1,  1,
-			  1, - 1, - 1,     1, - 1,  1,
-			  1,  1, - 1,     1,  1,  1,
+			1, - 1, - 1,     1, - 1,  1,
+			1,  1, - 1,     1,  1,  1,
 
 			// (0, ±1/φ, ±φ)
-			 0, - r, - t,     0, - r,  t,
-			 0,  r, - t,     0,  r,  t,
+			0, - r, - t,     0, - r,  t,
+			0,  r, - t,     0,  r,  t,
 
 			// (±1/φ, ±φ, 0)
 			- r, - t,  0,    - r,  t,  0,
-			 r, - t,  0,     r,  t,  0,
+			r, - t,  0,     r,  t,  0,
 
 			// (±φ, 0, ±1/φ)
 			- t,  0, - r,     t,  0, - r,
@@ -24847,18 +24847,18 @@
 		];
 
 		var indices = [
-			 3, 11,  7,      3,  7, 15,      3, 15, 13,
-			 7, 19, 17,      7, 17,  6,      7,  6, 15,
+			3, 11,  7,      3,  7, 15,      3, 15, 13,
+			7, 19, 17,      7, 17,  6,      7,  6, 15,
 			17,  4,  8,     17,  8, 10,     17, 10,  6,
-			 8,  0, 16,      8, 16,  2,      8,  2, 10,
-			 0, 12,  1,      0,  1, 18,      0, 18, 16,
-			 6, 10,  2,      6,  2, 13,      6, 13, 15,
-			 2, 16, 18,      2, 18,  3,      2,  3, 13,
+			8,  0, 16,      8, 16,  2,      8,  2, 10,
+			0, 12,  1,      0,  1, 18,      0, 18, 16,
+			6, 10,  2,      6,  2, 13,      6, 13, 15,
+			2, 16, 18,      2, 18,  3,      2,  3, 13,
 			18,  1,  9,     18,  9, 11,     18, 11,  3,
-			 4, 14, 12,      4, 12,  0,      4,  0,  8,
+			4, 14, 12,      4, 12,  0,      4,  0,  8,
 			11,  9,  5,     11,  5, 19,     11, 19,  7,
 			19,  5, 14,     19, 14,  4,     19,  4, 17,
-			 1, 12, 14,      1, 14,  5,      1,  5,  9
+			1, 12, 14,      1, 14,  5,      1,  5,  9
 		];
 
 		PolyhedronBufferGeometry.call( this, vertices, indices, radius, detail );
@@ -25479,8 +25479,8 @@
 					py = contour[ verts[ p ] ].y;
 
 					if ( ( ( px === ax ) && ( py === ay ) ) ||
-						 ( ( px === bx ) && ( py === by ) ) ||
-						 ( ( px === cx ) && ( py === cy ) ) )	continue;
+						( ( px === bx ) && ( py === by ) ) ||
+						( ( px === cx ) && ( py === cy ) ) )	continue;
 
 					apx = px - ax;  apy = py - ay;
 					bpx = px - bx;  bpy = py - by;
@@ -25683,14 +25683,14 @@
 					if ( perpSeg2 === 0 ) {
 
 						if ( ( inExcludeAdjacentSegs ) &&
-							 ( ( perpSeg1 === 0 ) || ( perpSeg1 === limit ) ) )		return [];
+							( ( perpSeg1 === 0 ) || ( perpSeg1 === limit ) ) )		return [];
 						return [ inSeg1Pt1 ];
 
 					}
 					if ( perpSeg2 === limit ) {
 
 						if ( ( inExcludeAdjacentSegs ) &&
-							 ( ( perpSeg1 === 0 ) || ( perpSeg1 === limit ) ) )		return [];
+							( ( perpSeg1 === 0 ) || ( perpSeg1 === limit ) ) )		return [];
 						return [ inSeg1Pt2 ];
 
 					}
@@ -25701,13 +25701,13 @@
 					// return real intersection point
 					var factorSeg1 = perpSeg2 / limit;
 					return	[ { x: inSeg1Pt1.x + factorSeg1 * seg1dx,
-								y: inSeg1Pt1.y + factorSeg1 * seg1dy } ];
+						y: inSeg1Pt1.y + factorSeg1 * seg1dy } ];
 
 				} else {
 
 					// parallel or collinear
 					if ( ( perpSeg1 !== 0 ) ||
-						 ( seg2dy * seg1seg2dx !== seg2dx * seg1seg2dy ) ) 			return [];
+						( seg2dy * seg1seg2dx !== seg2dx * seg1seg2dy ) ) 			return [];
 
 					// they are collinear or degenerate
 					var seg1Pt = ( ( seg1dx === 0 ) && ( seg1dy === 0 ) );	// segment1 is just a point?
@@ -25716,7 +25716,7 @@
 					if ( seg1Pt && seg2Pt ) {
 
 						if ( ( inSeg1Pt1.x !== inSeg2Pt1.x ) ||
-							 ( inSeg1Pt1.y !== inSeg2Pt1.y ) )		return [];	// they are distinct  points
+							( inSeg1Pt1.y !== inSeg2Pt1.y ) )		return [];	// they are distinct  points
 						return [ inSeg1Pt1 ];                 						// they are the same point
 
 					}
@@ -26333,8 +26333,8 @@
 				// scaling factor for v_prev to intersection point
 
 				var sf = (  ( ptNextShift_x - ptPrevShift_x ) * v_next_y -
-							( ptNextShift_y - ptPrevShift_y ) * v_next_x    ) /
-						  ( v_prev_x * v_next_y - v_prev_y * v_next_x );
+					( ptNextShift_y - ptPrevShift_y ) * v_next_x    ) /
+					( v_prev_x * v_next_y - v_prev_y * v_next_x );
 
 				// vector from inPt to intersection point
 
@@ -29054,7 +29054,7 @@
 						case 'arraybuffer':
 						case 'blob':
 
-						 	response = new ArrayBuffer( data.length );
+							response = new ArrayBuffer( data.length );
 
 							var view = new Uint8Array( response );
 
@@ -29502,12 +29502,12 @@
 			}, false );
 
 			/*
-			image.addEventListener( 'progress', function ( event ) {
+			 image.addEventListener( 'progress', function ( event ) {
 
-				if ( onProgress ) onProgress( event );
+			 if ( onProgress ) onProgress( event );
 
-			}, false );
-			*/
+			 }, false );
+			 */
 
 			image.addEventListener( 'error', function ( event ) {
 
@@ -30132,7 +30132,7 @@
 		convertArray: function ( array, type, forceClone ) {
 
 			if ( ! array || // let 'undefined' and 'null' pass
-					! forceClone && array.constructor === type ) return array;
+				! forceClone && array.constructor === type ) return array;
 
 			if ( typeof type.BYTES_PER_ELEMENT === 'number' ) {
 
@@ -30147,7 +30147,7 @@
 		isTypedArray: function ( object ) {
 
 			return ArrayBuffer.isView( object ) &&
-					! ( object instanceof DataView );
+				! ( object instanceof DataView );
 
 		},
 
@@ -30297,7 +30297,7 @@
 		this._cachedIndex = 0;
 
 		this.resultBuffer = resultBuffer !== undefined ?
-				resultBuffer : new sampleValues.constructor( sampleSize );
+			resultBuffer : new sampleValues.constructor( sampleSize );
 		this.sampleValues = sampleValues;
 		this.valueSize = sampleSize;
 
@@ -30538,7 +30538,7 @@
 	function CubicInterpolant( parameterPositions, sampleValues, sampleSize, resultBuffer ) {
 
 		Interpolant.call(
-				this, parameterPositions, sampleValues, sampleSize, resultBuffer );
+			this, parameterPositions, sampleValues, sampleSize, resultBuffer );
 
 		this._weightPrev = -0;
 		this._offsetPrev = -0;
@@ -30663,10 +30663,10 @@
 			for ( var i = 0; i !== stride; ++ i ) {
 
 				result[ i ] =
-						sP * values[ oP + i ] +
-						s0 * values[ o0 + i ] +
-						s1 * values[ o1 + i ] +
-						sN * values[ oN + i ];
+					sP * values[ oP + i ] +
+					s0 * values[ o0 + i ] +
+					s1 * values[ o1 + i ] +
+					sN * values[ oN + i ];
 
 			}
 
@@ -30705,8 +30705,8 @@
 			for ( var i = 0; i !== stride; ++ i ) {
 
 				result[ i ] =
-						values[ offset0 + i ] * weight0 +
-						values[ offset1 + i ] * weight1;
+					values[ offset0 + i ] * weight0 +
+					values[ offset1 + i ] * weight1;
 
 			}
 
@@ -30754,21 +30754,21 @@
 		InterpolantFactoryMethodDiscrete: function ( result ) {
 
 			return new DiscreteInterpolant(
-					this.times, this.values, this.getValueSize(), result );
+				this.times, this.values, this.getValueSize(), result );
 
 		},
 
 		InterpolantFactoryMethodLinear: function ( result ) {
 
 			return new LinearInterpolant(
-					this.times, this.values, this.getValueSize(), result );
+				this.times, this.values, this.getValueSize(), result );
 
 		},
 
 		InterpolantFactoryMethodSmooth: function ( result ) {
 
 			return new CubicInterpolant(
-					this.times, this.values, this.getValueSize(), result );
+				this.times, this.values, this.getValueSize(), result );
 
 		},
 
@@ -30801,7 +30801,7 @@
 			if ( factoryMethod === undefined ) {
 
 				var message = "unsupported interpolation for " +
-						this.ValueTypeName + " keyframe track named " + this.name;
+					this.ValueTypeName + " keyframe track named " + this.name;
 
 				if ( this.createInterpolant === undefined ) {
 
@@ -30913,7 +30913,7 @@
 				var stride = this.getValueSize();
 				this.times = AnimationUtils.arraySlice( times, from, to );
 				this.values = AnimationUtils.
-						arraySlice( this.values, from * stride, to * stride );
+				arraySlice( this.values, from * stride, to * stride );
 
 			}
 
@@ -31035,7 +31035,7 @@
 							var value = values[ offset + j ];
 
 							if ( value !== values[ offsetP + j ] ||
-									value !== values[ offsetN + j ] ) {
+								value !== values[ offsetN + j ] ) {
 
 								keep = true;
 								break;
@@ -31137,17 +31137,17 @@
 	}
 
 	VectorKeyframeTrack.prototype =
-			Object.assign( Object.create( KeyframeTrackPrototype ), {
+		Object.assign( Object.create( KeyframeTrackPrototype ), {
 
-		constructor: VectorKeyframeTrack,
+			constructor: VectorKeyframeTrack,
 
-		ValueTypeName: 'vector'
+			ValueTypeName: 'vector'
 
-		// ValueBufferType is inherited
+			// ValueBufferType is inherited
 
-		// DefaultInterpolation is inherited
+			// DefaultInterpolation is inherited
 
-	} );
+		} );
 
 	/**
 	 * Spherical linear unit quaternion interpolant.
@@ -31178,7 +31178,7 @@
 			for ( var end = offset + stride; offset !== end; offset += 4 ) {
 
 				Quaternion.slerpFlat( result, 0,
-						values, offset - stride, values, offset, alpha );
+					values, offset - stride, values, offset, alpha );
 
 			}
 
@@ -31204,26 +31204,26 @@
 	}
 
 	QuaternionKeyframeTrack.prototype =
-			Object.assign( Object.create( KeyframeTrackPrototype ), {
+		Object.assign( Object.create( KeyframeTrackPrototype ), {
 
-		constructor: QuaternionKeyframeTrack,
+			constructor: QuaternionKeyframeTrack,
 
-		ValueTypeName: 'quaternion',
+			ValueTypeName: 'quaternion',
 
-		// ValueBufferType is inherited
+			// ValueBufferType is inherited
 
-		DefaultInterpolation: InterpolateLinear,
+			DefaultInterpolation: InterpolateLinear,
 
-		InterpolantFactoryMethodLinear: function( result ) {
+			InterpolantFactoryMethodLinear: function( result ) {
 
-			return new QuaternionLinearInterpolant(
+				return new QuaternionLinearInterpolant(
 					this.times, this.values, this.getValueSize(), result );
 
-		},
+			},
 
-		InterpolantFactoryMethodSmooth: undefined // not yet implemented
+			InterpolantFactoryMethodSmooth: undefined // not yet implemented
 
-	} );
+		} );
 
 	/**
 	 *
@@ -31241,17 +31241,17 @@
 	}
 
 	NumberKeyframeTrack.prototype =
-			Object.assign( Object.create( KeyframeTrackPrototype ), {
+		Object.assign( Object.create( KeyframeTrackPrototype ), {
 
-		constructor: NumberKeyframeTrack,
+			constructor: NumberKeyframeTrack,
 
-		ValueTypeName: 'number'
+			ValueTypeName: 'number'
 
-		// ValueBufferType is inherited
+			// ValueBufferType is inherited
 
-		// DefaultInterpolation is inherited
+			// DefaultInterpolation is inherited
 
-	} );
+		} );
 
 	/**
 	 *
@@ -31270,20 +31270,20 @@
 	}
 
 	StringKeyframeTrack.prototype =
-			Object.assign( Object.create( KeyframeTrackPrototype ), {
+		Object.assign( Object.create( KeyframeTrackPrototype ), {
 
-		constructor: StringKeyframeTrack,
+			constructor: StringKeyframeTrack,
 
-		ValueTypeName: 'string',
-		ValueBufferType: Array,
+			ValueTypeName: 'string',
+			ValueBufferType: Array,
 
-		DefaultInterpolation: InterpolateDiscrete,
+			DefaultInterpolation: InterpolateDiscrete,
 
-		InterpolantFactoryMethodLinear: undefined,
+			InterpolantFactoryMethodLinear: undefined,
 
-		InterpolantFactoryMethodSmooth: undefined
+			InterpolantFactoryMethodSmooth: undefined
 
-	} );
+		} );
 
 	/**
 	 *
@@ -31302,23 +31302,23 @@
 	}
 
 	BooleanKeyframeTrack.prototype =
-			Object.assign( Object.create( KeyframeTrackPrototype ), {
+		Object.assign( Object.create( KeyframeTrackPrototype ), {
 
-		constructor: BooleanKeyframeTrack,
+			constructor: BooleanKeyframeTrack,
 
-		ValueTypeName: 'bool',
-		ValueBufferType: Array,
+			ValueTypeName: 'bool',
+			ValueBufferType: Array,
 
-		DefaultInterpolation: InterpolateDiscrete,
+			DefaultInterpolation: InterpolateDiscrete,
 
-		InterpolantFactoryMethodLinear: undefined,
-		InterpolantFactoryMethodSmooth: undefined
+			InterpolantFactoryMethodLinear: undefined,
+			InterpolantFactoryMethodSmooth: undefined
 
-		// Note: Actually this track could have a optimized / compressed
-		// representation of a single value and a custom interpolant that
-		// computes "firstValue ^ isOdd( index )".
+			// Note: Actually this track could have a optimized / compressed
+			// representation of a single value and a custom interpolant that
+			// computes "firstValue ^ isOdd( index )".
 
-	} );
+		} );
 
 	/**
 	 *
@@ -31337,21 +31337,21 @@
 	}
 
 	ColorKeyframeTrack.prototype =
-			Object.assign( Object.create( KeyframeTrackPrototype ), {
+		Object.assign( Object.create( KeyframeTrackPrototype ), {
 
-		constructor: ColorKeyframeTrack,
+			constructor: ColorKeyframeTrack,
 
-		ValueTypeName: 'color'
+			ValueTypeName: 'color'
 
-		// ValueBufferType is inherited
+			// ValueBufferType is inherited
 
-		// DefaultInterpolation is inherited
+			// DefaultInterpolation is inherited
 
 
-		// Note: Very basic implementation and nothing special yet.
-		// However, this is the place for color space parameterization.
+			// Note: Very basic implementation and nothing special yet.
+			// However, this is the place for color space parameterization.
 
-	} );
+		} );
 
 	/**
 	 *
@@ -31409,7 +31409,7 @@
 
 				// by default, we asssume a constructor compatible with the base
 				return new trackType(
-						json.name, json.times, json.values, json.interpolation );
+					json.name, json.times, json.values, json.interpolation );
 
 			}
 
@@ -31576,9 +31576,9 @@
 				var values = [];
 
 				times.push(
-						( i + numMorphTargets - 1 ) % numMorphTargets,
-						i,
-						( i + 1 ) % numMorphTargets );
+					( i + numMorphTargets - 1 ) % numMorphTargets,
+					i,
+					( i + 1 ) % numMorphTargets );
 
 				values.push( 0, 1, 0 );
 
@@ -31596,10 +31596,10 @@
 				}
 
 				tracks.push(
-						new NumberKeyframeTrack(
-							'.morphTargetInfluences[' + morphTargetSequence[ i ].name + ']',
-							times, values
-						).scale( 1.0 / fps ) );
+					new NumberKeyframeTrack(
+						'.morphTargetInfluences[' + morphTargetSequence[ i ].name + ']',
+						times, values
+					).scale( 1.0 / fps ) );
 
 			}
 
@@ -31774,16 +31774,16 @@
 					var boneName = '.bones[' + bones[ h ].name + ']';
 
 					addNonemptyTrack(
-							VectorKeyframeTrack, boneName + '.position',
-							animationKeys, 'pos', tracks );
+						VectorKeyframeTrack, boneName + '.position',
+						animationKeys, 'pos', tracks );
 
 					addNonemptyTrack(
-							QuaternionKeyframeTrack, boneName + '.quaternion',
-							animationKeys, 'rot', tracks );
+						QuaternionKeyframeTrack, boneName + '.quaternion',
+						animationKeys, 'rot', tracks );
 
 					addNonemptyTrack(
-							VectorKeyframeTrack, boneName + '.scale',
-							animationKeys, 'scl', tracks );
+						VectorKeyframeTrack, boneName + '.scale',
+						animationKeys, 'scl', tracks );
 
 				}
 
@@ -32509,7 +32509,7 @@
 		parse: function ( json, texturePath ) {
 
 			var geometry = new Geometry(),
-			scale = ( json.scale !== undefined ) ? 1.0 / json.scale : 1.0;
+				scale = ( json.scale !== undefined ) ? 1.0 / json.scale : 1.0;
 
 			parseModel( scale );
 
@@ -32530,27 +32530,27 @@
 
 				var i, j, fi,
 
-				offset, zLength,
+					offset, zLength,
 
-			colorIndex, normalIndex, uvIndex, materialIndex,
+					colorIndex, normalIndex, uvIndex, materialIndex,
 
-				type,
-				isQuad,
-				hasMaterial,
-				hasFaceVertexUv,
-				hasFaceNormal, hasFaceVertexNormal,
-				hasFaceColor, hasFaceVertexColor,
+					type,
+					isQuad,
+					hasMaterial,
+					hasFaceVertexUv,
+					hasFaceNormal, hasFaceVertexNormal,
+					hasFaceColor, hasFaceVertexColor,
 
-			vertex, face, faceA, faceB, hex, normal,
+					vertex, face, faceA, faceB, hex, normal,
 
-				uvLayer, uv, u, v,
+					uvLayer, uv, u, v,
 
-				faces = json.faces,
-				vertices = json.vertices,
-				normals = json.normals,
-				colors = json.colors,
+					faces = json.faces,
+					vertices = json.vertices,
+					normals = json.normals,
+					colors = json.colors,
 
-				nUvLayers = 0;
+					nUvLayers = 0;
 
 				if ( json.uvs !== undefined ) {
 
@@ -34914,7 +34914,7 @@
 						if ( inPt.y !== edgeLowPt.y ) 		continue;			// parallel
 						// edge lies on the same horizontal line as inPt
 						if ( ( ( edgeHighPt.x <= inPt.x ) && ( inPt.x <= edgeLowPt.x ) ) ||
-							 ( ( edgeLowPt.x <= inPt.x ) && ( inPt.x <= edgeHighPt.x ) ) )		return	true;	// inPt: Point on contour !
+							( ( edgeLowPt.x <= inPt.x ) && ( inPt.x <= edgeHighPt.x ) ) )		return	true;	// inPt: Point on contour !
 						// continue;
 
 					}
@@ -35391,8 +35391,8 @@
 			return function update( camera ) {
 
 				var needsUpdate = instance !== this || focus !== camera.focus || fov !== camera.fov ||
-													aspect !== camera.aspect * this.aspect || near !== camera.near ||
-													far !== camera.far || zoom !== camera.zoom || eyeSep !== this.eyeSep;
+					aspect !== camera.aspect * this.aspect || near !== camera.near ||
+					far !== camera.far || zoom !== camera.zoom || eyeSep !== this.eyeSep;
 
 				if ( needsUpdate ) {
 
@@ -35946,7 +35946,7 @@
 			return this.gain.gain.value;
 
 		},
-		
+
 		setVolume: function ( value ) {
 
 			this.gain.gain.value = value;
@@ -36427,51 +36427,51 @@
 
 			return function ( trackName ) {
 
-					var matches = trackRe.exec( trackName );
+				var matches = trackRe.exec( trackName );
 
-					if ( ! matches ) {
+				if ( ! matches ) {
 
-						throw new Error( 'PropertyBinding: Cannot parse trackName: ' + trackName );
+					throw new Error( 'PropertyBinding: Cannot parse trackName: ' + trackName );
 
-					}
+				}
 
-					var results = {
-						// directoryName: matches[ 1 ], // (tschw) currently unused
-						nodeName: matches[ 2 ],
-						objectName: matches[ 3 ],
-						objectIndex: matches[ 4 ],
-						propertyName: matches[ 5 ],     // required
-						propertyIndex: matches[ 6 ]
-					};
-
-					var lastDot = results.nodeName && results.nodeName.lastIndexOf( '.' );
-
-					if ( lastDot !== undefined && lastDot !== -1 ) {
-
-						var objectName = results.nodeName.substring( lastDot + 1 );
-
-						// Object names must be checked against a whitelist. Otherwise, there
-						// is no way to parse 'foo.bar.baz': 'baz' must be a property, but
-						// 'bar' could be the objectName, or part of a nodeName (which can
-						// include '.' characters).
-						if ( supportedObjectNames.indexOf( objectName ) !== -1 ) {
-
-							results.nodeName = results.nodeName.substring( 0, lastDot );
-							results.objectName = objectName;
-
-						}
-
-					}
-
-					if ( results.propertyName === null || results.propertyName.length === 0 ) {
-
-						throw new Error( 'PropertyBinding: can not parse propertyName from trackName: ' + trackName );
-
-					}
-
-					return results;
-
+				var results = {
+					// directoryName: matches[ 1 ], // (tschw) currently unused
+					nodeName: matches[ 2 ],
+					objectName: matches[ 3 ],
+					objectIndex: matches[ 4 ],
+					propertyName: matches[ 5 ],     // required
+					propertyIndex: matches[ 6 ]
 				};
+
+				var lastDot = results.nodeName && results.nodeName.lastIndexOf( '.' );
+
+				if ( lastDot !== undefined && lastDot !== -1 ) {
+
+					var objectName = results.nodeName.substring( lastDot + 1 );
+
+					// Object names must be checked against a whitelist. Otherwise, there
+					// is no way to parse 'foo.bar.baz': 'baz' must be a property, but
+					// 'bar' could be the objectName, or part of a nodeName (which can
+					// include '.' characters).
+					if ( supportedObjectNames.indexOf( objectName ) !== -1 ) {
+
+						results.nodeName = results.nodeName.substring( 0, lastDot );
+						results.objectName = objectName;
+
+					}
+
+				}
+
+				if ( results.propertyName === null || results.propertyName.length === 0 ) {
+
+					throw new Error( 'PropertyBinding: can not parse propertyName from trackName: ' + trackName );
+
+				}
+
+				return results;
+
+			};
 
 		}(),
 
@@ -37089,8 +37089,8 @@
 					for ( var j = 0, m = nBindings; j !== m; ++ j ) {
 
 						bindings[ j ].push(
-								new PropertyBinding(
-									object, paths[ j ], parsedPaths[ j ] ) );
+							new PropertyBinding(
+								object, paths[ j ], parsedPaths[ j ] ) );
 
 					}
 
@@ -37126,7 +37126,7 @@
 							// or may not exist
 
 							binding = new PropertyBinding(
-									object, paths[ j ], parsedPaths[ j ] );
+								object, paths[ j ], parsedPaths[ j ] );
 
 						}
 
@@ -37137,8 +37137,8 @@
 				} else if ( objects[ index ] !== knownObject ) {
 
 					console.error( "Different objects with the same UUID " +
-							"detected. Clean the caches or recreate your " +
-							"infrastructure when reloading scenes..." );
+						"detected. Clean the caches or recreate your " +
+						"infrastructure when reloading scenes..." );
 
 				} // else the object is already where we want it to be
 
@@ -37375,8 +37375,8 @@
 			interpolants = new Array( nTracks );
 
 		var interpolantSettings = {
-				endingStart: 	ZeroCurvatureEnding,
-				endingEnd:		ZeroCurvatureEnding
+			endingStart: 	ZeroCurvatureEnding,
+			endingEnd:		ZeroCurvatureEnding
 		};
 
 		for ( var i = 0; i !== nTracks; ++ i ) {
@@ -37465,7 +37465,7 @@
 		isRunning: function() {
 
 			return this.enabled && ! this.paused && this.timeScale !== 0 &&
-					this._startTime === null && this._mixer._isActiveAction( this );
+				this._startTime === null && this._mixer._isActiveAction( this );
 
 		},
 
@@ -37863,7 +37863,7 @@
 						loopCount = 0;
 
 						this._setEndings(
-								true, this.repetitions === 0, pingPong );
+							true, this.repetitions === 0, pingPong );
 
 					} else {
 
@@ -37872,7 +37872,7 @@
 						// so leave loopCount at -1
 
 						this._setEndings(
-								this.repetitions === 0, true, pingPong );
+							this.repetitions === 0, true, pingPong );
 
 					}
 
@@ -37957,7 +37957,7 @@
 				if ( atStart ) {
 
 					settings.endingStart = this.zeroSlopeAtStart ?
-							ZeroSlopeEnding : ZeroCurvatureEnding;
+						ZeroSlopeEnding : ZeroCurvatureEnding;
 
 				} else {
 
@@ -37968,7 +37968,7 @@
 				if ( atEnd ) {
 
 					settings.endingEnd = this.zeroSlopeAtEnd ?
-							ZeroSlopeEnding : ZeroCurvatureEnding;
+						ZeroSlopeEnding : ZeroCurvatureEnding;
 
 				} else {
 
@@ -38507,7 +38507,7 @@
 			if ( actionsForClip !== undefined ) {
 
 				var existingAction =
-						actionsForClip.actionByRoot[ rootUuid ];
+					actionsForClip.actionByRoot[ rootUuid ];
 
 				if ( existingAction !== undefined ) {
 
@@ -39799,7 +39799,7 @@
 	/**
 	 * @author mrdoob / http://mrdoob.com/
 	 * @author WestLangley / http://github.com/WestLangley
-	*/
+	 */
 
 	function VertexNormalsHelper( object, size, hex, linewidth ) {
 
@@ -39946,7 +39946,7 @@
 	 * @author alteredq / http://alteredqualia.com/
 	 * @author mrdoob / http://mrdoob.com/
 	 * @author WestLangley / http://github.com/WestLangley
-	*/
+	 */
 
 	function SpotLightHelper( light ) {
 
@@ -40159,26 +40159,26 @@
 		this.matrixAutoUpdate = false;
 
 		/*
-		var distanceGeometry = new THREE.IcosahedronGeometry( 1, 2 );
-		var distanceMaterial = new THREE.MeshBasicMaterial( { color: hexColor, fog: false, wireframe: true, opacity: 0.1, transparent: true } );
+		 var distanceGeometry = new THREE.IcosahedronGeometry( 1, 2 );
+		 var distanceMaterial = new THREE.MeshBasicMaterial( { color: hexColor, fog: false, wireframe: true, opacity: 0.1, transparent: true } );
 
-		this.lightSphere = new THREE.Mesh( bulbGeometry, bulbMaterial );
-		this.lightDistance = new THREE.Mesh( distanceGeometry, distanceMaterial );
+		 this.lightSphere = new THREE.Mesh( bulbGeometry, bulbMaterial );
+		 this.lightDistance = new THREE.Mesh( distanceGeometry, distanceMaterial );
 
-		var d = light.distance;
+		 var d = light.distance;
 
-		if ( d === 0.0 ) {
+		 if ( d === 0.0 ) {
 
-			this.lightDistance.visible = false;
+		 this.lightDistance.visible = false;
 
-		} else {
+		 } else {
 
-			this.lightDistance.scale.set( d, d, d );
+		 this.lightDistance.scale.set( d, d, d );
 
-		}
+		 }
 
-		this.add( this.lightDistance );
-		*/
+		 this.add( this.lightDistance );
+		 */
 
 	}
 
@@ -40197,19 +40197,19 @@
 		this.material.color.copy( this.light.color ).multiplyScalar( this.light.intensity );
 
 		/*
-		var d = this.light.distance;
+		 var d = this.light.distance;
 
-		if ( d === 0.0 ) {
+		 if ( d === 0.0 ) {
 
-			this.lightDistance.visible = false;
+		 this.lightDistance.visible = false;
 
-		} else {
+		 } else {
 
-			this.lightDistance.visible = true;
-			this.lightDistance.scale.set( d, d, d );
+		 this.lightDistance.visible = true;
+		 this.lightDistance.scale.set( d, d, d );
 
-		}
-		*/
+		 }
+		 */
 
 	};
 
@@ -40526,7 +40526,7 @@
 	/**
 	 * @author mrdoob / http://mrdoob.com/
 	 * @author WestLangley / http://github.com/WestLangley
-	*/
+	 */
 
 	function FaceNormalsHelper( object, size, hex, linewidth ) {
 
@@ -40655,8 +40655,8 @@
 		var geometry = new BufferGeometry();
 		geometry.addAttribute( 'position', new Float32BufferAttribute( [
 			- size,   size, 0,
-			  size,   size, 0,
-			  size, - size, 0,
+			size,   size, 0,
+			size, - size, 0,
 			- size, - size, 0,
 			- size,   size, 0
 		], 3 ) );
@@ -40963,20 +40963,20 @@
 			var max = box.max;
 
 			/*
-			  5____4
-			1/___0/|
-			| 6__|_7
-			2/___3/
+			 5____4
+			 1/___0/|
+			 | 6__|_7
+			 2/___3/
 
-			0: max.x, max.y, max.z
-			1: min.x, max.y, max.z
-			2: min.x, min.y, max.z
-			3: max.x, min.y, max.z
-			4: max.x, max.y, min.z
-			5: min.x, max.y, min.z
-			6: min.x, min.y, min.z
-			7: max.x, min.y, min.z
-			*/
+			 0: max.x, max.y, max.z
+			 1: min.x, max.y, max.z
+			 2: min.x, min.y, max.z
+			 3: max.x, min.y, max.z
+			 4: max.x, max.y, min.z
+			 5: min.x, max.y, min.z
+			 6: min.x, min.y, min.z
+			 7: max.x, min.y, min.z
+			 */
 
 			var position = this.geometry.attributes.position;
 			var array = position.array;
@@ -41155,14 +41155,14 @@
 
 
 	/*
-	Based on an optimized c++ solution in
+	 Based on an optimized c++ solution in
 	 - http://stackoverflow.com/questions/9489736/catmull-rom-curve-with-no-cusps-and-no-self-intersections/
 	 - http://ideone.com/NoEbVM
 
-	This CubicPoly class could be used for reusing some variables and calculations,
-	but for three.js curve use, it could be possible inlined and flatten into a single function call
-	which can be placed in CurveUtils.
-	*/
+	 This CubicPoly class could be used for reusing some variables and calculations,
+	 but for three.js curve use, it could be possible inlined and flatten into a single function call
+	 which can be placed in CurveUtils.
+	 */
 
 	function CubicPoly() {
 
@@ -41692,7 +41692,7 @@
 
 	GridHelper.prototype.setColors = function () {
 
-		// console.error( 'THREE.GridHelper: setColors() has been deprecated, pass them in the constructor instead.' );
+		console.error( 'THREE.GridHelper: setColors() has been deprecated, pass them in the constructor instead.' );
 
 	};
 
@@ -42159,7 +42159,7 @@
 	PerspectiveCamera.prototype.setLens = function ( focalLength, filmGauge ) {
 
 		console.warn( "THREE.PerspectiveCamera.setLens is deprecated. " +
-				"Use .setFocalLength and .filmGauge for a photographic setup." );
+			"Use .setFocalLength and .filmGauge for a photographic setup." );
 
 		if ( filmGauge !== undefined ) this.filmGauge = filmGauge;
 		this.setFocalLength( focalLength );

@@ -4,7 +4,7 @@
 $("#li").on("click", function () {
     if(CurrentTabNum==1){
         clearBackroundController();
-    }else if(CurrentTabNum ==2){
+    }else if(CurrentTabNum ==3){
         clearEffectController();
     }
     CurrentTabNum = 2;
