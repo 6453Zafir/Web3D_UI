@@ -52,11 +52,11 @@ body{
     border-top: solid 3px #fe8b6c;
 }
 
-.settingButton,.uploadButton,.saveButton{
+.navButton{
     display: inline-block;
     height: 30px;
     width: 30px;
-    margin-top: 6px;
+    margin-top: 4px;
     margin-right: 20px;
     border: none;
     vertical-align: top;
@@ -64,19 +64,10 @@ body{
     background-size: cover;
 }
 
-.settingButton:focus,.uploadButton:focus{
+.navButton:focus{
     outline: none;
 }
 
-.settingButton{
-    background-image: url("../images/setting.png");
-}
-.uploadButton{
-    background-image: url("../images/upload.png");
-}
-.saveButton{
-    background-image: url("../images/save.png");
-}
 
 
 /*------------------------my tab end------------------------*/

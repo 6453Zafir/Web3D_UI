@@ -2,11 +2,13 @@
  * Created by admin on 2017/5/4.
  */
 
-var container;
+var container=document.getElementById('moduleArea');
+var width =container.clientWidth;
+var height = container.clientHeight;
 
 var renderer;
 var camera;
-var scene;
+var scene=new THREE.Scene();
 
 var cube;
 
@@ -42,7 +44,6 @@ function layoutController() {
     })
 
 }
-
 function basicLayout() {
     if(!IsSettingTipShowed){
         $("#setting-tip").css("display","block");
@@ -66,9 +67,9 @@ function basicLayout() {
         $("#dblclick-tip").css("display","none");
     })
     })
-    // renderEasyModel();
+     renderEasyModel();
     // LoadSTLModel();
-    loadOBJ();
+    // loadOBJ();
     backgroundController();
     effectController();
     lightController();
@@ -93,7 +94,6 @@ function FullLayout() {
 $(document).ready(function () {
     var nav1s = [];
     $("#addItemButton").on("click",function () {
-
     })
 })
 

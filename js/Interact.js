@@ -23,11 +23,11 @@ function defaultControl() {
     document.addEventListener( 'touchstart', onDocumentTouchStart, {passive: false} );
     document.addEventListener( 'touchmove', onDocumentTouchMove, {passive: false} );
 
-    // //    animate
-    // function animate() {
-    //     requestAnimationFrame(animate);
-    //     render();
-    // }
+    //    animate
+    function animate() {
+        requestAnimationFrame(animate);
+        render();
+    }
 
     function render() {
         cube.rotation.y += (targetRotation-cube.rotation.y)*0.005;

@@ -31,18 +31,11 @@ function renderEasyModel() {
             initThree();
             animate();
         })
-
         function initThree() {
             document.getElementById("processing").style.display="none";
-
-            container = document.getElementById('moduleArea');
-            width =container.clientWidth;
-            height = container.clientHeight;
-
+            // container = document.getElementById('moduleArea');
             camera = new THREE.PerspectiveCamera(65,width/height,1,2000000);
             camera.position.set(0,0,50);
-
-            scene = new THREE.Scene();
 
             renderer = new THREE.WebGLRenderer();
             renderer.setSize(width,height);
@@ -53,7 +46,7 @@ function renderEasyModel() {
             var Cubegeometry;
             var Cubematerial;
 
-            Cubegeometry = new THREE.BoxGeometry(20,20,20);
+            Cubegeometry = new THREE.BoxGeometry(20,20,20,1,1,1);
             // Cubematerial = new THREE.MeshNormalMaterial( { overdraw: 0.5 } );
             // Cubematerial =  new THREE.MeshPhongMaterial( { color:0xffffff, shading: THREE.FlatShading } );
             Cubematerial =new THREE.MeshPhongMaterial( { specular: 0xFFFFFF,shininess: 10000} );
@@ -188,12 +181,7 @@ function renderEasyModel() {
 //             }
 //
 //         }
-
-
-
-
 //    animate
-
         }else{
             alert("haven't choose template yet");
         }
